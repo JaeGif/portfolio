@@ -8,8 +8,33 @@ module.exports = {
     // Or if using `src` directory:
     './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
+
   theme: {
-    extend: {},
+    extend: {
+      primary: '#111111',
+      secondary: '#FF1694',
+      colors: {
+        gray: {
+          950: '#000000',
+          900: '#111111',
+          800: '#222222',
+          700: '#333333',
+          600: '#444444',
+          400: '#555555',
+          300: '#666666',
+          200: '#777777',
+          100: '#888888',
+        },
+      },
+    },
+    gridTemplateColumns: {
+      fluid: 'repeat(auto-fit, minmax(20rem, 1fr))',
+    },
+    fontFamily: {
+      montserrat: ['montserrat', 'sans-serif'],
+    },
   },
+  variants: {},
   plugins: [],
 };
