@@ -15,3 +15,8 @@
     @apply dark:bg-gray-950 bg-white dark:text-white text-black;
   }
 }
+@layer components {
+  .debug {
+    @apply border-2 border-red-600;
+  }
+}

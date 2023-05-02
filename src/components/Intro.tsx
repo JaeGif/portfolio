@@ -3,6 +3,7 @@ import Image from 'next/image';
 import ThemeToggle from './svg/ThemeToggle';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
+import DownChevron from './svg/DownChevron';
 
 function Intro() {
   const { systemTheme, theme, setTheme } = useTheme();
@@ -13,7 +14,8 @@ function Intro() {
     setMounted(true);
   }, []);
   return (
-    <div className='w-screen h-screen flex flex-col justify-start items-center'>
+    // 7rem is height of header
+    <div className='w-screen h-[calc(100vh-7rem)] flex flex-col justify-start mt-10 items-center gap-5'>
       <div className='flex flex-col text-[6vw] text-center w-8/12'>
         <p className='m-11'>Jacob Gifford</p>
         <p>Full Stack Developer</p>
@@ -40,6 +42,7 @@ function Intro() {
           Contact
         </Link>
       </nav>
+      <DownChevron />
     </div>
   );
 }
