@@ -1,5 +1,7 @@
 import React from 'react';
 import { useTheme } from 'next-themes';
+import Moon from '@/theme/Moon';
+import Sun from '@/theme/Sun';
 
 function ThemeToggle() {
   const { systemTheme, theme, setTheme } = useTheme();
@@ -10,7 +12,7 @@ function ThemeToggle() {
         currentTheme == 'dark' ? setTheme('light') : setTheme('dark')
       }
     >
-      ToggleTheme
+      {theme === 'dark' ? <Sun /> : <Moon />}
     </button>
   );
 }

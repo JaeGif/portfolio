@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import ThemeToggle from './ThemeToggle';
+import ThemeToggle from './svg/ThemeToggle';
 import { useTheme } from 'next-themes';
+import Link from 'next/link';
 
 function Intro() {
   const { systemTheme, theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
   const currentTheme = theme === 'system' ? systemTheme : theme;
+  const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -31,11 +33,13 @@ function Intro() {
             />
           </svg>
         </button>
-        <button className='p-2 border-2 dark:border-white border-black rounded-md'>
+        <Link
+          href={'/contact'}
+          className='p-2 border-2 dark:border-white border-black rounded-md'
+        >
           Contact
-        </button>
+        </Link>
       </nav>
-      <ThemeToggle />
     </div>
   );
 }

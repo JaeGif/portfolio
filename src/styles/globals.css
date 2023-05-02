@@ -9,8 +9,9 @@
 @layer base {
   html {
     font-family: montserrat, uni-sans, system-ui, sans-serif;
+    scroll-behavior: smooth;
   }
   body {
-    @apply dark:bg-gray-900 bg-white dark:text-white text-black;
+    @apply dark:bg-gray-950 bg-white dark:text-white text-black;
   }
 }
