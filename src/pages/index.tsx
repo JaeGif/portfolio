@@ -1,10 +1,12 @@
 import Intro from '@/components/Intro';
-import Projects from '@/components/Projects';
+import Technologies from '@/components/Technologies';
+import Projects from '@/components/projects/Projects';
 
 export default function Home() {
   return (
     <main>
       <Intro />
+      <Technologies />
       <Projects />
     </main>
   );

@@ -1,9 +1,6 @@
 import React from 'react';
 import { useTheme } from 'next-themes';
 function LinkedIn() {
-  const { systemTheme, theme, setTheme } = useTheme();
-  const currentTheme = theme === 'system' ? systemTheme : theme;
-
   return (
     <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128' height={32}>
       <path
