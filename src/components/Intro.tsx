@@ -42,7 +42,7 @@ function Intro() {
           Contact
         </Link>
       </nav>
-      <DownChevron />
+      <DownChevron anchor='#projects' />
     </div>
   );
 }

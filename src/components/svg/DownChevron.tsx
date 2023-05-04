@@ -2,9 +2,12 @@ import React from 'react';
 import style from './downchevron.module.css';
 import Link from 'next/link';
 // downchevron from junjun https://codepen.io/postor/pen/vYpNYg
-function DownChevron() {
+type DownChevronProps = {
+  anchor?: string;
+};
+function DownChevron({ anchor }: DownChevronProps) {
   return (
-    <Link href='#technologies' scroll={false}>
+    <Link href={`${anchor}`} scroll={false}>
       <svg className={`${style.arrows}`}>
         <path className={`${style.a1}`} d='M0 0 L30 32 L60 0'></path>
         <path className={`${style.a2}`} d='M0 20 L30 52 L60 20'></path>

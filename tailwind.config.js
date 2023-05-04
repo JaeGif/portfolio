@@ -27,12 +27,17 @@ module.exports = {
           100: '#888888',
         },
       },
-    },
-    gridTemplateColumns: {
-      fluid: 'repeat(auto-fit, minmax(20rem, 1fr))',
-    },
-    fontFamily: {
-      montserrat: ['montserrat', 'sans-serif'],
+      boxShadow: {
+        black: '0 35px 60px -15px #000000',
+        white: '0 35px 60px -15px #FFFFFF',
+      },
+
+      gridTemplateColumns: {
+        fluid: 'repeat(auto-fit, minmax(20rem, 1fr))',
+      },
+      fontFamily: {
+        montserrat: ['montserrat', 'sans-serif'],
+      },
     },
   },
   variants: {},

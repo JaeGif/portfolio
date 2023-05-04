@@ -5,14 +5,19 @@ import LinkedIn from './svg/LinkedIn';
 import Github from './svg/Github';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import MobileHeader from './MobileHeader';
 
-function Header() {
+type HeaderProps = {
+  toggleMenu: Function;
+};
+function Header({ toggleMenu }: HeaderProps) {
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
     setMounted(true);
   }, []);
   return (
-    <header className='w-full px-32 py-8 flex justify-between'>
+    <header className='invisible sm:visible sm:w-full sm:flex sm:px-32 sm:py-8 sm:justify-between'>
+      <MobileHeader toggleMenu={toggleMenu} />
       <nav className='flex w-1/3 justify-start gap-8'>
         <Link href={'/'}>Home</Link>
         <Link href={'/#projects'} scroll={false}>

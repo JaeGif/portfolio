@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import style from '../../styles/animateTrack.module.css';
-import { easeInOut, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 function ImageCarousel() {
   const [mouseDownAt, setMouseDownAt] = useState<number>(0);
   const [percentageMoved, setPercentageMoved] = useState<number>(0);
@@ -22,6 +21,7 @@ function ImageCarousel() {
 
   return (
     <motion.div
+      id='photography'
       style={{
         transform: `translate(${percentageMoved}%, 0%)`,
       }}
@@ -41,7 +41,7 @@ function ImageCarousel() {
         animate={{ objectPosition: `${100 + percentageMoved}%, center)` }}
         transition={{ duration: 1 }}
         draggable={false}
-        className={`${style.image}`}
+        className={`w-[40vmin] h-full object-cover object-center`}
         src={'/assets/images/photography/beach.jpg'}
         alt='photography showcase'
         style={{ objectPosition: `${percentageMoved + 100}% center` }}
@@ -50,7 +50,7 @@ function ImageCarousel() {
         animate={{ objectPosition: `${100 + percentageMoved}%, center)` }}
         transition={{ duration: 1 }}
         draggable={false}
-        className={`${style.image}`}
+        className={`w-[40vmin] h-full object-cover object-center`}
         src={'/assets/images/photography/road.png'}
         alt='photography showcase'
         style={{ objectPosition: `${percentageMoved + 100}% 50%` }}
@@ -59,7 +59,7 @@ function ImageCarousel() {
         animate={{ objectPosition: `${100 + percentageMoved}%, center)` }}
         transition={{ duration: 1 }}
         draggable={false}
-        className={`${style.image}`}
+        className={`w-[40vmin] h-full object-cover object-center`}
         src={'/assets/images/photography/shh.jpg'}
         alt='photography showcase'
         style={{ objectPosition: `${percentageMoved + 100}% 50%` }}
@@ -68,7 +68,7 @@ function ImageCarousel() {
         animate={{ objectPosition: `${100 + percentageMoved}%, center)` }}
         transition={{ duration: 1 }}
         draggable={false}
-        className={`${style.image}`}
+        className={`w-[40vmin] h-full object-cover object-center`}
         src={'/assets/images/photography/boat.png'}
         alt='photography showcase'
         style={{ objectPosition: `${percentageMoved + 100}% 50%` }}
@@ -77,7 +77,7 @@ function ImageCarousel() {
         animate={{ objectPosition: `${100 + percentageMoved}%, center)` }}
         transition={{ duration: 1 }}
         draggable={false}
-        className={`${style.image}`}
+        className={`w-[40vmin] h-full object-cover object-center`}
         src={'/assets/images/photography/mountains2.png'}
         alt='photography showcase'
         style={{ objectPosition: `${percentageMoved + 100}% 50%` }}
@@ -86,7 +86,7 @@ function ImageCarousel() {
         animate={{ objectPosition: `${100 + percentageMoved}%, center)` }}
         transition={{ duration: 1 }}
         draggable={false}
-        className={`${style.image}`}
+        className={`w-[40vmin] h-full object-cover object-center`}
         src={'/assets/images/photography/mountain.jpg'}
         alt='photography showcase'
         style={{ objectPosition: `${percentageMoved + 100}% 50%` }}

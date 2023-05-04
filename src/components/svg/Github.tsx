@@ -6,7 +6,12 @@ function Github() {
   const currentTheme = theme === 'system' ? systemTheme : theme;
 
   return (
-    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128' height={32}>
+    <svg
+      className='hover:cursor-pointer'
+      xmlns='http://www.w3.org/2000/svg'
+      viewBox='0 0 128 128'
+      height={32}
+    >
       <g fill={theme === 'dark' ? '#FFFFFF' : '#181616'}>
         <path
           fillRule='evenodd'
