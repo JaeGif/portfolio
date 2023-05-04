@@ -1,6 +1,6 @@
 import React from 'react';
-import Github from './svg/Github';
-import LinkedIn from './svg/LinkedIn';
+import Github from '../svg/Github';
+import LinkedIn from '../svg/LinkedIn';
 
 function SocialLinks() {
   return (

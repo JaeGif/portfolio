@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Menu from './svg/Menu';
+import Menu from '../svg/Menu';
 import MobileMenuOptions from './MobileMenuOptions';
 type MobileMenuOptionsProps = {
   toggleMenu: Function;

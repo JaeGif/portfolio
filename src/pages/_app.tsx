@@ -1,9 +1,9 @@
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'next-themes';
-import Header from '@/components/Header';
+import Header from '@/components/menu/Header';
 import { useState } from 'react';
-import MobileMenuModal from '@/components/MobileMenuModal';
+import MobileMenuModal from '@/components/menu/MobileMenuModal';
 
 export default function App({ Component, pageProps }: AppProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

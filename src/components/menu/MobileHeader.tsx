@@ -1,6 +1,6 @@
 import React from 'react';
-import ThemeToggle from './svg/ThemeToggle';
-import Menu from './svg/Menu';
+import ThemeToggle from '../svg/ThemeToggle';
+import Menu from '../svg/Menu';
 type MobileHeaderProps = {
   toggleMenu: Function;
 };
