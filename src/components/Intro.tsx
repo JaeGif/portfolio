@@ -16,8 +16,8 @@ function Intro() {
   }, []);
   return (
     // 7rem is height of header
-    <div className='w-screen h-[calc(100vh-7rem)] flex flex-col justify-start mt-10 items-center gap-5'>
-      <div className='flex flex-col text-5xl mt-10 sm:mt-0 sm:text-[6vw] text-center w-8/12'>
+    <div className='w-full h-[calc(100vh-7rem)] flex flex-col justify-start mt-10 items-center gap-5'>
+      <div className='flex flex-col text-5xl mt-10 sm:mt-0 sm:text-[6vw] text-center w-full'>
         <p className='m-11'>Jacob Gifford</p>
         <p>Full Stack Developer</p>
       </div>
