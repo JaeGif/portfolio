@@ -10,7 +10,7 @@ function Footer() {
       <div className='h-[1px] w-11/12 dark:bg-white bg-gray-950'>
         <p className='invisible'>dummy content</p>
       </div>
-      <div className='flex justify-center items-center gap-2 p-5'>
+      <div className='flex flex-col justify-center items-center gap-2 p-5'>
         <p className='text-sm text-gray-100'>This site built with</p>
         <div className='flex gap-2'>
           <Image
