@@ -5,8 +5,13 @@ import SymphonyLinks from './SymphonyLinks';
 import SymphonyStack from './SymphonyStack';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import useMediaQuery from '@/hooks/useMediaQuery';
 
 function SymphonyDetails() {
+  const isSm = useMediaQuery('(min-width: 640px)');
+  const isMd = useMediaQuery('(min-width: 768px)');
+  const isLg = useMediaQuery('(min-width: 1024px)');
+
   return (
     <span className='flex w-full p-2 sm:p-5 gap-5'>
       <h1 className='text-7xl hidden sm:flex w-20'>1.</h1>
@@ -54,12 +59,13 @@ function SymphonyDetails() {
         <div className='flex gap-2 justify-center'>
           <motion.div
             whileHover={{
-              x: -100,
-              scale: 1.5,
+              x: isLg ? -100 : 0,
+              scale: isLg ? 1.5 : 1.1,
               transition: { duration: 0.2 },
             }}
             whileTap={{
-              scale: 1.5,
+              x: isLg ? -100 : 0,
+              scale: isLg ? 1.5 : 1.1,
               transition: { duration: 0.2 },
             }}
             className='rounded-xl overflow-hidden shadow-md h-96'
