@@ -14,9 +14,9 @@ function BattleshipDetails() {
         <div className='hidden sm:flex absolute top-5 left-5 h-full w-full bg-gray-950 dark:bg-white rounded-lg -z-10'></div>
         <div className='flex flex-col'>
           <div>
-            <h1 className='text-3xl'>Battleship</h1>
+            <h1 className='text-3xl'>Totally Not Battleship</h1>
             <h2 className='text-xl dark:text-blue-300 text-pink-500'>
-              Instant Messaging App
+              Battleship Game
             </h2>
           </div>
           <div className='flex'>

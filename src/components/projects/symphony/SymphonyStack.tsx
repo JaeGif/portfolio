@@ -1,7 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
+import { useTheme } from 'next-themes';
 
 function SymphonyStack() {
+  const { systemTheme, theme, setTheme } = useTheme();
+  const currentTheme = theme === 'system' ? systemTheme : theme;
   return (
     <div className='flex gap-2 flex-wrap'>
       <Image
@@ -31,7 +34,11 @@ function SymphonyStack() {
       <Image
         height={48}
         width={48}
-        src={'/assets/favicons/express-original.svg'}
+        src={
+          currentTheme === 'dark'
+            ? '/assets/favicons/express-white.svg'
+            : '/assets/favicons/express-original.svg'
+        }
         alt='express'
       />
       <Image
@@ -43,7 +50,11 @@ function SymphonyStack() {
       <Image
         height={48}
         width={48}
-        src={'/assets/favicons/socketio-original.svg'}
+        src={
+          currentTheme === 'dark'
+            ? '/assets/favicons/socketio-white.svg'
+            : '/assets/favicons/socketio-original.svg'
+        }
         alt='socket.io'
       />
       <Image
