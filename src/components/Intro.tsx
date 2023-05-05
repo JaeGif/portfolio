@@ -24,7 +24,7 @@ function Intro() {
       <nav className='flex gap-5 justify-center'>
         <motion.button
           whileHover={{ scale: 1.05 }}
-          className='p-2 border-2 dark:border-white border-black rounded-md flex gap-1'
+          className='p-2 border-2 dark:border-white border-black rounded-md flex items-center gap-1 text-lg'
         >
           Resume
           <svg
@@ -41,7 +41,7 @@ function Intro() {
         </motion.button>
         <Link href={'/contact'}>
           <motion.p
-            className='p-2 border-2 dark:border-white border-black rounded-md'
+            className='p-2 border-2 dark:border-white border-black rounded-md text-lg'
             whileHover={{ scale: 1.05 }}
           >
             Contact

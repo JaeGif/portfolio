@@ -27,7 +27,7 @@ function BattleshipDetails() {
           <div className='flex'>
             <div className='p-2 pr-5 flex flex-col gap-4'>
               <div>
-                <h2 className='font-semibold text-2xl'>About</h2>
+                <h2 className='font-bold text-2xl'>About</h2>
                 <p>
                   Battleship is a full stack instant messaging application built
                   to practice using industry standard technologies. This project

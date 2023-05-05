@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 function LinkedIn() {
   return (
     <motion.svg
-      whileHover={{ scale: 1.2 }}
+      whileHover={{ y: -5 }}
       className='hover:cursor-pointer'
       xmlns='http://www.w3.org/2000/svg'
       viewBox='0 0 128 128'

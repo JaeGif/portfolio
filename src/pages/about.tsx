@@ -18,7 +18,7 @@ function about() {
       </Head>
       <TransitionEffect />
       <div className='flex flex-col items-center overflow-hidden p-5 gap-5'>
-        <h1 className='text-3xl sm:text-[8vw] w-full text-center flex justify-center gap-4'>
+        <h1 className='text-2xl sm:text-[7vw] w-full text-center flex justify-center gap-4 mt-10'>
           <motion.p
             initial={{ y: 90, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -33,20 +33,22 @@ function about() {
           >
             with{' '}
           </motion.p>{' '}
-          <motion.p
-            initial={{ y: 90, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 1.6, duration: 0.5 }}
-          >
-            creativity
-          </motion.p>
-          <motion.p
-            initial={{ y: 75, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 1.8, duration: 0.5 }}
-          >
-            .
-          </motion.p>
+          <span className='flex gap-0'>
+            <motion.p
+              initial={{ y: 90, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 1.6, duration: 0.5 }}
+            >
+              creativity
+            </motion.p>
+            <motion.p
+              initial={{ y: 75, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 1.8, duration: 0.5 }}
+            >
+              .
+            </motion.p>
+          </span>
         </h1>
         <div className='flex flex-col gap-5'>
           <div className='flex flex-col overflow-hidden min-w-[33%] gap-3'>
