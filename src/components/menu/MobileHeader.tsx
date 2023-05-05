@@ -6,7 +6,7 @@ type MobileHeaderProps = {
 };
 function MobileHeader({ toggleMenu }: MobileHeaderProps) {
   return (
-    <div className='sm:hidden sm:invisible visible flex w-screen p-4 justify-between items-center'>
+    <div className='sm:hidden sm:invisible visible flex w-full justify-between items-center'>
       <Menu toggleMenu={toggleMenu} />
       <ThemeToggle />
     </div>

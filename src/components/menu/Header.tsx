@@ -27,7 +27,7 @@ function Header({ toggleMenu }: HeaderProps) {
     animate: { x: '0' },
   };
   return (
-    <header className='invisible sm:visible sm:w-full sm:flex sm:px-32 sm:py-8 sm:justify-between'>
+    <header className='invisible sm:visible sm:w-full sm:flex sm:px-28 sm:py-3 sm:justify-between'>
       <MobileHeader toggleMenu={toggleMenu} />
       <nav className='hidden sm:flex w-1/3 justify-start gap-8'>
         <motion.div
