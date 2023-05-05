@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-function SymphonyStack() {
+function BattleshipStack() {
   return (
     <div className='flex gap-2 flex-wrap'>
       <Image
@@ -69,4 +69,4 @@ function SymphonyStack() {
   );
 }
 
-export default SymphonyStack;
+export default BattleshipStack;

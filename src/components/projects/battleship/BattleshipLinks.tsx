@@ -3,13 +3,13 @@ import Link from 'next/link';
 import Client from '@/components/svg/Client';
 import Server from '@/components/svg/Server';
 import { useTheme } from 'next-themes';
-function InstagramLinks() {
+function BattleshipLinks() {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === 'system' ? systemTheme : theme;
   return (
     <div className='flex gap-2'>
       <Link
-        href={'https://github.com/JaeGif/InstagramClientPages'}
+        href={'https://github.com/JaeGif/BattleshipClientPages'}
         target='_blank'
       >
         <div className='p-2 border-2 dark:border-white border-black rounded-md flex gap-1'>
@@ -17,7 +17,7 @@ function InstagramLinks() {
         </div>
       </Link>
       <Link
-        href={'https://github.com/JaeGif/InstagramServerRailway'}
+        href={'https://github.com/JaeGif/BattleshipServerRailway'}
         target='_blank'
       >
         <div className='p-2 border-2 dark:border-white border-black rounded-md flex gap-1'>
@@ -26,7 +26,7 @@ function InstagramLinks() {
         </div>
       </Link>
       <Link
-        href={'https://jaegif.github.io/InstagramClientPages/'}
+        href={'https://jaegif.github.io/BattleshipClientPages/'}
         target='_blank'
       >
         <button className='p-2 border-2 dark:border-white border-black rounded-md flex gap-1'>
@@ -48,4 +48,4 @@ function InstagramLinks() {
   );
 }
 
-export default InstagramLinks;
+export default BattleshipLinks;

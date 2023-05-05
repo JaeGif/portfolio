@@ -7,13 +7,13 @@ function SymphonyLinks() {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === 'system' ? systemTheme : theme;
   return (
-    <div className='flex gap-2 p-4'>
+    <div className='flex gap-2'>
       <Link
         href={'https://github.com/JaeGif/symphonyClientPages'}
         target='_blank'
       >
         <div className='p-2 border-2 dark:border-white border-black rounded-md flex gap-1'>
-          <Client /> Client Source
+          <Client /> Client
         </div>
       </Link>
       <Link
@@ -22,7 +22,7 @@ function SymphonyLinks() {
       >
         <div className='p-2 border-2 dark:border-white border-black rounded-md flex gap-1'>
           <Server />
-          Server Source
+          Server
         </div>
       </Link>
       <Link
@@ -30,7 +30,7 @@ function SymphonyLinks() {
         target='_blank'
       >
         <button className='p-2 border-2 dark:border-white border-black rounded-md flex gap-1'>
-          View Live
+          Live
           <svg
             xmlns='http://www.w3.org/2000/svg'
             height='24'
