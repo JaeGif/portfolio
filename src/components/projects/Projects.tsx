@@ -13,7 +13,6 @@ function Projects() {
       </span>
       <div className='flex flex-col items-center gap-20'>
         <SymphonyDetails />
-
         <InstagramDetails />
         <BattleshipDetails />
       </div>
