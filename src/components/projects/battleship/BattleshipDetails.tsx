@@ -32,22 +32,11 @@ function BattleshipDetails() {
                   Battleship is a full stack instant messaging application built
                   to practice using industry standard technologies. This project
                   helped me learn{' '}
-                  <em className='text-blue-500 not-italic'>TypeScript</em>,{' '}
-                  <em className='text-blue-500  not-italic'>TailwindCSS</em>,{' '}
-                  <em className='text-blue-500  not-italic'>Framer Motion</em>,
-                  and more advanced uses of{' '}
-                  <em className='text-blue-500  not-italic'>React Router</em>.
-                </p>
-                <br />
-                <p>
-                  Battleship also provided a chance to flex my creative
-                  front-end skills as I reverse-engineered the login page
-                  animations from
-                  <Link href='https://www.arena.net/en' target='_blank'>
-                    <em className='text-blue-500 not-italic'> Arena.net</em>
-                  </Link>
-                  , making my own animation with{' '}
-                  <em className='not-italic text-blue-500 '>Photoshop</em>.
+                  <em className='text-blue-500 not-italic'>Jest</em>, for unit
+                  testing, advanced{' '}
+                  <em className='text-blue-500  not-italic'>Javascript</em>,{' '}
+                  <em className='text-blue-500  not-italic'>Web API&apos;s</em>{' '}
+                  like the Audio API and Keyboard API.
                 </p>
               </div>
               <BattleshipLinks />
@@ -59,18 +48,18 @@ function BattleshipDetails() {
           <motion.div
             whileHover={{
               x: isLg ? -100 : 0,
-              scale: isLg ? 1.5 : 1.1,
+              scale: isLg ? 1.2 : 1.1,
               transition: { duration: 0.2 },
             }}
             whileTap={{
               x: isLg ? -100 : 0,
-              scale: isLg ? 1.5 : 1.1,
+              scale: isLg ? 1.2 : 1.1,
               transition: { duration: 0.2 },
             }}
-            className='rounded-xl overflow-hidden shadow-lg h-96'
+            className='rounded-xl overflow-hidden shadow-lg'
           >
             <img
-              className='min-h-full max-w-full object-contain'
+              className='max-w-full object-contain'
               src='/assets/images/battleship/desktop.png'
               alt='project image'
               aria-label='project mobile view'
