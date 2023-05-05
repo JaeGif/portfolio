@@ -7,7 +7,7 @@ function Footer() {
   const currentTheme = theme === 'system' ? systemTheme : theme;
   return (
     <div className='w-full h-16 text-center items-center flex flex-col mt-5'>
-      <div className='h-[1px] w-screen dark:bg-white bg-gray-950'>
+      <div className='h-[1px] w-11/12 dark:bg-white bg-gray-950'>
         <p className='invisible'>dummy content</p>
       </div>
       <div className='flex justify-center items-center gap-2 p-5'>

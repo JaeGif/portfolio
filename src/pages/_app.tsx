@@ -5,6 +5,7 @@ import Header from '@/components/menu/Header';
 import { useEffect, useState } from 'react';
 import MobileMenuModal from '@/components/menu/MobileMenuModal';
 import Footer from '@/components/Footer';
+import TransitionEffect from '@/components/menu/TransitionEffect';
 
 export default function App({ Component, pageProps }: AppProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
