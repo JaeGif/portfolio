@@ -14,28 +14,19 @@ function InstagramLinks() {
     <>
       {mounted && (
         <div className='flex gap-2'>
-          <Link
-            href={'https://github.com/JaeGif/InstagramClientPages'}
-            target='_blank'
-          >
-            <div className='p-2 border-2 dark:border-white border-black rounded-md flex gap-1'>
+          <Link href={'https://github.com/JaeGif/BlogAPI'} target='_blank'>
+            <div className='p-2 border-2 dark:border-white border-black rounded-md flex gap-1 hover:border-pink-500 dark:hover:border-pink-500'>
               <Client /> Client
             </div>
           </Link>
-          <Link
-            href={'https://github.com/JaeGif/InstagramServerRailway'}
-            target='_blank'
-          >
-            <div className='p-2 border-2 dark:border-white border-black rounded-md flex gap-1'>
+          <Link href={'https://github.com/JaeGif/RESTful_API'} target='_blank'>
+            <div className='p-2 border-2 dark:border-white border-black rounded-md flex gap-1 hover:border-pink-500 dark:hover:border-pink-500'>
               <Server />
               Server
             </div>
           </Link>
-          <Link
-            href={'https://jaegif.github.io/InstagramClientPages/'}
-            target='_blank'
-          >
-            <button className='p-2 border-2 dark:border-white border-black rounded-md flex gap-1'>
+          <Link href={'https://jaegif.github.io/BlogAPI/'} target='_blank'>
+            <button className='p-2 border-2 dark:border-white border-black rounded-md flex gap-1 hover:border-pink-500 dark:hover:border-pink-500'>
               Live
               <svg
                 xmlns='http://www.w3.org/2000/svg'
