@@ -65,7 +65,11 @@ function Technologies() {
               <Image
                 height={54}
                 width={54}
-                src='/assets/favicons/html5-original-wordmark.svg'
+                src={
+                  currentTheme === 'dark'
+                    ? '/assets/favicons/html5-white.svg'
+                    : '/assets/favicons/html5-original-wordmark.svg'
+                }
                 alt='technologies I use'
                 aria-label='html5'
                 title='HTML5'
@@ -73,7 +77,11 @@ function Technologies() {
               <Image
                 height={54}
                 width={54}
-                src='/assets/favicons/css3-original-wordmark.svg'
+                src={
+                  currentTheme === 'dark'
+                    ? '/assets/favicons/css3-white.svg'
+                    : '/assets/favicons/css3-original-wordmark.svg'
+                }
                 alt='technologies I use'
                 aria-label='css3'
                 title='CSS3'
@@ -162,6 +170,18 @@ function Technologies() {
                 alt='technologies I use'
                 aria-label='mongodb'
                 title='MongoDB'
+              />
+              <Image
+                height={48}
+                width={48}
+                src={
+                  currentTheme === 'dark'
+                    ? '/assets/favicons/passport.svg'
+                    : '/assets/favicons/passport-dark.svg'
+                }
+                alt='technologies I use'
+                aria-label='passport.js'
+                title='Passport.js'
               />
               <Image
                 height={54}

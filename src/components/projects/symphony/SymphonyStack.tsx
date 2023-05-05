@@ -28,6 +28,12 @@ function SymphonyStack() {
       <Image
         height={48}
         width={48}
+        src={'/assets/favicons/jest-plain.svg'}
+        alt='jest'
+      />
+      <Image
+        height={48}
+        width={48}
         src={'/assets/favicons/nodejs-original.svg'}
         alt='node'
       />

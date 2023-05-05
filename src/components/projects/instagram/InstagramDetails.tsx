@@ -25,28 +25,27 @@ function InstagramDetails() {
             </h2>
           </div>
           <div className='flex'>
-            <div className='p-2 flex flex-col gap-4'>
-              <div>
+            <div className='p-2 pr-5 flex flex-col gap-4'>
+              <div className=''>
                 <h2 className='font-semibold text-2xl'>About</h2>
                 <p>
-                  Instagram is a full stack instant messaging application built
-                  to practice using industry standard technologies. This project
-                  helped me learn{' '}
-                  <em className='text-blue-500 not-italic'>TypeScript</em>,{' '}
-                  <em className='text-blue-500  not-italic'>TailwindCSS</em>,{' '}
-                  <em className='text-blue-500  not-italic'>Framer Motion</em>,
-                  and more advanced uses of{' '}
-                  <em className='text-blue-500  not-italic'>React Router</em>.
+                  Totally Not Instagram is a full stack instagram clone. The
+                  final product has most of the key features of Instagram,
+                  including photo filters, following and notification systems,
+                  and CRUD operations for posts and users. This was my first
+                  true full stack application, utilizing my own REST API built
+                  with <em className='text-blue-500 not-italic'>Express.js</em>.
                 </p>
                 <br />
                 <p>
-                  Instagram also provided a chance to flex my creative front-end
-                  skills as I reverse-engineered the login page animations from
-                  <Link href='https://www.arena.net/en' target='_blank'>
-                    <em className='text-blue-500 not-italic'> Arena.net</em>
-                  </Link>
-                  , making my own animation with{' '}
-                  <em className='not-italic text-blue-500 '>Photoshop</em>.
+                  This was the first project that forced me well outside of my
+                  comfortable tech stack, I learned{' '}
+                  <em className='text-blue-500  not-italic'>React Query</em>,{' '}
+                  <em className='text-blue-500  not-italic'>Vite</em>, and{' '}
+                  <em className='text-blue-500  not-italic'>Mongoose</em> to
+                  finish the project. Authorization is handled by{' '}
+                  <em className='text-blue-500  not-italic'>Passport.js</em>{' '}
+                  using JWT&apos;s.
                 </p>
               </div>
               <InstagramLinks />
@@ -67,7 +66,7 @@ function InstagramDetails() {
               scale: isLg ? 1.5 : 1.1,
               transition: { duration: 0.2 },
             }}
-            className='rounded-xl overflow-hidden shadow-md h-96'
+            className='rounded-xl overflow-hidden shadow-lg h-96'
           >
             <img
               className='h-full max-w-fit'
