@@ -18,7 +18,7 @@ function SymphonyLinks() {
             href={'https://github.com/JaeGif/symphonyClientPages'}
             target='_blank'
           >
-            <div className='p-2 border-2 dark:border-white border-black rounded-md flex gap-1'>
+            <div className='p-2 border-2 dark:border-white border-black rounded-md flex gap-2'>
               <Client /> Client
             </div>
           </Link>
@@ -26,7 +26,7 @@ function SymphonyLinks() {
             href={'https://github.com/JaeGif/symphonyServerRailway'}
             target='_blank'
           >
-            <div className='p-2 border-2 dark:border-white border-black rounded-md flex gap-1'>
+            <div className='p-2 border-2 dark:border-white border-black rounded-md flex gap-2'>
               <Server />
               Server
             </div>
@@ -35,7 +35,7 @@ function SymphonyLinks() {
             href={'https://jaegif.github.io/symphonyClientPages/'}
             target='_blank'
           >
-            <button className='p-2 border-2 dark:border-white border-black rounded-md flex gap-1'>
+            <button className='p-2 border-2 dark:border-white border-black rounded-md flex gap-2'>
               Live
               <svg
                 xmlns='http://www.w3.org/2000/svg'

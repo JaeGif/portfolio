@@ -10,7 +10,7 @@ function BattleshipDetails() {
   return (
     <span className='flex w-full p-2 sm:p-5 gap-8'>
       <h1 className='text-7xl hidden sm:flex'>3.</h1>
-      <div className='flex flex-col sm:flex-row relative sm:w-5/6 shadow-md border-2 dark:border-white border-gray-950 bg-white dark:bg-gray-950 rounded-md mt-5 p-4'>
+      <div className='flex flex-col lg:flex-row relative sm:w-5/6 shadow-md border-2 dark:border-white border-gray-950 bg-white dark:bg-gray-950 rounded-md mt-5 p-4'>
         <div className='hidden sm:flex absolute top-5 left-5 h-full w-full bg-gray-950 dark:bg-white rounded-lg -z-10'></div>
         <div className='flex flex-col'>
           <div>
@@ -50,7 +50,7 @@ function BattleshipDetails() {
             </div>
           </div>
         </div>
-        <div className='flex gap-2 justify-center'>
+        <div className='flex gap-2 justify-center items-center'>
           <motion.div
             whileHover={{
               x: -100,
@@ -64,8 +64,8 @@ function BattleshipDetails() {
             className='rounded-xl overflow-hidden shadow-md h-96'
           >
             <img
-              className='h-full max-w-fit'
-              src='/assets/images/Battleship/mobile.png'
+              className='min-h-full max-w-full object-contain'
+              src='/assets/images/battleship/desktop.png'
               alt='project image'
               aria-label='project mobile view'
             />

@@ -10,7 +10,7 @@ function Technologies() {
     setMounted(true);
   }, []);
   return (
-    <div id='technologies' className='flex flex-col items-center p-5'>
+    <div id='technologies' className='flex flex-col items-center p-5 mb-5'>
       <h1 className='text-4xl p-5 font-semibold'>Technologies</h1>
       {/* Stack container */}
       {mounted && (
