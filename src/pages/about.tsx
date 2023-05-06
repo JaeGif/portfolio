@@ -33,7 +33,10 @@ function about() {
           >
             with{' '}
           </motion.p>{' '}
-          <span className='flex gap-0'>
+          <span
+            className='flex gap-0 justify-center font-pixeloid text-blue-500
+'
+          >
             <motion.p
               initial={{ y: 90, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -41,14 +44,13 @@ function about() {
             >
               passion
             </motion.p>
-            <motion.img
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 2.5, duration: 0.1 }}
-              className='-mt-2 sm:-mb-[1.5vw] w-6'
-              src={'/assets/images/flame.gif'}
-              alt='flame gif'
-            />
+            <motion.p
+              initial={{ y: 90, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 1.9, duration: 0.5 }}
+            >
+              .
+            </motion.p>
           </span>
         </h1>
         <div className='flex flex-col gap-5'>
@@ -73,9 +75,6 @@ function about() {
                     aria-label='Picture of Jacob'
                   />
                 </div>
-              </div>
-              <div>
-                <p>Experience in many different industries and businesses.</p>
               </div>
             </div>
           </div>

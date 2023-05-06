@@ -38,6 +38,7 @@ module.exports = {
       },
       fontFamily: {
         montserrat: ['montserrat', 'sans-serif'],
+        pixeloid: ['pixeloid', 'sans-serif'],
       },
     },
   },
