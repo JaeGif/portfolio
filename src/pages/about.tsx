@@ -39,15 +39,16 @@ function about() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 1.6, duration: 0.5 }}
             >
-              creativity
+              passion
             </motion.p>
-            <motion.p
-              initial={{ y: 75, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 1.8, duration: 0.5 }}
-            >
-              .
-            </motion.p>
+            <motion.img
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 2.5, duration: 0.1 }}
+              className='-mt-2 sm:-mb-[1.5vw] w-6'
+              src={'/assets/images/flame.gif'}
+              alt='flame gif'
+            />
           </span>
         </h1>
         <div className='flex flex-col gap-5'>
@@ -62,16 +63,19 @@ function about() {
                 project I make challenges me in some new way and forces me to
                 grow, and I wouldn&apos;t have it any other way.
               </p>
-              <div className='h-fit w-fit relative border-2 dark:border-white dark:bg-gray-950 bg-white border-gray-950 rounded-3xl mt-10 mb-10 p-2 sm:p-4 shadow-lg'>
+              <div className='h-fit w-fit max-w-[33%] relative border-2 dark:border-white dark:bg-gray-950 bg-white border-gray-950 rounded-3xl mt-10 mb-10 p-2 sm:p-4 shadow-lg'>
                 <div className='rounded-xl overflow-hidden border-[1px] border-gray-950 p-2'>
                   <Image
                     height={500}
-                    width={500}
+                    width={400}
                     src={'/assets/images/punchout.png'}
                     alt='picture of Jacob'
                     aria-label='Picture of Jacob'
                   />
                 </div>
+              </div>
+              <div>
+                <p>Experience in many different industries and businesses.</p>
               </div>
             </div>
           </div>

@@ -15,7 +15,7 @@ function ImageCarousel() {
       maxDelta = window.innerWidth / 2;
     const percentage = (mouseDelta / maxDelta) * -100,
       nextPercentageNoBorder = previousPercentageMoved + percentage,
-      nextPercentage = Math.max(Math.min(nextPercentageNoBorder, 0), -100);
+      nextPercentage = Math.max(Math.min(nextPercentageNoBorder, 50), -50);
     setPercentageMoved(nextPercentage);
   };
 
@@ -35,43 +35,43 @@ function ImageCarousel() {
       }}
       onMouseMove={(e) => handleMouseMove(e)}
       onMouseDown={(e) => handleMouseDown(e)}
-      className={`h-80 flex gap-4 select-none`}
+      className={`h-80 flex gap-4 select-none justify-center`}
     >
       <motion.img
-        animate={{ objectPosition: `${100 + percentageMoved}%, center)` }}
-        transition={{ duration: 1 }}
+        whileHover={{ scale: 1.3, y: -30 }}
+        animate={{ objectPosition: `${100 + percentageMoved}% center)` }}
         draggable={false}
-        className={`w-[40vmin] h-full object-cover object-center`}
+        className={`w-[40vmin] h-full object-cover`}
         src={'/assets/images/photography/beach.jpg'}
         alt='photography showcase'
-        style={{ objectPosition: `${percentageMoved + 100}% center` }}
+        style={{ objectPosition: `${percentageMoved + 50}% center` }}
       />
       <motion.img
-        animate={{ objectPosition: `${100 + percentageMoved}%, center)` }}
-        transition={{ duration: 1 }}
+        whileHover={{ scale: 1.3, y: -30 }}
+        animate={{ objectPosition: `${100 + percentageMoved}% center)` }}
         draggable={false}
-        className={`w-[40vmin] h-full object-cover object-center`}
+        className={`w-[40vmin] h-full object-cover`}
         src={'/assets/images/photography/mountains2.png'}
         alt='photography showcase'
-        style={{ objectPosition: `${percentageMoved + 100}% 50%` }}
+        style={{ objectPosition: `${percentageMoved + 50}% center` }}
       />
       <motion.img
-        animate={{ objectPosition: `${100 + percentageMoved}%, center)` }}
-        transition={{ duration: 1 }}
+        whileHover={{ scale: 1.3, y: -30 }}
+        animate={{ objectPosition: `${100 + percentageMoved}% center)` }}
         draggable={false}
-        className={`w-[40vmin] h-full object-cover object-center hidden sm:flex`}
+        className={`w-[40vmin] h-full object-cover hidden sm:flex`}
         src={'/assets/images/photography/water-rock.jpg'}
         alt='photography showcase'
-        style={{ objectPosition: `${percentageMoved + 100}% 50%` }}
+        style={{ objectPosition: `${percentageMoved + 50}%` }}
       />
       <motion.img
-        animate={{ objectPosition: `${100 + percentageMoved}%, center)` }}
-        transition={{ duration: 1 }}
+        whileHover={{ scale: 1.3, y: -30 }}
+        animate={{ objectPosition: `${100 + percentageMoved}% center)` }}
         draggable={false}
-        className={`w-[40vmin] h-full object-cover object-center`}
+        className={`w-[40vmin] h-full object-cover`}
         src={'/assets/images/photography/shh.jpg'}
         alt='photography showcase'
-        style={{ objectPosition: `${percentageMoved + 100}% 50%` }}
+        style={{ objectPosition: `${percentageMoved + 50}%` }}
       />
     </motion.div>
   );
