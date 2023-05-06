@@ -12,7 +12,7 @@ function SymphonyLinks() {
   }, []);
   return (
     <>
-      <div className='flex gap-2'>
+      <div className='flex gap-2 flex-wrap'>
         <Link
           href={'https://github.com/JaeGif/symphonyClientPages'}
           target='_blank'

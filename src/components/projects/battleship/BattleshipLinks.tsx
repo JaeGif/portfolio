@@ -13,7 +13,7 @@ function BattleshipLinks() {
   return (
     <>
       {mounted && (
-        <div className='flex gap-2'>
+        <div className='flex gap-2 flex-wrap'>
           <Link href={'https://github.com/JaeGif/Battleship'} target='_blank'>
             <div className='p-2 border-2 dark:border-white border-black rounded-md flex gap-1 hover:border-pink-500 dark:hover:border-pink-500 '>
               <Client /> Client

@@ -65,6 +65,14 @@ function Footer() {
             aria-label='Photoshop'
             title='Adobe Photoshop'
           />
+          <Image
+            height={40}
+            width={40}
+            src='/assets/favicons/digitalocean-original.svg'
+            alt='technologies I use'
+            aria-label='digital ocean'
+            title='Digital Ocean'
+          />
         </div>
         <em className='text-sm text-gray-100'>
           Copyright &#169; 2023 Jacob Gifford

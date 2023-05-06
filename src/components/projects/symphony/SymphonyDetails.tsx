@@ -25,7 +25,7 @@ function SymphonyDetails() {
             </h2>
           </div>
           <div className='flex'>
-            <div className='p-2 pr-5 flex flex-col gap-4'>
+            <div className='p-2 sm:pr-5 flex flex-col gap-4'>
               <div>
                 <h2 className='font-semibold text-2xl'>About</h2>
                 <p>
