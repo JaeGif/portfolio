@@ -87,14 +87,7 @@ function Header({ toggleMenu }: HeaderProps) {
           </motion.div>
         </motion.div>
       </nav>
-      <div className='hidden sm:flex w-1/3 justify-center'>
-        <Image
-          height={50}
-          width={100}
-          src={'/assets/images/resizedcoffee.png'}
-          alt='logo'
-        />
-      </div>
+
       <div className='hidden sm:flex w-1/3 justify-end items-center gap-3'>
         <Link
           href={'https://github.com/JaeGif'}

@@ -15,7 +15,7 @@ function MobileMenuModal({ toggleMenu }: MobileMenuOptionsProps) {
     <div
       onClick={(e) => e.stopPropagation()}
       onScroll={(e) => e.stopPropagation()}
-      className='fixed top-16 left-0 w-screen h-[calc(100vh-64px)] dark:bg-gray-950 bg-white z-50'
+      className='fixed top-16 left-0 w-screen h-[calc(100vh-64px)] dark:bg-gray-950 bg-gray-10 z-50'
     >
       <MobileMenuOptions toggleMenu={toggleMenu} />
     </div>
