@@ -42,6 +42,12 @@ function BattleshipStack() {
       <Image
         height={48}
         width={48}
+        src={'/assets/favicons/git-original.svg'}
+        alt='git'
+      />
+      <Image
+        height={48}
+        width={48}
         src={'/assets/favicons/photoshop-line.svg'}
         alt='photoshop'
       />

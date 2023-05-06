@@ -29,12 +29,18 @@ function BattleshipDetails() {
               <div>
                 <h2 className='font-bold text-2xl'>About</h2>
                 <p>
-                  Battleship is a full stack instant messaging application built
-                  to practice using industry standard technologies. This project
-                  helped me learn{' '}
-                  <em className='text-blue-500 not-italic'>Jest</em>, for unit
-                  testing, advanced{' '}
-                  <em className='text-blue-500  not-italic'>Javascript</em>,{' '}
+                  Battleship is a more exciting version of the classic game. It
+                  was built entirely vanilla and features some special additions
+                  in creative attacks, like the radar and sniper as well as an
+                  energy system and a smart computer opponent. It is also
+                  playable in local multiplayer.
+                </p>
+                <br />
+                <p>
+                  This project was developed in a Test Driven manner with{' '}
+                  <em className='text-blue-500 not-italic'>Jest</em>, advanced{' '}
+                  <em className='text-blue-500  not-italic'>Javascript</em>, and
+                  various{' '}
                   <em className='text-blue-500  not-italic'>Web API&apos;s</em>{' '}
                   like the Audio API and Keyboard API.
                 </p>

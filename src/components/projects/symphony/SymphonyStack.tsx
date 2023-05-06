@@ -28,6 +28,24 @@ function SymphonyStack() {
       <Image
         height={48}
         width={48}
+        src={'/assets/favicons/react-query.svg'}
+        alt='react-query'
+      />
+      <Image
+        height={48}
+        width={48}
+        src={'/assets/favicons/tailwindcss-plain.svg'}
+        alt='tailwindcss'
+      />
+      <Image
+        height={48}
+        width={48}
+        src={'/assets/favicons/framer-motion.svg'}
+        alt='framer motion'
+      />
+      <Image
+        height={48}
+        width={48}
         src={'/assets/favicons/jest-plain.svg'}
         alt='jest'
       />
@@ -46,6 +64,16 @@ function SymphonyStack() {
             : '/assets/favicons/express-original.svg'
         }
         alt='express'
+      />
+      <Image
+        height={40}
+        width={40}
+        src={
+          currentTheme === 'dark'
+            ? '/assets/favicons/passport.svg'
+            : '/assets/favicons/passport-dark.svg'
+        }
+        alt='passport.js'
       />
       <Image
         height={48}
@@ -75,6 +103,12 @@ function SymphonyStack() {
         width={48}
         src={'/assets/favicons/vite.svg'}
         alt='vite'
+      />
+      <Image
+        height={48}
+        width={48}
+        src={'/assets/favicons/git-original.svg'}
+        alt='git'
       />
       <Image
         height={48}

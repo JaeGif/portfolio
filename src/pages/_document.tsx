@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang='en'>
       <title>J. Gifford</title>
-      <link rel='icon' href='/assets/images/logo.png'></link>
+      <link rel='icon' href='/assets/images/bluetitle.png'></link>
       <Head />
       <body>
         <Main />

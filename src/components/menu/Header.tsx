@@ -90,8 +90,8 @@ function Header({ toggleMenu }: HeaderProps) {
       <div className='hidden sm:flex w-1/3 justify-center'>
         <Image
           height={50}
-          width={50}
-          src={'/assets/images/logo.png'}
+          width={100}
+          src={'/assets/images/resizedcoffee.png'}
           alt='logo'
         />
       </div>
