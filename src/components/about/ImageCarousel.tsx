@@ -51,7 +51,16 @@ function ImageCarousel() {
         transition={{ duration: 1 }}
         draggable={false}
         className={`w-[40vmin] h-full object-cover object-center`}
-        src={'/assets/images/photography/road.png'}
+        src={'/assets/images/photography/mountains2.png'}
+        alt='photography showcase'
+        style={{ objectPosition: `${percentageMoved + 100}% 50%` }}
+      />
+      <motion.img
+        animate={{ objectPosition: `${100 + percentageMoved}%, center)` }}
+        transition={{ duration: 1 }}
+        draggable={false}
+        className={`w-[40vmin] h-full object-cover object-center hidden sm:flex`}
+        src={'/assets/images/photography/water-rock.jpg'}
         alt='photography showcase'
         style={{ objectPosition: `${percentageMoved + 100}% 50%` }}
       />
@@ -61,33 +70,6 @@ function ImageCarousel() {
         draggable={false}
         className={`w-[40vmin] h-full object-cover object-center`}
         src={'/assets/images/photography/shh.jpg'}
-        alt='photography showcase'
-        style={{ objectPosition: `${percentageMoved + 100}% 50%` }}
-      />
-      <motion.img
-        animate={{ objectPosition: `${100 + percentageMoved}%, center)` }}
-        transition={{ duration: 1 }}
-        draggable={false}
-        className={`w-[40vmin] h-full object-cover object-center`}
-        src={'/assets/images/photography/boat.png'}
-        alt='photography showcase'
-        style={{ objectPosition: `${percentageMoved + 100}% 50%` }}
-      />
-      <motion.img
-        animate={{ objectPosition: `${100 + percentageMoved}%, center)` }}
-        transition={{ duration: 1 }}
-        draggable={false}
-        className={`w-[40vmin] h-full object-cover object-center`}
-        src={'/assets/images/photography/mountains2.png'}
-        alt='photography showcase'
-        style={{ objectPosition: `${percentageMoved + 100}% 50%` }}
-      />
-      <motion.img
-        animate={{ objectPosition: `${100 + percentageMoved}%, center)` }}
-        transition={{ duration: 1 }}
-        draggable={false}
-        className={`w-[40vmin] h-full object-cover object-center`}
-        src={'/assets/images/photography/mountain.jpg'}
         alt='photography showcase'
         style={{ objectPosition: `${percentageMoved + 100}% 50%` }}
       />
