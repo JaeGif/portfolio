@@ -22,14 +22,14 @@ function about() {
           <motion.p
             initial={{ y: 90, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 1, duration: 0.5 }}
+            transition={{ delay: 1.2, duration: 0.5 }}
           >
             Build{' '}
           </motion.p>
           <motion.p
             initial={{ y: 90, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 1.3, duration: 0.5 }}
+            transition={{ delay: 1.5, duration: 0.5 }}
           >
             with{' '}
           </motion.p>{' '}
@@ -40,14 +40,14 @@ function about() {
             <motion.p
               initial={{ y: 90, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 1.6, duration: 0.5 }}
+              transition={{ delay: 1.8, duration: 0.5 }}
             >
               passion
             </motion.p>
             <motion.p
               initial={{ y: 90, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 1.9, duration: 0.5 }}
+              transition={{ delay: 2.1, duration: 0.5 }}
             >
               .
             </motion.p>
