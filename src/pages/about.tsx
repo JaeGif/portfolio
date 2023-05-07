@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import Head from 'next/head';
 import ScrollArrowLeft from '@/components/about/ScrollArrowLeft';
 import ScrollArrowRight from '@/components/about/ScrollArrowRight';
+import Link from 'next/link';
 
 function about() {
   return (
@@ -74,6 +75,32 @@ function about() {
                 constantly improve my skills. Every project I make challenges me
                 in some new way and forces me to grow, and I wouldn&apos;t have
                 it any other way.
+              </p>
+              <p className='text-lg'>
+                If you&apos;re interested in checking out my other projects,
+                feel free to head off to my{' '}
+                <Link
+                  className='cursor-pointer'
+                  href={'https://github.com/JaeGif'}
+                  target='_blank'
+                >
+                  <em className='cursor-pointer not-italic text-blue-500'>
+                    GitHub
+                  </em>
+                </Link>{' '}
+                and{' '}
+                <Link
+                  className='cursor-pointer'
+                  href={'https://www.linkedin.com/in/jacob-gifford-dev/'}
+                  target='_blank'
+                >
+                  {' '}
+                  <em className='cursor-pointer not-italic text-blue-500'>
+                    LinkedIn
+                  </em>
+                </Link>{' '}
+                pages. Nearly all of my finished projects and experience are
+                public.
               </p>
             </span>
             <div className='h-full w-full flex justify-center items-center'>
