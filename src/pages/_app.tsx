@@ -5,7 +5,7 @@ import Header from '@/components/menu/Header';
 import { useEffect, useState } from 'react';
 import MobileMenuModal from '@/components/menu/MobileMenuModal';
 import Footer from '@/components/Footer';
-import TransitionEffect from '@/components/menu/TransitionEffect';
+import { AnimatePresence } from 'framer-motion';
 
 export default function App({ Component, pageProps }: AppProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -20,7 +20,10 @@ export default function App({ Component, pageProps }: AppProps) {
     <ThemeProvider attribute='class'>
       {mounted && (
         <>
-          {isMobileMenuOpen && <MobileMenuModal toggleMenu={toggleMenu} />}
+          <AnimatePresence>
+            {isMobileMenuOpen && <MobileMenuModal toggleMenu={toggleMenu} />}{' '}
+          </AnimatePresence>
+
           <Header toggleMenu={toggleMenu} />
           <Component {...pageProps} />
           <Footer />

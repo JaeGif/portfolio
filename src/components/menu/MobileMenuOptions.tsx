@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import SocialLinks from './SocialLinks';
-import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 
 type MobileMenuOptionsProps = {
@@ -18,11 +17,7 @@ function MobileMenuOptions({ toggleMenu }: MobileMenuOptionsProps) {
   }, [router]);
 
   return (
-    <motion.div
-      initial={{ x: '-100%' }}
-      animate={{ x: '0%' }}
-      className='flex flex-col w-full h-[calc(100%-32px)] items-center justify-center text-3xl gap-10'
-    >
+    <div className='flex flex-col w-full h-[calc(100%-32px)] items-center justify-center text-3xl gap-10'>
       <Link
         className={urlParam === '/' ? 'text-blue-500' : ''}
         onClick={() => toggleMenu()}
@@ -53,7 +48,7 @@ function MobileMenuOptions({ toggleMenu }: MobileMenuOptionsProps) {
         Contact
       </Link>
       <SocialLinks />
-    </motion.div>
+    </div>
   );
 }
 
