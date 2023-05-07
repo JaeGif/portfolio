@@ -6,6 +6,7 @@ function contact() {
     <>
       <Head>
         <title>J. Gifford | Contact</title>
+        <link rel='icon' href='/assets/images/bluetitle.png'></link>
         <meta name='description' content='Contact Jacob Gifford' />
       </Head>
       <TransitionEffect />

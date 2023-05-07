@@ -16,6 +16,7 @@ function about() {
     <>
       <Head>
         <title>J. Gifford | About</title>
+        <link rel='icon' href='/assets/images/bluetitle.png'></link>
         <meta
           name='description'
           content='Description of Jacob Giffords developer career'
