@@ -41,9 +41,14 @@ function Form() {
             minLength={1}
           ></textarea>
         </div>
-        <button className='flex w-full justify-center' type='submit'>
-          Send
-        </button>
+        <div className='w-full flex justify-center'>
+          <button
+            className='flex w-fit p-2 pr-3 pl-3 justify-center border-2 dark:border-gray-10 border-gray-800 rounded-md'
+            type='submit'
+          >
+            Send
+          </button>
+        </div>
       </form>
     </div>
   );

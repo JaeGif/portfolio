@@ -11,7 +11,8 @@ function PersonalDescription() {
             I&apos;m Jacob, a Full Stack Engineer with a passion for building
             beautiful user-centric applications. I&apos;m constantly learning
             new technologies and finding interesting UI designs and making them
-            my own.
+            my own. In my spare developement time, you might also catch me
+            making open source contributions to The Odin Project.
           </p>
           <p className='text-lg'>
             I learned web development with the Odin Project, and Full Stack
