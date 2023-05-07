@@ -6,7 +6,7 @@ function Form() {
     <div className='relative border-2 dark:border-white border-gray-950 rounded-lg p-4 dark:bg-gray-800 bg-white'>
       <div className='absolute hidden sm:flex top-5 left-5 h-full w-full dark:bg-white bg-gray-950 rounded-lg p-4 -z-10'></div>
       <form
-        action='https://formsubmit.co/jaegifforddev@gmail.com'
+        action='https://formsubmit.co/bddcd0d1879966d8248ec038d7fcd610'
         method='POST'
         className='min-w-[33vw] flex flex-col gap-3'
       >
