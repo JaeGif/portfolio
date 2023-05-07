@@ -12,7 +12,7 @@ function Footer() {
       </div>
       <div className='flex flex-col justify-center items-center gap-2 p-5'>
         <p className='text-sm text-gray-100'>This site built with</p>
-        <div className='flex gap-2'>
+        <div className='flex gap-2 flex-wrap justify-center'>
           <Image
             height={32}
             width={32}
