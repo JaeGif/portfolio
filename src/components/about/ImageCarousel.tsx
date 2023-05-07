@@ -60,7 +60,7 @@ function ImageCarousel() {
         animate={{ objectPosition: `${100 + percentageMoved}% center)` }}
         draggable={false}
         className={`w-[40vmin] h-full object-cover hidden sm:flex`}
-        src={'/assets/images/photography/water-rock.jpg'}
+        src={'/assets/images/photography/swimming.jpg'}
         alt='photography showcase'
         style={{ objectPosition: `${percentageMoved + 50}%` }}
       />
