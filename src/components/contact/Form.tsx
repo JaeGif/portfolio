@@ -41,11 +41,7 @@ function Form() {
             minLength={1}
           ></textarea>
         </div>
-        <button
-          className='flex w-full justify-center'
-          onClick={() => setIsSubmitting(true)}
-          type='submit'
-        >
+        <button className='flex w-full justify-center' type='submit'>
           Send
         </button>
       </form>
