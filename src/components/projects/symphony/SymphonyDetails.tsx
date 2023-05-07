@@ -72,7 +72,7 @@ function SymphonyDetails() {
           >
             <img
               className='h-full max-w-fit'
-              src='/assets/images/symphony/mobile.png'
+              src='/assets/images/symphony/symphonyMobile.png'
               alt='project image'
               aria-label='project mobile view'
             />

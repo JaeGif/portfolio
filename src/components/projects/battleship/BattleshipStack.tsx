@@ -14,6 +14,12 @@ function BattleshipStack() {
         <Image
           height={48}
           width={48}
+          src={'/assets/favicons/javascript-original.svg'}
+          alt='javascript'
+        />
+        <Image
+          height={48}
+          width={48}
           src={
             currentTheme === 'dark'
               ? '/assets/favicons/html5-white.svg'
@@ -31,12 +37,7 @@ function BattleshipStack() {
           }
           alt='css3'
         />
-        <Image
-          height={48}
-          width={48}
-          src={'/assets/favicons/javascript-original.svg'}
-          alt='javascript'
-        />
+
         <Image
           height={48}
           width={48}

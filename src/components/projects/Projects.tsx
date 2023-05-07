@@ -1,10 +1,10 @@
 import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
 
 import SymphonyDetails from './symphony/SymphonyDetails';
 import InstagramDetails from './instagram/InstagramDetails';
 import BattleshipDetails from './battleship/BattleshipDetails';
+import ShoppingDetails from './shopping/ShoppingDetails';
+import WeatherDetails from './weather/WeatherDetails';
 function Projects() {
   return (
     <section className='min-h-screen ' id='projects'>
@@ -15,6 +15,8 @@ function Projects() {
         <SymphonyDetails />
         <InstagramDetails />
         <BattleshipDetails />
+        <ShoppingDetails />
+        <WeatherDetails />
       </div>
     </section>
   );
