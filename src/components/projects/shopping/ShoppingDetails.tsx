@@ -17,7 +17,7 @@ function ShoppingDetails() {
       <h1 className='text-7xl hidden sm:flex w-20'>4.</h1>
       <div className='flex flex-col lg:flex-row relative sm:w-5/6 shadow-md border-2 dark:border-white border-gray-950 bg-white dark:bg-gray-800 rounded-md mt-5 p-4 items-center'>
         <div className='hidden sm:flex absolute top-3 left-3 h-full w-full bg-gray-950 dark:bg-white rounded-xl -z-10'></div>
-        <div className='flex flex-col debug'>
+        <div className='flex flex-col'>
           <div>
             <h1 className='text-3xl'>Shopping Cart</h1>
             <h2 className='text-xl dark:text-blue-300 text-pink-500'>
