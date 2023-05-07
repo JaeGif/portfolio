@@ -29,12 +29,12 @@ function Header({ toggleMenu }: HeaderProps) {
   return (
     <header className='invisible sm:visible sm:w-full sm:flex sm:px-28 sm:py-3 sm:justify-between'>
       <MobileHeader toggleMenu={toggleMenu} />
-      <nav className='hidden sm:flex w-1/3 justify-start gap-8'>
+      <nav className='hidden sm:flex w-1/3 justify-start sm:gap-3 md:gap-8'>
         <motion.div
           initial='initial'
           animate='initial'
           whileHover='animate'
-          className='overflow-hidden flex flex-col items-center'
+          className='overflow-hidden flex flex-col items-center min-w-fit'
         >
           <Link className={urlParam === '/' ? 'text-blue-500' : ''} href={'/'}>
             Home
@@ -50,7 +50,7 @@ function Header({ toggleMenu }: HeaderProps) {
           initial='initial'
           animate='initial'
           whileHover='animate'
-          className='overflow-hidden flex flex-col items-center'
+          className='overflow-hidden flex flex-col items-center min-w-fit'
         >
           <Link
             className={urlParam === '/#projects' ? 'text-blue-500' : ''}
@@ -71,7 +71,7 @@ function Header({ toggleMenu }: HeaderProps) {
           initial='initial'
           animate='initial'
           whileHover='animate'
-          className='overflow-hidden flex flex-col items-center'
+          className='overflow-hidden flex flex-col items-center min-w-fit'
         >
           <Link
             className={urlParam === '/about' ? 'text-blue-500' : ''}
