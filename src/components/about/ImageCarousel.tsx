@@ -78,4 +78,3 @@ function ImageCarousel() {
 }
 
 export default ImageCarousel;
-//className={`${style.}`}

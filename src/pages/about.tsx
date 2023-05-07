@@ -5,6 +5,8 @@ import DownChevron from '@/components/svg/DownChevron';
 import TransitionEffect from '@/components/menu/TransitionEffect';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
+import ScrollArrowLeft from '@/components/about/ScrollArrowLeft';
+import ScrollArrowRight from '@/components/about/ScrollArrowRight';
 
 function about() {
   return (
@@ -18,7 +20,7 @@ function about() {
       </Head>
       <TransitionEffect />
       <section className='flex flex-col items-center overflow-hidden p-5 gap-5'>
-        <h1 className='text-3xl sm:text-[7vw] w-full text-center flex justify-center gap-2 sm:gap-4 mt-10 mb-10'>
+        <h1 className='text-3xl sm:text-[7vw] w-full text-center flex justify-center gap-2 sm:gap-4 mt-10 mb-10 flex-wrap'>
           <motion.p
             initial={{ y: 90, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -54,7 +56,7 @@ function about() {
           </span>
         </h1>
         <div className='flex flex-col gap-5'>
-          <div className='flex flex-col sm:flex-row'>
+          <div className='flex flex-col sm:flex-row items-center'>
             <span className='flex flex-col gap-3 w-fit'>
               <h2 className='text-2xl font-bold text-blue-400 w-fit'>
                 Who am I?
@@ -101,9 +103,16 @@ function about() {
             I&apos;ve taken recently.
           </p>
         </div>
-        <h2 className='text-2xl font-bold text-blue-400'>
-          Photography Showcase
-        </h2>
+        <span className='flex gap-5 sm:gap-10 items-center justify-center w-full'>
+          <ScrollArrowLeft />
+          <h2 className='hidden sm:block text-2xl font-bold text-blue-400'>
+            Photography Showcase
+          </h2>
+          <h2 className='block sm:hidden text-2xl font-bold text-blue-400'>
+            Photos
+          </h2>
+          <ScrollArrowRight />
+        </span>
         <ImageCarousel />
       </section>
     </>
