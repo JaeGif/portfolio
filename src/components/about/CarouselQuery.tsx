@@ -5,7 +5,6 @@ import ImageCarousel from '@/components/about/ImageCarousel';
 import useMediaQuery from '@/hooks/useMediaQuery';
 
 function CarouselQuery() {
-  const isSm = useMediaQuery('(min-width: 640px)');
   const isMobile = useMediaQuery('(max-width: 800px)');
   return (
     <>

@@ -4,7 +4,6 @@ import ThemeToggle from '../svg/ThemeToggle';
 import LinkedIn from '../svg/LinkedIn';
 import Github from '../svg/Github';
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 import MobileHeader from './MobileHeader';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';

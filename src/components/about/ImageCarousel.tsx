@@ -1,6 +1,5 @@
 import React, { TouchEventHandler, useState } from 'react';
 import { motion } from 'framer-motion';
-import useMediaQuery from '@/hooks/useMediaQuery';
 
 function ImageCarousel() {
   const [mouseDownAt, setMouseDownAt] = useState<number>(0);

@@ -12,7 +12,7 @@ function about() {
     <>
       <Head>
         <title>J. Gifford | about</title>
-        <link rel='icon' href='/assets/images/bluetitle.png'></link>
+        <link rel='icon' href='/assets/images/bluetitle.ico'></link>
         <meta
           name='description'
           content='Description of Jacob Giffords developer career'
