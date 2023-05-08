@@ -10,7 +10,6 @@ function MobileMenuOptions({ toggleMenu }: MobileMenuOptionsProps) {
   const router = useRouter();
   const [urlParam, setUrlParam] = useState('/');
   useEffect(() => {
-    console.log(router);
     if (router.isReady) {
       setUrlParam(router.route);
     }

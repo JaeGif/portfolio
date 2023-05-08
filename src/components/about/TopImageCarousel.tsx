@@ -1,8 +1,7 @@
-import React, { TouchEventHandler, useState } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import useMediaQuery from '@/hooks/useMediaQuery';
 
-function ImageCarousel() {
+function TopImageCarousel() {
   const [mouseDownAt, setMouseDownAt] = useState<number>(0);
   const [percentageMoved, setPercentageMoved] = useState<number>(0);
   const [previousPercentageMoved, setPreviousPercentageMoved] =
@@ -101,45 +100,9 @@ function ImageCarousel() {
           alt='photography showcase'
           style={{ objectPosition: `${percentageMoved + 50}% center` }}
         />
-        <motion.img
-          whileHover={{ scale: 1.3, y: -30, zIndex: 10 }}
-          whileTap={{ scale: 1.3, y: -30, zIndex: 10 }}
-          animate={{
-            objectPosition: `${100 + percentageMoved}% center)`,
-          }}
-          draggable={false}
-          className={`w-[40vmin] h-full object-cover hidden lg:flex cursor-grab`}
-          src={'/assets/images/photography/swimming.jpg'}
-          alt='photography showcase'
-          style={{ objectPosition: `${percentageMoved + 50}%` }}
-        />
-        <motion.img
-          whileHover={{ scale: 1.3, y: -30, zIndex: 10 }}
-          whileTap={{ scale: 1.3, y: -30, zIndex: 10 }}
-          animate={{
-            objectPosition: `${100 + percentageMoved}% center)`,
-          }}
-          draggable={false}
-          className={`w-[40vmin] h-full object-cover cursor-grab`}
-          src={'/assets/images/photography/cablecar.jpg'}
-          alt='photography showcase'
-          style={{ objectPosition: `${percentageMoved + 50}% center` }}
-        />
-        <motion.img
-          whileHover={{ scale: 1.3, y: -30, zIndex: 10 }}
-          whileTap={{ scale: 1.3, y: -30, zIndex: 10 }}
-          animate={{
-            objectPosition: `${100 + percentageMoved}% center)`,
-          }}
-          draggable={false}
-          className={`w-[40vmin] h-full object-cover cursor-grab`}
-          src={'/assets/images/photography/shh.jpg'}
-          alt='photography showcase'
-          style={{ objectPosition: `${percentageMoved + 50}%` }}
-        />
       </motion.div>
     </div>
   );
 }
 
-export default ImageCarousel;
+export default TopImageCarousel;

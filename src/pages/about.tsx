@@ -1,21 +1,17 @@
 import React from 'react';
-import Image from 'next/image';
-import ImageCarousel from '@/components/about/ImageCarousel';
 import TransitionEffect from '@/components/menu/TransitionEffect';
 import Head from 'next/head';
-import ScrollArrowLeft from '@/components/about/ScrollArrowLeft';
-import ScrollArrowRight from '@/components/about/ScrollArrowRight';
-import Link from 'next/link';
 import AboutHeading from '@/components/about/AboutHeading';
 import PersonalDescription from '@/components/about/PersonalDescription';
 import Hobbies from '@/components/about/Hobbies';
 import ShowcaseHeader from '@/components/about/ShowcaseHeader';
+import CarouselQuery from '@/components/about/CarouselQuery';
 
 function about() {
   return (
     <>
       <Head>
-        <title>J. Gifford | About</title>
+        <title>J. Gifford | about</title>
         <link rel='icon' href='/assets/images/bluetitle.png'></link>
         <meta
           name='description'
@@ -28,7 +24,7 @@ function about() {
         <PersonalDescription />
         <Hobbies />
         <ShowcaseHeader />
-        <ImageCarousel />
+        <CarouselQuery />
       </section>
     </>
   );
