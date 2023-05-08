@@ -4,10 +4,12 @@ import { motion } from 'framer-motion';
 function ImageCarousel() {
   const [mouseDownAt, setMouseDownAt] = useState<number>(0);
   const [percentageMoved, setPercentageMoved] = useState<number>(0);
+  const [cursorType, setCursorType] = useState<'grab' | 'grabbing'>('grab');
   const [previousPercentageMoved, setPreviousPercentageMoved] =
     useState<number>(0);
 
   const handleMouseDown = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    setCursorType('grabbing');
     setMouseDownAt(e.clientX);
   };
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -40,10 +42,12 @@ function ImageCarousel() {
         }}
         onMouseLeave={() => {
           setMouseDownAt(0);
+          setCursorType('grab');
           setPreviousPercentageMoved(percentageMoved);
         }}
         onMouseUp={() => {
           setMouseDownAt(0);
+          setCursorType('grab');
           setPreviousPercentageMoved(percentageMoved);
         }}
         onTouchStart={(e) => {
@@ -62,7 +66,7 @@ function ImageCarousel() {
         }}
         onMouseMove={(e) => handleMouseMove(e)}
         onMouseDown={(e) => handleMouseDown(e)}
-        className={`h-80 flex gap-4 select-none justify-center cursor-grab`}
+        className={`h-80 flex gap-4 select-none justify-center cursor-${cursorType}`}
       >
         <motion.img
           whileHover={{ scale: 1.3, y: -30, zIndex: 10 }}
@@ -71,7 +75,7 @@ function ImageCarousel() {
             objectPosition: `${100 + percentageMoved}% center)`,
           }}
           draggable={false}
-          className={`w-[40vmin] h-full object-cover cursor-grab`}
+          className={`w-[40vmin] h-full object-cover cursor-${cursorType}`}
           src={'/assets/images/photography/beach.jpg'}
           alt='photography showcase'
           style={{ objectPosition: `${percentageMoved + 50}% center` }}
@@ -83,7 +87,7 @@ function ImageCarousel() {
             objectPosition: `${100 + percentageMoved}% center)`,
           }}
           draggable={false}
-          className={`w-[40vmin] h-full object-cover cursor-grab`}
+          className={`w-[40vmin] h-full object-cover cursor-${cursorType}`}
           src={'/assets/images/photography/monke.jpg'}
           alt='photography showcase'
           style={{ objectPosition: `${percentageMoved + 50}% center` }}
@@ -95,7 +99,7 @@ function ImageCarousel() {
             objectPosition: `${100 + percentageMoved}% center)`,
           }}
           draggable={false}
-          className={`w-[40vmin] h-full object-cover cursor-grab`}
+          className={`w-[40vmin] h-full object-cover cursor-${cursorType}`}
           src={'/assets/images/photography/mountains2.jpg'}
           alt='photography showcase'
           style={{ objectPosition: `${percentageMoved + 50}% center` }}
@@ -107,7 +111,7 @@ function ImageCarousel() {
             objectPosition: `${100 + percentageMoved}% center)`,
           }}
           draggable={false}
-          className={`w-[40vmin] h-full object-cover hidden lg:flex cursor-grab`}
+          className={`w-[40vmin] h-full object-cover hidden lg:flex cursor-${cursorType}`}
           src={'/assets/images/photography/swimming.jpg'}
           alt='photography showcase'
           style={{ objectPosition: `${percentageMoved + 50}%` }}
@@ -119,7 +123,7 @@ function ImageCarousel() {
             objectPosition: `${100 + percentageMoved}% center)`,
           }}
           draggable={false}
-          className={`w-[40vmin] h-full object-cover cursor-grab`}
+          className={`w-[40vmin] h-full object-cover cursor-${cursorType}`}
           src={'/assets/images/photography/cablecar.jpg'}
           alt='photography showcase'
           style={{ objectPosition: `${percentageMoved + 50}% center` }}
@@ -131,7 +135,7 @@ function ImageCarousel() {
             objectPosition: `${100 + percentageMoved}% center)`,
           }}
           draggable={false}
-          className={`w-[40vmin] h-full object-cover cursor-grab`}
+          className={`w-[40vmin] h-full object-cover cursor-${cursorType}`}
           src={'/assets/images/photography/shh.jpg'}
           alt='photography showcase'
           style={{ objectPosition: `${percentageMoved + 50}%` }}
