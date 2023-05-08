@@ -31,7 +31,7 @@ function ImageCarousel() {
     setPercentageMoved(nextPercentage);
   };
   return (
-    <div className='debug border-blue-600 w-full flex justify-center'>
+    <div className='w-full flex justify-center'>
       <motion.div
         id='photography'
         style={{
@@ -61,7 +61,7 @@ function ImageCarousel() {
         }}
         onMouseMove={(e) => handleMouseMove(e)}
         onMouseDown={(e) => handleMouseDown(e)}
-        className={`h-80 flex gap-4 select-none justify-center cursor-grab debug`}
+        className={`h-80 flex gap-4 select-none justify-center cursor-grab`}
       >
         <motion.img
           whileHover={{ scale: 1.3, y: -30, zIndex: 10 }}
