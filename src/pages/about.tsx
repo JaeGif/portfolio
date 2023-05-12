@@ -11,7 +11,7 @@ function about() {
   return (
     <>
       <Head>
-        <title>J. Gifford | about</title>
+        <title>J. Gifford | About</title>
         <link rel='icon' href='/assets/images/bluetitle.ico'></link>
         <meta
           name='description'

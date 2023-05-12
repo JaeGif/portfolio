@@ -23,7 +23,6 @@ export default function App({ Component, pageProps }: AppProps) {
           <AnimatePresence>
             {isMobileMenuOpen && <MobileMenuModal toggleMenu={toggleMenu} />}{' '}
           </AnimatePresence>
-
           <Header toggleMenu={toggleMenu} />
           <Component {...pageProps} />
           <Footer />
