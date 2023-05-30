@@ -172,6 +172,30 @@ function Technologies() {
                 title='MongoDB'
               />
               <Image
+                height={54}
+                width={54}
+                src={
+                  currentTheme === 'dark'
+                    ? '/assets/favicons/postgresql-white.svg'
+                    : '/assets/favicons/postgresql-original-wordmark.svg'
+                }
+                alt='technologies I use'
+                aria-label='postgresql'
+                title='PostgreSQL'
+              />
+              <Image
+                height={54}
+                width={54}
+                src={
+                  currentTheme === 'dark'
+                    ? '/assets/favicons/prisma-blue.svg'
+                    : '/assets/favicons/prisma.svg'
+                }
+                alt='technologies I use'
+                aria-label='prisma'
+                title='Prisma'
+              />
+              <Image
                 height={48}
                 width={48}
                 src={
