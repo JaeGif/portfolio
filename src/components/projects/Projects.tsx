@@ -5,6 +5,7 @@ import InstagramDetails from './instagram/InstagramDetails';
 import BattleshipDetails from './battleship/BattleshipDetails';
 import ShoppingDetails from './shopping/ShoppingDetails';
 import WeatherDetails from './weather/WeatherDetails';
+import GradientDetails from './gradient/GradientDetails';
 function Projects() {
   return (
     <section className='min-h-screen ' id='projects'>
@@ -12,11 +13,13 @@ function Projects() {
         <h1 className='text-4xl font-semibold'>Projects</h1>
       </span>
       <div className='flex flex-col items-center gap-20'>
+        <GradientDetails />
         <SymphonyDetails />
         <InstagramDetails />
         <BattleshipDetails />
         <ShoppingDetails />
-        <WeatherDetails />
+        {/*         <WeatherDetails />
+         */}{' '}
       </div>
     </section>
   );

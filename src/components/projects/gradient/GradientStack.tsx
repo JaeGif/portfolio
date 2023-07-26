@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 
-function SymphonyStack() {
+function Gradienttack() {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === 'system' ? systemTheme : theme;
   return (
@@ -11,7 +11,6 @@ function SymphonyStack() {
         <p className='p-2 pl-0 font-bold'>Key Technologies</p>
       </span>
       <div className='flex gap-2 flex-wrap'>
-        {' '}
         <Image
           height={48}
           width={48}
@@ -37,6 +36,12 @@ function SymphonyStack() {
           alt='framer motion'
         />
         <Image
+          height={50}
+          width={50}
+          src={'/assets/favicons/chartjs.svg'}
+          alt='chartjs'
+        />
+        <Image
           height={48}
           width={48}
           src={
@@ -51,12 +56,6 @@ function SymphonyStack() {
           width={48}
           src={'/assets/favicons/react-query.svg'}
           alt='react query'
-        />
-        <Image
-          height={48}
-          width={48}
-          src={'/assets/favicons/jest-plain.svg'}
-          alt='jest'
         />
         <Image
           height={48}
@@ -81,18 +80,22 @@ function SymphonyStack() {
         <Image
           height={48}
           width={48}
-          src={'/assets/favicons/mongodb-original-wordmark.svg'}
-          alt='mongodb'
+          src={
+            currentTheme === 'dark'
+              ? '/assets/favicons/postgresql-white.svg'
+              : '/assets/favicons/postgresql-original-wordmark.svg'
+          }
+          alt='postgresql'
         />
         <Image
           height={48}
           width={48}
           src={
             currentTheme === 'dark'
-              ? '/assets/favicons/socketio-white.svg'
-              : '/assets/favicons/socketio-original.svg'
+              ? '/assets/favicons/prisma-blue.svg'
+              : '/assets/favicons/prisma.svg'
           }
-          alt='socket.io'
+          alt='prisma'
         />
         <Image
           height={48}
@@ -105,4 +108,4 @@ function SymphonyStack() {
   );
 }
 
-export default SymphonyStack;
+export default Gradienttack;

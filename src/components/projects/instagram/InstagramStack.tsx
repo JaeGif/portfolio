@@ -11,7 +11,6 @@ function InstagramStack() {
         <p className='p-2 pl-0 font-bold'>Key Technologies</p>
       </span>
       <div className='flex gap-2 flex-wrap'>
-        {' '}
         <Image
           height={48}
           width={48}
@@ -23,6 +22,22 @@ function InstagramStack() {
           width={48}
           src={'/assets/favicons/react-original-wordmark.svg'}
           alt='react'
+        />
+        <Image
+          height={48}
+          width={48}
+          src={
+            currentTheme === 'dark'
+              ? '/assets/favicons/react-router-white.svg'
+              : '/assets/favicons/react-router.svg'
+          }
+          alt='react router'
+        />
+        <Image
+          height={48}
+          width={48}
+          src={'/assets/favicons/react-query.svg'}
+          alt='react query'
         />
         <Image
           height={48}
