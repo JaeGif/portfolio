@@ -79,7 +79,7 @@ function GradientDetails() {
           >
             <img
               className='h-full max-w-fit'
-              src='/assets/images/instagram/mobile.png'
+              src='/assets/images/gradient/mobile.png'
               alt='project image'
               aria-label='project mobile view'
             />
