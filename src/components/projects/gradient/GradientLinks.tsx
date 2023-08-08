@@ -31,7 +31,7 @@ function GradientLinks() {
               Server
             </div>
           </Link>
-          <Link href={''} target='_blank'>
+          <Link href={'https://gradientfitness.pro/'} target='_blank'>
             <button className='p-2 border-2 dark:border-white border-black rounded-md flex gap-1 hover:border-pink-500 dark:hover:border-pink-500'>
               Live
               <svg
