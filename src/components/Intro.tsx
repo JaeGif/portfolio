@@ -22,25 +22,27 @@ function Intro() {
         <p>Full Stack Developer</p>
       </div>
       <nav className='flex gap-5 justify-center'>
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          className='p-2 border-2 dark:border-white border-black rounded-md flex items-center gap-1 text-lg hover:border-pink-500 hover:dark:border-pink-500'
-        >
-          <a href='/assets/fullstackResume.pdf' target='_blank'>
-            Resume
-          </a>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            height='24'
-            viewBox='0 96 960 960'
-            width='24'
+        <a href='/assets/fullstackResume.pdf' target='_blank'>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            className='p-2 border-2 dark:border-white border-black rounded-md flex items-center gap-1 text-lg hover:border-pink-500 hover:dark:border-pink-500'
           >
-            <path
-              fill={mounted && currentTheme === 'dark' ? '#FFFFFF' : '#000000'}
-              d='M180 936q-24 0-42-18t-18-42V276q0-24 18-42t42-18h279v60H180v600h600V597h60v279q0 24-18 42t-42 18H180Zm202-219-42-43 398-398H519v-60h321v321h-60V319L382 717Z'
-            />
-          </svg>
-        </motion.button>
+            Resume
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              height='24'
+              viewBox='0 96 960 960'
+              width='24'
+            >
+              <path
+                fill={
+                  mounted && currentTheme === 'dark' ? '#FFFFFF' : '#000000'
+                }
+                d='M180 936q-24 0-42-18t-18-42V276q0-24 18-42t42-18h279v60H180v600h600V597h60v279q0 24-18 42t-42 18H180Zm202-219-42-43 398-398H519v-60h321v321h-60V319L382 717Z'
+              />
+            </svg>
+          </motion.button>
+        </a>
         <Link href={'/contact'}>
           <motion.p
             className='p-2 border-2 dark:border-white border-black rounded-md text-lg hover:border-pink-500 hover:dark:border-pink-500'
