@@ -124,7 +124,7 @@ function ImageCarousel() {
           }}
           draggable={false}
           className={`w-[40vmin] h-full object-cover cursor-${cursorType}`}
-          src={'/assets/images/photography/cablecar.jpg'}
+          src={'/assets/images/photography/reed.jpg'}
           alt='photography showcase'
           style={{ objectPosition: `${percentageMoved + 50}% center` }}
         />

@@ -84,9 +84,9 @@ function TopImageCarousel() {
           }}
           draggable={false}
           className={`w-[40vmin] h-full object-cover cursor-grab`}
-          src={'/assets/images/photography/shh.jpg'}
+          src={'/assets/images/photography/reed.jpg'}
           alt='photography showcase'
-          style={{ objectPosition: `${percentageMoved + 50}%` }}
+          style={{ objectPosition: `${percentageMoved + 50}% center` }}
         />
         <motion.img
           whileHover={{ scale: 1.3, y: -30, zIndex: 10 }}
@@ -96,9 +96,9 @@ function TopImageCarousel() {
           }}
           draggable={false}
           className={`w-[40vmin] h-full object-cover cursor-grab`}
-          src={'/assets/images/photography/cablecar.jpg'}
+          src={'/assets/images/photography/shh.jpg'}
           alt='photography showcase'
-          style={{ objectPosition: `${percentageMoved + 50}% center` }}
+          style={{ objectPosition: `${percentageMoved + 50}%` }}
         />
       </motion.div>
     </div>
