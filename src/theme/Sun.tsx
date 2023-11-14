@@ -8,6 +8,8 @@ function Sun() {
       src='/assets/favicons/sun.svg'
       alt='theme switch light'
       aria-label='theme switch light'
+      height={30}
+      width={30}
     />
   );
 }

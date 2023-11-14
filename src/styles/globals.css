@@ -5,10 +5,12 @@
 @font-face {
   font-family: 'montserrat';
   src: url('/assets/fonts/Montserrat-Regular.ttf');
+  font-display: swap;
 }
 @font-face {
   font-family: 'pixeloid';
   src: url('/assets/fonts/pixeloid.ttf');
+  font-display: swap;
 }
 @layer base {
   html {

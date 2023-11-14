@@ -91,6 +91,7 @@ function Header({ toggleMenu }: HeaderProps) {
           href={'https://github.com/JaeGif'}
           target='_blank'
           rel='noreferrer'
+          aria-label='github out link'
         >
           <Github />
         </Link>
@@ -98,6 +99,7 @@ function Header({ toggleMenu }: HeaderProps) {
           href={'https://www.linkedin.com/in/jacob-gifford-88a453172/'}
           target='_blank'
           rel='noreferrer'
+          aria-label='linkedin out link'
         >
           <LinkedIn />
         </Link>

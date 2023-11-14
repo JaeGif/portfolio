@@ -8,6 +8,8 @@ function Moon() {
       src='/assets/favicons/moon.svg'
       alt='theme switch'
       aria-label='theme switch dark'
+      height={30}
+      width={30}
     />
   );
 }

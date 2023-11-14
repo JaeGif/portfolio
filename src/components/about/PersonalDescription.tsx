@@ -50,6 +50,7 @@ function PersonalDescription() {
         <div className='h-full w-full flex justify-center items-center'>
           <div className='sm:max-w-[50vw] h-full'>
             <Image
+              priority
               height={500}
               width={500}
               src={'/assets/images/punchout-light.webp'}
