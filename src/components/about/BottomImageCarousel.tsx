@@ -72,19 +72,7 @@ function TopImageCarousel() {
           }}
           draggable={false}
           className={`w-[40vmin] h-full object-cover cursor-grab`}
-          src={'/assets/images/photography/swimming.jpg'}
-          alt='photography showcase'
-          style={{ objectPosition: `${percentageMoved + 50}%` }}
-        />
-        <motion.img
-          whileHover={{ scale: 1.3, y: -30, zIndex: 10 }}
-          whileTap={{ scale: 1.3, y: -30, zIndex: 10 }}
-          animate={{
-            objectPosition: `${100 + percentageMoved}% center)`,
-          }}
-          draggable={false}
-          className={`w-[40vmin] h-full object-cover cursor-grab`}
-          src={'/assets/images/photography/reed.jpg'}
+          src={'/assets/images/photography/reed.webp'}
           alt='photography showcase'
           style={{ objectPosition: `${percentageMoved + 50}% center` }}
         />
@@ -96,7 +84,19 @@ function TopImageCarousel() {
           }}
           draggable={false}
           className={`w-[40vmin] h-full object-cover cursor-grab`}
-          src={'/assets/images/photography/shh.jpg'}
+          src={'/assets/images/photography/hoover.webp'}
+          alt='photography showcase'
+          style={{ objectPosition: `${percentageMoved + 50}%` }}
+        />
+        <motion.img
+          whileHover={{ scale: 1.3, y: -30, zIndex: 10 }}
+          whileTap={{ scale: 1.3, y: -30, zIndex: 10 }}
+          animate={{
+            objectPosition: `${100 + percentageMoved}% center)`,
+          }}
+          draggable={false}
+          className={`w-[40vmin] h-full object-cover cursor-grab`}
+          src={'/assets/images/photography/shh.webp'}
           alt='photography showcase'
           style={{ objectPosition: `${percentageMoved + 50}%` }}
         />

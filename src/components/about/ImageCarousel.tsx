@@ -76,10 +76,11 @@ function ImageCarousel() {
           }}
           draggable={false}
           className={`w-[40vmin] h-full object-cover cursor-${cursorType}`}
-          src={'/assets/images/photography/beach.jpg'}
+          src={'/assets/images/photography/monke.webp'}
           alt='photography showcase'
           style={{ objectPosition: `${percentageMoved + 50}% center` }}
         />
+
         <motion.img
           whileHover={{ scale: 1.3, y: -30, zIndex: 10 }}
           whileTap={{ scale: 1.3, y: -30, zIndex: 10 }}
@@ -88,22 +89,26 @@ function ImageCarousel() {
           }}
           draggable={false}
           className={`w-[40vmin] h-full object-cover cursor-${cursorType}`}
-          src={'/assets/images/photography/monke.jpg'}
+          src={'/assets/images/photography/mountains2.webp'}
           alt='photography showcase'
           style={{ objectPosition: `${percentageMoved + 50}% center` }}
         />
-        <motion.img
+
+        <motion.video
+          autoPlay
+          loop
+          controls={false}
           whileHover={{ scale: 1.3, y: -30, zIndex: 10 }}
           whileTap={{ scale: 1.3, y: -30, zIndex: 10 }}
           animate={{
             objectPosition: `${100 + percentageMoved}% center)`,
           }}
+          style={{ objectPosition: `${percentageMoved + 50}% center` }}
           draggable={false}
           className={`w-[40vmin] h-full object-cover cursor-${cursorType}`}
-          src={'/assets/images/photography/mountains2.jpg'}
-          alt='photography showcase'
-          style={{ objectPosition: `${percentageMoved + 50}% center` }}
-        />
+        >
+          <source src='/assets/images/photography/house.mp4'></source>
+        </motion.video>
         <motion.img
           whileHover={{ scale: 1.3, y: -30, zIndex: 10 }}
           whileTap={{ scale: 1.3, y: -30, zIndex: 10 }}
@@ -112,7 +117,7 @@ function ImageCarousel() {
           }}
           draggable={false}
           className={`w-[40vmin] h-full object-cover hidden lg:flex cursor-${cursorType}`}
-          src={'/assets/images/photography/swimming.jpg'}
+          src={'/assets/images/photography/hoover.webp'}
           alt='photography showcase'
           style={{ objectPosition: `${percentageMoved + 50}%` }}
         />
@@ -124,7 +129,7 @@ function ImageCarousel() {
           }}
           draggable={false}
           className={`w-[40vmin] h-full object-cover cursor-${cursorType}`}
-          src={'/assets/images/photography/reed.jpg'}
+          src={'/assets/images/photography/reed.webp'}
           alt='photography showcase'
           style={{ objectPosition: `${percentageMoved + 50}% center` }}
         />
@@ -136,7 +141,7 @@ function ImageCarousel() {
           }}
           draggable={false}
           className={`w-[40vmin] h-full object-cover cursor-${cursorType}`}
-          src={'/assets/images/photography/shh.jpg'}
+          src={'/assets/images/photography/shh.webp'}
           alt='photography showcase'
           style={{ objectPosition: `${percentageMoved + 50}%` }}
         />

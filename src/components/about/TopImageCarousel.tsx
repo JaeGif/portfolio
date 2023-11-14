@@ -72,10 +72,25 @@ function TopImageCarousel() {
           }}
           draggable={false}
           className={`w-[40vmin] h-full object-cover cursor-grab`}
-          src={'/assets/images/photography/beach.jpg'}
+          src={'/assets/images/photography/monke.webp'}
           alt='photography showcase'
           style={{ objectPosition: `${percentageMoved + 50}% center` }}
         />
+        <motion.video
+          autoPlay
+          loop
+          controls={false}
+          whileHover={{ scale: 1.3, y: -30, zIndex: 10 }}
+          whileTap={{ scale: 1.3, y: -30, zIndex: 10 }}
+          animate={{
+            objectPosition: `${100 + percentageMoved}% center)`,
+          }}
+          style={{ objectPosition: `${percentageMoved + 50}% center` }}
+          draggable={false}
+          className={`w-[40vmin] h-full object-cover cursor-grab`}
+        >
+          <source src='/assets/images/photography/house.mp4'></source>
+        </motion.video>
         <motion.img
           whileHover={{ scale: 1.3, y: -30, zIndex: 10 }}
           whileTap={{ scale: 1.3, y: -30, zIndex: 10 }}
@@ -84,19 +99,7 @@ function TopImageCarousel() {
           }}
           draggable={false}
           className={`w-[40vmin] h-full object-cover cursor-grab`}
-          src={'/assets/images/photography/monke.jpg'}
-          alt='photography showcase'
-          style={{ objectPosition: `${percentageMoved + 50}% center` }}
-        />
-        <motion.img
-          whileHover={{ scale: 1.3, y: -30, zIndex: 10 }}
-          whileTap={{ scale: 1.3, y: -30, zIndex: 10 }}
-          animate={{
-            objectPosition: `${100 + percentageMoved}% center)`,
-          }}
-          draggable={false}
-          className={`w-[40vmin] h-full object-cover cursor-grab`}
-          src={'/assets/images/photography/mountains2.jpg'}
+          src={'/assets/images/photography/mountains2.webp'}
           alt='photography showcase'
           style={{ objectPosition: `${percentageMoved + 50}% center` }}
         />

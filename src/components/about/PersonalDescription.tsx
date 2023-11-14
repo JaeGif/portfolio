@@ -52,7 +52,7 @@ function PersonalDescription() {
             <Image
               height={500}
               width={500}
-              src={'/assets/images/punchout-light.png'}
+              src={'/assets/images/punchout-light.webp'}
               alt='picture of Jacob'
               aria-label='Picture of Jacob'
             />
