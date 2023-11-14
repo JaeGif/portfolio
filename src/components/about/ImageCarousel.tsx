@@ -76,6 +76,31 @@ function ImageCarousel() {
           }}
           draggable={false}
           className={`w-[40vmin] h-full object-cover cursor-${cursorType}`}
+          src={'/assets/images/photography/swimming.webp'}
+          alt='photography showcase'
+          style={{ objectPosition: `${percentageMoved + 50}% center` }}
+        />
+
+        <motion.img
+          whileHover={{ scale: 1.3, y: -30, zIndex: 10 }}
+          whileTap={{ scale: 1.3, y: -30, zIndex: 10 }}
+          animate={{
+            objectPosition: `${100 + percentageMoved}% center)`,
+          }}
+          draggable={false}
+          className={`w-[40vmin] h-full object-cover cursor-${cursorType}`}
+          src={'/assets/images/photography/cablecar.webp'}
+          alt='photography showcase'
+          style={{ objectPosition: `${percentageMoved + 50}% center` }}
+        />
+        <motion.img
+          whileHover={{ scale: 1.3, y: -30, zIndex: 10 }}
+          whileTap={{ scale: 1.3, y: -30, zIndex: 10 }}
+          animate={{
+            objectPosition: `${100 + percentageMoved}% center)`,
+          }}
+          draggable={false}
+          className={`w-[40vmin] h-full object-cover hidden cursor-${cursorType}`}
           src={'/assets/images/photography/monke.webp'}
           alt='photography showcase'
           style={{ objectPosition: `${percentageMoved + 50}% center` }}
@@ -95,7 +120,7 @@ function ImageCarousel() {
         />
 
         <motion.video
-          autoPlay
+          autoPlay={true}
           loop
           controls={false}
           whileHover={{ scale: 1.3, y: -30, zIndex: 10 }}
@@ -116,7 +141,7 @@ function ImageCarousel() {
             objectPosition: `${100 + percentageMoved}% center)`,
           }}
           draggable={false}
-          className={`w-[40vmin] h-full object-cover hidden lg:flex cursor-${cursorType}`}
+          className={`w-[40vmin] h-full object-cover lg:flex cursor-${cursorType}`}
           src={'/assets/images/photography/hoover.webp'}
           alt='photography showcase'
           style={{ objectPosition: `${percentageMoved + 50}%` }}
