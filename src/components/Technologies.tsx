@@ -230,7 +230,10 @@ function Technologies() {
             </div>
           </div>
           <div className='flex flex-col w-full sm:w-[calc(33%-4rem)] dark:bg-gray-800'>
-            <h1 className='text-2xl'>Dev Ops & Testing</h1>
+            <span className='flex'>
+              <h1 className='text-2xl'>Dev-Ops</h1>
+              <h1 className='text-2xl lg:flex hidden'>&nbsp;& Testing</h1>
+            </span>
             <div className='flex flex-1 flex-wrap p-4 rounded-md border-2 dark:border-white border-gray-950 justify-center gap-4 shadow-md'>
               <Image
                 height={54}

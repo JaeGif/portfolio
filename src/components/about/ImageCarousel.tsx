@@ -75,7 +75,7 @@ function ImageCarousel() {
             objectPosition: `${100 + percentageMoved}% center)`,
           }}
           draggable={false}
-          className={`w-[40vmin] h-full object-cover cursor-${cursorType}`}
+          className={`w-[40vmin] h-full object-cover md:hidden lg:flex cursor-${cursorType}`}
           src={'/assets/images/photography/swimming.webp'}
           alt='photography showcase'
           style={{ objectPosition: `${percentageMoved + 50}% center` }}
@@ -100,7 +100,7 @@ function ImageCarousel() {
             objectPosition: `${100 + percentageMoved}% center)`,
           }}
           draggable={false}
-          className={`w-[40vmin] h-full object-cover hidden cursor-${cursorType}`}
+          className={`w-[40vmin] h-full object-cover md:hidden lg:flex cursor-${cursorType}`}
           src={'/assets/images/photography/monke.webp'}
           alt='photography showcase'
           style={{ objectPosition: `${percentageMoved + 50}% center` }}

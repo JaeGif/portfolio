@@ -75,7 +75,7 @@ function Footer() {
           />
         </div>
         <em className='text-sm text-gray-100'>
-          Copyright &#169; 2023 Jacob Gifford
+          Copyright &#169; {new Date().getFullYear()} Jacob Gifford
         </em>
       </div>
     </div>

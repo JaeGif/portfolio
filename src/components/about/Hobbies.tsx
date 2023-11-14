@@ -10,9 +10,10 @@ function Hobbies() {
         Outside of full stack development, I dabble in hobbies that help fuel my
         creativity. I take and edit photos with a Canon T6 Rebel, Photoshop and
         Lightroom. I fly a DJI Mavic Mini 2 drone for some interesting shots and
-        angles, and I rock climb, solving interesting problems. I surf and get
-        totally rolled. Here&apos;s a selection of some interesting photos
-        I&apos;ve taken recently.
+        angles, and I rock climb, solving interesting problems. I&apos;m
+        currently learning how to surf and am getting totally rolled.
+        Here&apos;s a selection of some interesting moments I&apos;ve taken
+        recently.
       </p>
     </div>
   );
