@@ -60,6 +60,12 @@ function Gradienttack() {
         <Image
           height={48}
           width={48}
+          src={'/assets/favicons/nodejs-original.svg'}
+          alt='node'
+        />
+        <Image
+          height={48}
+          width={48}
           src={
             currentTheme === 'dark'
               ? '/assets/favicons/express-white.svg'
@@ -96,6 +102,12 @@ function Gradienttack() {
               : '/assets/favicons/prisma.svg'
           }
           alt='prisma'
+        />
+        <Image
+          height={48}
+          width={48}
+          src={'/assets/favicons/git-original.svg'}
+          alt='git'
         />
         <Image
           height={48}

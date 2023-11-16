@@ -61,6 +61,12 @@ function SymphonyStack() {
         <Image
           height={48}
           width={48}
+          src={'/assets/favicons/nodejs-original.svg'}
+          alt='node'
+        />
+        <Image
+          height={48}
+          width={48}
           src={
             currentTheme === 'dark'
               ? '/assets/favicons/express-white.svg'
@@ -93,6 +99,12 @@ function SymphonyStack() {
               : '/assets/favicons/socketio-original.svg'
           }
           alt='socket.io'
+        />
+        <Image
+          height={48}
+          width={48}
+          src={'/assets/favicons/git-original.svg'}
+          alt='git'
         />
         <Image
           height={48}

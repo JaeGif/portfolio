@@ -42,6 +42,12 @@ function InstagramStack() {
         <Image
           height={48}
           width={48}
+          src={'/assets/favicons/nodejs-original.svg'}
+          alt='node'
+        />
+        <Image
+          height={48}
+          width={48}
           src={
             currentTheme === 'dark'
               ? '/assets/favicons/express-white.svg'
@@ -64,6 +70,12 @@ function InstagramStack() {
           width={48}
           src={'/assets/favicons/mongodb-original-wordmark.svg'}
           alt='mongodb'
+        />
+        <Image
+          height={48}
+          width={48}
+          src={'/assets/favicons/git-original.svg'}
+          alt='git'
         />
         <Image
           height={48}

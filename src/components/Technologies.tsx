@@ -117,6 +117,14 @@ function Technologies() {
               <Image
                 height={54}
                 width={54}
+                src='/assets/favicons/chartjs.svg'
+                alt='technologies I use'
+                aria-label='chart js'
+                title='Chart.js'
+              />
+              <Image
+                height={54}
+                width={54}
                 src='/assets/favicons/figma-original.svg'
                 alt='technologies I use'
                 aria-label='figma'
@@ -226,6 +234,18 @@ function Technologies() {
                 alt='technologies I use'
                 aria-label='AWS S3'
                 title='AWS S3'
+              />
+              <Image
+                height={48}
+                width={48}
+                src={
+                  currentTheme === 'dark'
+                    ? '/assets/favicons/aws-dark.svg'
+                    : '/assets/favicons/aws-original.svg'
+                }
+                alt='technologies I use'
+                aria-label='amazon web services'
+                title='Amazon Web Services'
               />
             </div>
           </div>
