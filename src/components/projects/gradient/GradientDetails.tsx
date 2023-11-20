@@ -30,7 +30,7 @@ function GradientDetails() {
                 <h2 className='font-semibold text-2xl'>About</h2>
                 <p>
                   Gradient is a strength and fitness analytics platform. It
-                  features an impressive and responsive UI utilitzing{' '}
+                  features an impressive and responsive UI utilizing{' '}
                   <em className='text-blue-500 not-italic'>TailwindCSS</em> and{' '}
                   <em className='text-blue-500 not-italic'>Framer Motion</em>,
                   with powerful and informative analytics and statistics via{' '}
