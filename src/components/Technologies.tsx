@@ -284,6 +284,16 @@ function Technologies() {
                 title='Jest'
               />
               <Image
+                height={40}
+                width={40}
+                src={
+                  currentTheme === 'dark'
+                    ? '/assets/favicons/railway-dark.svg'
+                    : '/assets/favicons/railway.svg'
+                }
+                alt='passport.js'
+              />
+              <Image
                 height={54}
                 width={54}
                 src='/assets/favicons/digitalocean-original.svg'

@@ -32,14 +32,20 @@ function BattleshipDetails() {
                   Battleship is a more exciting version of the classic game. It
                   was built entirely vanilla and features some special additions
                   in creative attacks, like the radar and sniper as well as an
-                  energy system and a smart computer opponent. It is also
-                  playable in local multiplayer.
+                  energy system and a smart computer opponent. I recently
+                  revisted the game, providing some small quality of life
+                  updates, and implemented an online multiplayer version of the
+                  game using{' '}
+                  <em className='text-blue-500  not-italic'>Web Sockets</em> on
+                  an <em className='text-blue-500  not-italic'>Express.js</em>{' '}
+                  server.
                 </p>
                 <br />
                 <p>
                   This project was developed in a Test Driven manner with{' '}
-                  <em className='text-blue-500 not-italic'>Jest</em>, advanced{' '}
-                  <em className='text-blue-500  not-italic'>Javascript</em>, and
+                  <em className='text-blue-500 not-italic'>Jest</em>,{' '}
+                  <em className='text-blue-500  not-italic'>Javascript</em>,{' '}
+                  <em className='text-blue-500  not-italic'>Typescript</em>, and
                   various{' '}
                   <em className='text-blue-500  not-italic'>Web API&apos;s</em>{' '}
                   like the Audio API and Keyboard API.

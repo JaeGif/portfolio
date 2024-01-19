@@ -20,6 +20,12 @@ function BattleshipStack() {
         <Image
           height={48}
           width={48}
+          src={'/assets/favicons/typescript-original.svg'}
+          alt='typescript'
+        />
+        <Image
+          height={48}
+          width={48}
           src={
             currentTheme === 'dark'
               ? '/assets/favicons/html5-white.svg'
@@ -37,7 +43,32 @@ function BattleshipStack() {
           }
           alt='css3'
         />
-
+        <Image
+          height={48}
+          width={48}
+          src={'/assets/favicons/nodejs-original.svg'}
+          alt='node'
+        />
+        <Image
+          height={48}
+          width={48}
+          src={
+            currentTheme === 'dark'
+              ? '/assets/favicons/express-white.svg'
+              : '/assets/favicons/express-original.svg'
+          }
+          alt='express'
+        />
+        <Image
+          height={48}
+          width={48}
+          src={
+            currentTheme === 'dark'
+              ? '/assets/favicons/socketio-white.svg'
+              : '/assets/favicons/socketio-original.svg'
+          }
+          alt='socket.io'
+        />
         <Image
           height={48}
           width={48}
@@ -49,6 +80,12 @@ function BattleshipStack() {
           width={48}
           src={'/assets/favicons/git-original.svg'}
           alt='git'
+        />
+        <Image
+          height={48}
+          width={48}
+          src={'/assets/favicons/webpack-original.svg'}
+          alt='webpack'
         />
         <Image
           height={48}
