@@ -34,7 +34,7 @@ function BattleshipDetails() {
                   in creative attacks, like the radar and sniper as well as an
                   energy system and a smart computer opponent. I recently
                   revisted the game, providing some small quality of life
-                  updates, and implemented an online multiplayer version of the
+                  updates, and implementing an online multiplayer version of the
                   game using{' '}
                   <em className='text-blue-500  not-italic'>Web Sockets</em> on
                   an <em className='text-blue-500  not-italic'>Express.js</em>{' '}
