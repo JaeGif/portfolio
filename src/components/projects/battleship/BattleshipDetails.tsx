@@ -21,7 +21,7 @@ function BattleshipDetails() {
           <div>
             <h1 className='text-3xl'>Totally Not Battleship</h1>
             <h2 className='text-xl dark:text-blue-300 text-pink-500'>
-              Battleship Game
+              Battleship
             </h2>
           </div>
           <div className='flex'>
