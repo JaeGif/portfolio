@@ -6,6 +6,8 @@ import BattleshipDetails from './battleship/BattleshipDetails';
 import ShoppingDetails from './shopping/ShoppingDetails';
 import WeatherDetails from './weather/WeatherDetails';
 import GradientDetails from './gradient/GradientDetails';
+import FreelanceDetails from './freelance/FreelanceDetails';
+
 function Projects() {
   return (
     <section className='min-h-screen ' id='projects'>
@@ -17,9 +19,9 @@ function Projects() {
         <SymphonyDetails />
         <InstagramDetails />
         <BattleshipDetails />
+        <FreelanceDetails />
         <ShoppingDetails />
-        {/*         <WeatherDetails />
-         */}{' '}
+        <WeatherDetails />
       </div>
     </section>
   );

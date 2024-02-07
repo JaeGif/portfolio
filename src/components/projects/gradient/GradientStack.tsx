@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 
-function Gradienttack() {
+function GradientStack() {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === 'system' ? systemTheme : theme;
   return (
@@ -126,4 +126,4 @@ function Gradienttack() {
   );
 }
 
-export default Gradienttack;
+export default GradientStack;
