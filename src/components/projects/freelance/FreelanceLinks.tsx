@@ -22,7 +22,7 @@ function FreelanceLinks() {
               <Client /> Client
             </div>
           </Link>
-          <Link href={'https://Freelancefitness.pro/'} target='_blank'>
+          <Link href={'https://rohitmallick.com/'} target='_blank'>
             <button className='p-2 border-2 dark:border-white border-black rounded-md flex gap-1 hover:border-pink-500 dark:hover:border-pink-500'>
               Live
               <svg
