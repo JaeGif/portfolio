@@ -54,8 +54,8 @@ function FreelanceDetails() {
                 </p>
               </div>
               <FreelanceLinks />
-              {/*               <FreelanceTestimonial />
-               */}{' '}
+              <FreelanceTestimonial />
+
               <FreelanceStack />
             </div>
           </div>
