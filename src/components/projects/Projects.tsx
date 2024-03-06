@@ -20,8 +20,8 @@ function Projects() {
         <InstagramDetails />
         <BattleshipDetails />
         <FreelanceDetails />
-        <ShoppingDetails />
-        <WeatherDetails />
+        {/*         <ShoppingDetails />
+        <WeatherDetails /> */}
       </div>
     </section>
   );
