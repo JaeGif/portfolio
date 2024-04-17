@@ -65,6 +65,14 @@ function Technologies() {
               <Image
                 height={54}
                 width={54}
+                src='/assets/favicons/materialui-original.svg'
+                alt='technologies I use'
+                aria-label='material ui'
+                title='Material UI'
+              />
+              <Image
+                height={54}
+                width={54}
                 src={
                   currentTheme === 'dark'
                     ? '/assets/favicons/html5-white.svg'
@@ -170,6 +178,18 @@ function Technologies() {
                 alt='technologies I use'
                 aria-label='express'
                 title='Express'
+              />
+              <Image
+                height={54}
+                width={54}
+                src={
+                  currentTheme === 'dark'
+                    ? '/assets/favicons/flask-dark.svg'
+                    : '/assets/favicons/flask-original.svg'
+                }
+                alt='technologies I use'
+                aria-label='flask'
+                title='Flask'
               />
               <Image
                 height={54}
@@ -301,14 +321,14 @@ function Technologies() {
                 aria-label='digital ocean'
                 title='Digital Ocean'
               />
-              {/*               <Image
+              <Image
                 height={54}
                 width={54}
                 src='/assets/favicons/docker-original-wordmark.svg'
                 alt='technologies I use'
                 aria-label='docker'
                 title='Docker'
-              /> */}
+              />
               <Image
                 height={54}
                 width={54}
