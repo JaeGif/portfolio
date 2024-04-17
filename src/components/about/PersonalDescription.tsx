@@ -12,7 +12,27 @@ function PersonalDescription() {
             beautiful user-centric applications. I&apos;m constantly learning
             new technologies and finding interesting UI designs and making them
             my own. In my spare developement time, you might also catch me
-            making open source contributions to The Odin Project.
+            making open source contributions to{' '}
+            <Link
+              className='cursor-pointer'
+              target='_blank'
+              href={'https://www.theodinproject.com/'}
+            >
+              <em className='cursor-pointer not-italic text-blue-500'>
+                The Odin Project
+              </em>
+            </Link>
+            , or promoting civic change with{' '}
+            <Link
+              className='cursor-pointer'
+              href={'https://www.codepdx.org/'}
+              target='_blank'
+            >
+              <em className='cursor-pointer not-italic text-blue-500'>
+                CodePDX
+              </em>
+            </Link>
+            .
           </p>
           <p className='text-lg'>
             I learned web development with the Odin Project, and Full Stack
