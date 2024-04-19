@@ -8,11 +8,11 @@ function PersonalDescription() {
         <span className='flex flex-col gap-3 w-fit'>
           <h2 className='text-2xl font-bold text-blue-400 w-fit'>Who am I?</h2>
           <p className='sm:w-[50vw] text-lg'>
-            I&apos;m Jacob, a Full Stack Engineer with a passion for building
-            beautiful user-centric applications. I&apos;m constantly learning
-            new technologies and finding interesting UI designs and making them
-            my own. In my spare developement time, you might also catch me
-            making open source contributions to{' '}
+            I&apos;m Jacob, a Full Stack Engineer based in Portland Oregon, with
+            a passion for building beautiful user-centric applications. I&apos;m
+            constantly learning new technologies and finding interesting UI
+            designs and making them my own. In my spare developement time, you
+            might also catch me making open source contributions to{' '}
             <Link
               className='cursor-pointer'
               target='_blank'
