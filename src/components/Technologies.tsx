@@ -304,6 +304,14 @@ function Technologies() {
                 title='Jest'
               />
               <Image
+                height={54}
+                width={54}
+                src='/assets/favicons/vitest-original.svg'
+                alt='technologies I use'
+                aria-label='vitest'
+                title='Vitest'
+              />
+              <Image
                 height={40}
                 width={40}
                 src={
@@ -311,7 +319,7 @@ function Technologies() {
                     ? '/assets/favicons/railway-dark.svg'
                     : '/assets/favicons/railway.svg'
                 }
-                alt='passport.js'
+                alt='Railway'
               />
               <Image
                 height={54}
