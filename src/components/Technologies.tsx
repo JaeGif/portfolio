@@ -184,6 +184,18 @@ function Technologies() {
                 width={54}
                 src={
                   currentTheme === 'dark'
+                    ? '/assets/favicons/django-dark.svg'
+                    : '/assets/favicons/django-plain.svg'
+                }
+                alt='technologies I use'
+                aria-label='django'
+                title='Django'
+              />
+              <Image
+                height={54}
+                width={54}
+                src={
+                  currentTheme === 'dark'
                     ? '/assets/favicons/flask-dark.svg'
                     : '/assets/favicons/flask-original.svg'
                 }
