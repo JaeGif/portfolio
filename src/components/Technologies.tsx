@@ -63,6 +63,18 @@ function Technologies() {
                 title='TailwindCSS'
               />
               <Image
+                height={58}
+                width={58}
+                src={
+                  currentTheme === 'dark'
+                    ? '/assets/favicons/three-dark.svg'
+                    : '/assets/favicons/threejs-original-wordmark.svg'
+                }
+                alt='technologies I use'
+                aria-label='three js'
+                title='Three.js'
+              />
+              <Image
                 height={54}
                 width={54}
                 src='/assets/favicons/materialui-original.svg'
