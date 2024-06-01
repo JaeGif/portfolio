@@ -64,6 +64,25 @@ function Header({ toggleMenu }: HeaderProps) {
             <p className='invisible'>underline</p>
           </motion.div>
         </motion.div>
+        <motion.div
+          initial='initial'
+          animate='initial'
+          whileHover='animate'
+          className='overflow-hidden flex flex-col items-center min-w-fit'
+        >
+          <Link
+            className={urlParam === '/creative' ? 'text-blue-500' : ''}
+            href={'/creative'}
+          >
+            Creative
+          </Link>
+          <motion.div
+            variants={line}
+            className='dark:bg-white bg-gray-950 h-[1px] w-full'
+          >
+            <p className='invisible'>underline</p>
+          </motion.div>
+        </motion.div>
 
         <motion.div
           initial='initial'
