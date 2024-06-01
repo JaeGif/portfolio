@@ -18,7 +18,7 @@ function ShowcaseHeader() {
         <ScrollArrowRight />
       </span>
       <p className={`text-sm text-gray-${currentTheme === 'dark' ? 100 : 300}`}>
-        Hint: grab and drag the photos
+        Hint: grab and drag the media
       </p>
     </div>
   );
