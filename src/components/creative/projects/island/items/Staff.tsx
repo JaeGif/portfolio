@@ -1,5 +1,5 @@
 import React from 'react';
-import { GLTFNodesMaterials } from './types';
+import { GLTFNodesMaterials } from '../types';
 
 function Staff({ nodes, materials }: GLTFNodesMaterials) {
   return (

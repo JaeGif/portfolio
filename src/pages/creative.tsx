@@ -14,6 +14,7 @@ function creative() {
       <TransitionEffect />
       <section className='w-full h-[calc(100vh-6.5rem)] p-2 flex flex-col items-center mt-10 gap-10'>
         <Canvas
+          shadows
           camera={{
             fov: 45,
             near: 0.1,
