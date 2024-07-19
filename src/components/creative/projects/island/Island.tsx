@@ -13,6 +13,8 @@ import SmallAxe from './items/SmallAxe';
 import Stumps from './nature/Stumps';
 import Ground from './nature/Ground';
 import Trees from './nature/Trees';
+import Fireflies from './nature/Fireflies';
+import Waterfall from './nature/Waterfall';
 
 export default function Island(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF(
@@ -31,6 +33,8 @@ export default function Island(props: JSX.IntrinsicElements['group']) {
       <Stumps nodes={nodes} materials={materials} />
       <Ground nodes={nodes} materials={materials} />
       <Trees nodes={nodes} materials={materials} />
+      <Fireflies />
+      <Waterfall />
     </group>
   );
 }
