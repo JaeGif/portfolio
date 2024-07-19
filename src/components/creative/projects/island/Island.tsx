@@ -12,6 +12,7 @@ import Stark from './items/Stark';
 import SmallAxe from './items/SmallAxe';
 import Stumps from './nature/Stumps';
 import Ground from './nature/Ground';
+import Trees from './nature/Trees';
 
 export default function Island(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF(
@@ -29,22 +30,7 @@ export default function Island(props: JSX.IntrinsicElements['group']) {
       <SmallAxe nodes={nodes} materials={materials} />
       <Stumps nodes={nodes} materials={materials} />
       <Ground nodes={nodes} materials={materials} />
-      <mesh
-        name='tree'
-        castShadow
-        receiveShadow
-        geometry={nodes.tree.geometry}
-        material={materials['tree wood']}
-        position={[-0.06378, 0.99981, 0.01199]}
-      />
-      <mesh
-        name='protruding_roots'
-        castShadow
-        receiveShadow
-        geometry={nodes.protruding_roots.geometry}
-        material={materials.roots}
-        position={[-1.06492, -1.1637, -3.8598]}
-      />
+      <Trees nodes={nodes} materials={materials} />
     </group>
   );
 }
