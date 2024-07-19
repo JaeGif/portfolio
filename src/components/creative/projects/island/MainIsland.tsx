@@ -1,20 +1,16 @@
+// @ts-nocheck
+
 import React from 'react';
 import { useGLTF } from '@react-three/drei';
-import {
-  Bloom,
-  ToneMapping,
-  EffectComposer,
-} from '@react-three/postprocessing';
-import { ToneMappingMode } from 'postprocessing';
+import { Bloom, EffectComposer } from '@react-three/postprocessing';
 function MainIsland() {
-  const fullScene = useGLTF('/assets/creative/models/portal.glb');
-
-  console.log(fullScene.nodes);
+  const fullScene = useGLTF('/assets/creative/models/portalMaterials.glb');
   return (
     <>
       <EffectComposer>
         <Bloom mipmapBlur luminanceThreshold={1.001} intensity={0.2} />
       </EffectComposer>
+
       <mesh
         geometry={fullScene.nodes.grass.geometry}
         position={fullScene.nodes.grass.position}
@@ -45,7 +41,7 @@ function MainIsland() {
         rotation={fullScene.nodes.pondWalls.rotation}
         scale={fullScene.nodes.pondWalls.scale}
       >
-        <meshStandardMaterial color={'#51423C'} />
+        <meshStandardMaterial attach={'material'} color={'#51423C'} />
       </mesh>
       <mesh
         geometry={fullScene.nodes.crystals.geometry}
