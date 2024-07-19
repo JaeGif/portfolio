@@ -12,6 +12,7 @@
   "dependencies": {
     "@react-three/drei": "^9.108.4",
     "@react-three/fiber": "^8.16.7",
+    "@react-three/postprocessing": "^2.16.2",
     "@types/node": "18.16.3",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.1",
@@ -20,6 +21,7 @@
     "framer-motion": "^10.12.4",
     "next": "^14.2.5",
     "next-themes": "^0.2.1",
+    "postprocessing": "^6.35.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-loading-icons": "^1.1.0",
