@@ -34,7 +34,10 @@ export default function Island(props: JSX.IntrinsicElements['group']) {
       <Ground nodes={nodes} materials={materials} />
       <Trees nodes={nodes} materials={materials} />
       <Fireflies />
+      {/*       
+      edge with the pond fall
       <Waterfall />
+       */}{' '}
     </group>
   );
 }
