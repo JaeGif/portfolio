@@ -32,7 +32,7 @@ function Fireflies() {
 
     for (let i = 0; i < firefliesCount; i++) {
       firefliesPositions[i * 3 + 0] = (Math.random() - 0.5) * 8;
-      firefliesPositions[i * 3 + 1] = Math.random() * 1.5;
+      firefliesPositions[i * 3 + 1] = Math.random() * 1.5 * 2;
       firefliesPositions[i * 3 + 2] = (Math.random() - 0.5) * 7;
       firefliesScale[i] = Math.random();
     }
@@ -64,6 +64,7 @@ function Fireflies() {
       <firefliesMaterial
         ref={firefliesRef}
         transparent
+        attach={'material'}
         blending={THREE.AdditiveBlending}
         depthWrite={false}
       />

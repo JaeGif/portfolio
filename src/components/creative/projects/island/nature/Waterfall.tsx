@@ -31,9 +31,9 @@ function Waterfall() {
     const waterfallScale = new Float32Array(waterfallCount);
 
     for (let i = 0; i < waterfallCount; i++) {
-      waterfallPositions[i * 3 + 0] = (Math.random() - 0.5) * 1;
-      waterfallPositions[i * 3 + 1] = Math.random() * 1.5;
-      waterfallPositions[i * 3 + 2] = (Math.random() - 0.5) * 1;
+      waterfallPositions[i * 3 + 0] = Math.random() - 0.5 - 3;
+      waterfallPositions[i * 3 + 1] = Math.random() * 2 - 1;
+      waterfallPositions[i * 3 + 2] = 2;
       waterfallScale[i] = Math.random();
     }
     return { waterfallPositions, waterfallScale };
@@ -43,7 +43,7 @@ function Waterfall() {
     waterfallRef.current.uTime += delta;
   });
   return (
-    <points>
+    <points rotation={[1, 1, 1]}>
       <bufferGeometry attach={'geometry'}>
         <bufferAttribute
           attach='attributes-position'
