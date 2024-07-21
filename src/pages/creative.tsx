@@ -21,7 +21,7 @@ function creative() {
             fov: 45,
             near: 0.01,
             far: 200,
-            position: [1, 2, 15],
+            position: [3, 5, 11],
           }}
         >
           <Experience />

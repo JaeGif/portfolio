@@ -60,7 +60,6 @@ function Fireflies() {
         />
       </bufferGeometry>
       {/* @ts-ignore */}
-
       <firefliesMaterial
         ref={firefliesRef}
         transparent

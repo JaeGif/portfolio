@@ -1,6 +1,5 @@
-import * as THREE from 'three';
-import React, { useRef } from 'react';
-import { Float, useGLTF } from '@react-three/drei';
+import React from 'react';
+import { useGLTF } from '@react-three/drei';
 import Staff from './items/Staff';
 import { GLTFResult } from './types';
 import Path from './nature/Path';
@@ -15,17 +14,15 @@ import Ground from './nature/Ground';
 import Trees from './nature/Trees';
 import Fireflies from './nature/Fireflies';
 import Waterfall from './nature/Waterfall';
-import { useFrame } from '@react-three/fiber';
 
 export default function Island(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF(
     '/assets/creative/models/portalData.glb'
   ) as GLTFResult;
-  const islandGroupRef = useRef<any>(null);
 
   return (
     <>
-      <group ref={islandGroupRef} {...props} dispose={null}>
+      <group {...props} dispose={null}>
         <Staff nodes={nodes} materials={materials} />
         <Stark nodes={nodes} materials={materials} />
         <Path nodes={nodes} materials={materials} />
@@ -37,8 +34,8 @@ export default function Island(props: JSX.IntrinsicElements['group']) {
         <Stumps nodes={nodes} materials={materials} />
         <Ground nodes={nodes} materials={materials} />
         <Trees nodes={nodes} materials={materials} />
-        <Fireflies />
         <Waterfall nodes={nodes} materials={materials} />
+        <Fireflies />
       </group>
     </>
   );

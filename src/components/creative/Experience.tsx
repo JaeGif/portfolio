@@ -23,8 +23,7 @@ function Experience() {
         intensity={3}
         ref={dirLightRef}
       />
-
-      <Center>
+      <Center position-y={0}>
         <Island />
       </Center>
     </>

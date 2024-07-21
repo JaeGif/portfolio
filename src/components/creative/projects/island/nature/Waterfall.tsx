@@ -3,6 +3,9 @@ import * as THREE from 'three';
 // Shaders
 import waterfallVertexShader from '../shaders/waterfall/vertex.glsl';
 import waterfallFragmentShader from '../shaders/waterfall/fragment.glsl';
+
+import waterfallWaveVertexShader from '../shaders/waterfallWaves/vertex.glsl';
+import waterfallWaveFragmentShader from '../shaders/waterfallWaves/fragment.glsl';
 // R3F
 import { extend, useFrame } from '@react-three/fiber';
 // Drei
@@ -22,8 +25,9 @@ function Waterfall({ nodes, materials }: GLTFNodesMaterials) {
   extend({ WaterfallMaterial });
 
   const waterfallRef = useRef<any>(null);
+  const waterFallWaveRef = useRef<any>(null);
 
-  const waterfallCount = 1000;
+  const waterfallCount = 100;
 
   const { waterfallPositions, waterfallScale } = useMemo(() => {
     const waterfallPositions = new Float32Array(waterfallCount * 3);
@@ -34,13 +38,14 @@ function Waterfall({ nodes, materials }: GLTFNodesMaterials) {
       waterfallPositions[i * 3 + 0] = Math.random() - 0.5 - 3;
       waterfallPositions[i * 3 + 1] = Math.random() * 2 - 1;
       waterfallPositions[i * 3 + 2] = 2;
-      waterfallScale[i] = Math.random();
+      waterfallScale[i] = Math.random() * 3;
     }
     return { waterfallPositions, waterfallScale };
   }, [waterfallCount]);
 
   useFrame((state, delta) => {
     waterfallRef.current.uTime += delta;
+    waterFallWaveRef.current.uniforms.uTime.value = state.clock.elapsedTime;
   });
   return (
     <>
@@ -52,9 +57,17 @@ function Waterfall({ nodes, materials }: GLTFNodesMaterials) {
         position={[-2.21782, 1.44812, 7.27783]}
         rotation={[-1.662, 0.05586, -0.5481]}
       >
-        <meshBasicMaterial side={2} />
+        <shaderMaterial
+          transparent
+          depthWrite={false}
+          ref={waterFallWaveRef}
+          uniforms={{ uTime: { value: 0 } }}
+          vertexShader={waterfallWaveVertexShader}
+          fragmentShader={waterfallWaveFragmentShader}
+          side={2}
+        />
       </mesh>
-      <points rotation={[1, 1, 1]}>
+      <points rotation={[0, 0, 0]}>
         <bufferGeometry attach={'geometry'}>
           <bufferAttribute
             attach='attributes-position'
