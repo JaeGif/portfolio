@@ -1,14 +1,7 @@
 import React, { useRef } from 'react';
-import {
-  Center,
-  useGLTF,
-  OrbitControls,
-  useHelper,
-  Float,
-} from '@react-three/drei';
+import { Center, OrbitControls, useHelper, Circle } from '@react-three/drei';
 import Island from './projects/island/Island';
 import { DirectionalLightHelper } from 'three';
-
 import { Bloom, EffectComposer } from '@react-three/postprocessing';
 
 function Experience() {
@@ -19,6 +12,7 @@ function Experience() {
       <EffectComposer>
         <Bloom mipmapBlur luminanceThreshold={1.1} intensity={0.05} />
       </EffectComposer>
+
       <OrbitControls makeDefault maxPolarAngle={Math.PI / 2 - 0.1} />
       <ambientLight intensity={0.75} />
       <directionalLight

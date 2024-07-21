@@ -16,11 +16,12 @@ function creative() {
       <section className='w-full h-[calc(100vh-6.5rem)] p-2 flex flex-col items-center mt-10 gap-10'>
         <Canvas
           shadows
+          dpr={[1, 2]}
           camera={{
             fov: 45,
-            near: 0.1,
+            near: 0.01,
             far: 200,
-            position: [1, 2, 6],
+            position: [1, 2, 15],
           }}
         >
           <Experience />
