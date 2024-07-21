@@ -16,10 +16,10 @@ function Experience() {
       <OrbitControls makeDefault maxPolarAngle={Math.PI / 2 - 0.1} />
       <ambientLight intensity={0.75} />
       <directionalLight
-        shadow-mapSize-height={512}
-        shadow-mapSize-width={512}
+        shadow-bias={-0.0002}
+        shadow-mapSize={[512, 512]}
         castShadow
-        position={[-5, 3, 2]}
+        position={[10, 5, -2]}
         intensity={3}
         ref={dirLightRef}
       />

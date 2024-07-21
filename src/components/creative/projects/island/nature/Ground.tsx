@@ -5,17 +5,20 @@ import { Bloom, EffectComposer } from '@react-three/postprocessing';
 function Ground({ nodes, materials }: GLTFNodesMaterials) {
   return (
     <>
-      <mesh
-        name='grass'
-        castShadow
-        receiveShadow
-        geometry={nodes.grass.geometry}
-        material={materials.grass}
-        position={[0, -1.87264, 0]}
-      />
+      <group position={[0, -1.87264, 0]}>
+        <mesh
+          receiveShadow
+          geometry={nodes.Cube058.geometry}
+          material={materials.grass}
+        />
+        <mesh
+          receiveShadow
+          geometry={nodes.Cube058_1.geometry}
+          material={materials.dirt}
+        />
+      </group>
       <mesh
         name='pondWalls'
-        castShadow
         receiveShadow
         geometry={nodes.pondWalls.geometry}
         material={materials.dirt}
@@ -23,7 +26,6 @@ function Ground({ nodes, materials }: GLTFNodesMaterials) {
       />
       <mesh
         name='dirt'
-        castShadow
         receiveShadow
         geometry={nodes.dirt.geometry}
         material={materials.path}
@@ -31,7 +33,6 @@ function Ground({ nodes, materials }: GLTFNodesMaterials) {
       />
       <mesh
         name='crystals'
-        castShadow
         receiveShadow
         geometry={nodes.crystals.geometry}
         material={materials['blue gemstone']}

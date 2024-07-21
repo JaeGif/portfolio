@@ -15,6 +15,8 @@ export type GLTFResult = GLTF & {
     Cylinder014_1: THREE.Mesh;
     Cylinder013: THREE.Mesh;
     Cylinder013_1: THREE.Mesh;
+    Cube058: THREE.Mesh;
+    Cube058_1: THREE.Mesh;
     light1: THREE.Mesh;
     light2: THREE.Mesh;
     Circle: THREE.Mesh;
@@ -125,6 +127,8 @@ export type GLTFNodesMaterials = {
     Cylinder014_1: THREE.Mesh;
     Cylinder013: THREE.Mesh;
     Cylinder013_1: THREE.Mesh;
+    Cube058: THREE.Mesh;
+    Cube058_1: THREE.Mesh;
     light1: THREE.Mesh;
     light2: THREE.Mesh;
     Circle: THREE.Mesh;

@@ -6,7 +6,6 @@ function Pond({ nodes, materials }: GLTFNodesMaterials) {
     <>
       <mesh
         name='water_surface'
-        castShadow
         receiveShadow
         geometry={nodes.water_surface.geometry}
         material={materials.waterfall}
@@ -16,7 +15,6 @@ function Pond({ nodes, materials }: GLTFNodesMaterials) {
       />
       <mesh
         name='pond'
-        castShadow
         receiveShadow
         geometry={nodes.pond.geometry}
         material={materials.basin}

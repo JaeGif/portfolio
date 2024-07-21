@@ -19,7 +19,7 @@ import { useFrame } from '@react-three/fiber';
 
 export default function Island(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF(
-    '/assets/creative/models/portalMaterials.glb'
+    '/assets/creative/models/portalData.glb'
   ) as GLTFResult;
   const islandGroupRef = useRef<any>(null);
 
@@ -46,4 +46,4 @@ export default function Island(props: JSX.IntrinsicElements['group']) {
   );
 }
 
-useGLTF.preload('/assets/creative/models/portalMaterials.glb');
+useGLTF.preload('/assets/creative/models/portalData.glb');
