@@ -20,7 +20,6 @@ function Fireflies() {
   );
 
   extend({ FirefliesMaterial });
-
   const firefliesRef = useRef<any>(null);
 
   const firefliesCount = 30;
@@ -61,6 +60,7 @@ function Fireflies() {
         />
       </bufferGeometry>
       {/* @ts-ignore */}
+
       <firefliesMaterial
         ref={firefliesRef}
         transparent

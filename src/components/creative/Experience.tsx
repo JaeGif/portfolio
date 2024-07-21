@@ -17,7 +17,7 @@ function Experience() {
       <ambientLight intensity={0.75} />
       <directionalLight
         shadow-bias={-0.0002}
-        shadow-mapSize={[512, 512]}
+        shadow-mapSize={[1024, 1024]}
         castShadow
         position={[10, 5, -2]}
         intensity={3}

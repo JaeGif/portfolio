@@ -25,23 +25,21 @@ export default function Island(props: JSX.IntrinsicElements['group']) {
 
   return (
     <>
-      <Float floatIntensity={5} rotationIntensity={0.5}>
-        <group ref={islandGroupRef} {...props} dispose={null}>
-          <Staff nodes={nodes} materials={materials} />
-          <Stark nodes={nodes} materials={materials} />
-          <Path nodes={nodes} materials={materials} />
-          <Portal nodes={nodes} materials={materials} />
-          <Pond nodes={nodes} materials={materials} />
-          <Rocks nodes={nodes} materials={materials} />
-          <Lights nodes={nodes} materials={materials} />
-          <SmallAxe nodes={nodes} materials={materials} />
-          <Stumps nodes={nodes} materials={materials} />
-          <Ground nodes={nodes} materials={materials} />
-          <Trees nodes={nodes} materials={materials} />
-          <Fireflies />
-          <Waterfall />
-        </group>
-      </Float>
+      <group ref={islandGroupRef} {...props} dispose={null}>
+        <Staff nodes={nodes} materials={materials} />
+        <Stark nodes={nodes} materials={materials} />
+        <Path nodes={nodes} materials={materials} />
+        <Portal nodes={nodes} materials={materials} />
+        <Pond nodes={nodes} materials={materials} />
+        <Rocks nodes={nodes} materials={materials} />
+        <Lights nodes={nodes} materials={materials} />
+        <SmallAxe nodes={nodes} materials={materials} />
+        <Stumps nodes={nodes} materials={materials} />
+        <Ground nodes={nodes} materials={materials} />
+        <Trees nodes={nodes} materials={materials} />
+        <Fireflies />
+        <Waterfall nodes={nodes} materials={materials} />
+      </group>
     </>
   );
 }

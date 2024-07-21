@@ -1,6 +1,4 @@
 uniform float uTime;
-
-
 varying vec2 vUv;
 
 //	Classic Perlin 3D Noise 
@@ -93,13 +91,14 @@ void main() {
 
     strength += outerGlow;
     // Apply sharpness
-    strength += step(- 0.75, strength) ;
+    strength += step(- 0.75, strength);
 
-    strength = clamp(strength, 0.0, 1.0);
+    strength = clamp(strength, 0.0, 1.0); 
 
     vec3 color = vec3(0.685, 0.212, 1.0);
     color *= 1.0-strength;
     
-   gl_FragColor = vec4(vec3(color), 1.0 -strength - .1);
-
+    gl_FragColor = vec4(vec3(color * 5.0), 1.0 -strength);
+ 
+    
 }

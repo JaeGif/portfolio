@@ -7,8 +7,8 @@ import waterfallFragmentShader from '../shaders/waterfall/fragment.glsl';
 import { extend, useFrame } from '@react-three/fiber';
 // Drei
 import { shaderMaterial } from '@react-three/drei';
-
-function Waterfall() {
+import { GLTFNodesMaterials } from '../types';
+function Waterfall({ nodes, materials }: GLTFNodesMaterials) {
   // extend shader materials
   const WaterfallMaterial = shaderMaterial(
     {
@@ -43,31 +43,43 @@ function Waterfall() {
     waterfallRef.current.uTime += delta;
   });
   return (
-    <points rotation={[1, 1, 1]}>
-      <bufferGeometry attach={'geometry'}>
-        <bufferAttribute
-          attach='attributes-position'
-          count={waterfallPositions.length / 3}
-          array={waterfallPositions}
-          itemSize={3}
-          usage={THREE.DynamicDrawUsage}
+    <>
+      <mesh
+        name='waterfall'
+        castShadow
+        receiveShadow
+        geometry={nodes.waterfall.geometry}
+        position={[-2.21782, 1.44812, 7.27783]}
+        rotation={[-1.662, 0.05586, -0.5481]}
+      >
+        <meshBasicMaterial side={2} />
+      </mesh>
+      <points rotation={[1, 1, 1]}>
+        <bufferGeometry attach={'geometry'}>
+          <bufferAttribute
+            attach='attributes-position'
+            count={waterfallPositions.length / 3}
+            array={waterfallPositions}
+            itemSize={3}
+            usage={THREE.DynamicDrawUsage}
+          />
+          <bufferAttribute
+            attach='attributes-aScale'
+            count={waterfallScale.length}
+            array={waterfallScale}
+            itemSize={1}
+            usage={THREE.DynamicDrawUsage}
+          />
+        </bufferGeometry>
+        {/* @ts-ignore */}
+        <waterfallMaterial
+          ref={waterfallRef}
+          transparent
+          blending={THREE.AdditiveBlending}
+          depthWrite={false}
         />
-        <bufferAttribute
-          attach='attributes-aScale'
-          count={waterfallScale.length}
-          array={waterfallScale}
-          itemSize={1}
-          usage={THREE.DynamicDrawUsage}
-        />
-      </bufferGeometry>
-      {/* @ts-ignore */}
-      <waterfallMaterial
-        ref={waterfallRef}
-        transparent
-        blending={THREE.AdditiveBlending}
-        depthWrite={false}
-      />
-    </points>
+      </points>
+    </>
   );
 }
 
