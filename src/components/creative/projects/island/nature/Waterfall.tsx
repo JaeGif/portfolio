@@ -30,7 +30,7 @@ function Waterfall({ nodes, materials }: GLTFNodesMaterials) {
   extend({ SprayMaterial });
   const sprayRef = useRef<any>(null);
 
-  const sprayCount = 100;
+  const sprayCount = 200;
 
   const { sprayPositions, sprayScale } = useMemo(() => {
     const sprayPositions = new Float32Array(sprayCount * 3);
@@ -41,7 +41,7 @@ function Waterfall({ nodes, materials }: GLTFNodesMaterials) {
       sprayPositions[i * 3 + 0] = Math.random() * 0.4 - 0.5;
       sprayPositions[i * 3 + 1] = Math.random() * 0.4;
       sprayPositions[i * 3 + 2] = Math.random() - 0.5;
-      sprayScale[i] = Math.random();
+      sprayScale[i] = Math.random() * 2;
     }
     return { sprayPositions, sprayScale };
   }, [sprayCount]);
@@ -58,7 +58,7 @@ function Waterfall({ nodes, materials }: GLTFNodesMaterials) {
     <>
       <group>
         <points
-          position={[-2.1, -3.5, 2.6]}
+          position={[-2, -3.5, 2.5]}
           rotation={[0.00754, 0.76818, -0.01133]}
         >
           <bufferGeometry attach={'geometry'}>
