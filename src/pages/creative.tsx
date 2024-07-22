@@ -1,8 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import TransitionEffect from '@/components/menu/TransitionEffect';
-import Experience from '@/components/creative/Experience';
-import { Canvas } from '@react-three/fiber';
+import ExperienceContainer from '@/components/creative/ExperienceContainer';
 
 function creative() {
   return (
@@ -14,18 +13,7 @@ function creative() {
       </Head>
       <TransitionEffect />
       <section className='w-full h-[calc(100vh-6.5rem)] p-2 flex flex-col items-center mt-10 gap-10'>
-        <Canvas
-          shadows
-          dpr={[1, 2]}
-          camera={{
-            fov: 45,
-            near: 0.01,
-            far: 200,
-            position: [3, 5, 11],
-          }}
-        >
-          <Experience />
-        </Canvas>
+        <ExperienceContainer />
       </section>
     </>
   );
