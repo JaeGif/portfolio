@@ -22,7 +22,7 @@ function Fireflies() {
   extend({ FirefliesMaterial });
   const firefliesRef = useRef<any>(null);
 
-  const firefliesCount = 30;
+  const firefliesCount = 50;
 
   const { firefliesPositions, firefliesScale } = useMemo(() => {
     const firefliesPositions = new Float32Array(firefliesCount * 3);

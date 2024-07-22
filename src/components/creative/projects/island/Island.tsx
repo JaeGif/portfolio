@@ -13,7 +13,6 @@ import Ground from './nature/Ground';
 import Trees from './nature/Trees';
 import Fireflies from './nature/Fireflies';
 import Waterfall from './nature/Waterfall';
-import SunDial from './items/SunDial';
 
 export default function Island(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF(
@@ -34,7 +33,6 @@ export default function Island(props: JSX.IntrinsicElements['group']) {
         <Ground nodes={nodes} materials={materials} />
         <Trees nodes={nodes} materials={materials} />
         <Waterfall nodes={nodes} materials={materials} />
-        <SunDial nodes={nodes} materials={materials} />
         <Fireflies />
       </group>
     </>

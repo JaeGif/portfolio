@@ -13,10 +13,9 @@ void main() {
     vec4 viewPosition = viewMatrix * modelPosition; 
     vec4 projectionPosition = projectionMatrix * viewPosition;
 
-    float flickerScale = sin(uTime * aScale * 5.0) + 2.0;
+    float flickerScale = sin(uTime * aScale * 10.0) + 2.0;
 
     gl_Position = projectionPosition;
-    gl_PointSize = 100.0 * flickerScale * uPixelRatio * aScale;    // change sizes
-    gl_PointSize *= (1.0 / - viewPosition.z);       // size attenuation
+    gl_PointSize = 10.0 * flickerScale * uPixelRatio * aScale;    // change sizes
 
 }

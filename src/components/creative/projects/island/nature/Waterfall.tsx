@@ -41,7 +41,7 @@ function Waterfall({ nodes, materials }: GLTFNodesMaterials) {
       sprayPositions[i * 3 + 0] = Math.random() * 0.4 - 0.5;
       sprayPositions[i * 3 + 1] = Math.random() * 0.4;
       sprayPositions[i * 3 + 2] = Math.random() - 0.5;
-      sprayScale[i] = Math.random() * 2;
+      sprayScale[i] = Math.random();
     }
     return { sprayPositions, sprayScale };
   }, [sprayCount]);
