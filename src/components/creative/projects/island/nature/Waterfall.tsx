@@ -1,8 +1,5 @@
 import React, { useRef } from 'react';
 // Shaders
-import waterfallVertexShader from '../shaders/waterfall/vertex.glsl';
-import waterfallFragmentShader from '../shaders/waterfall/fragment.glsl';
-
 import waterfallWaveVertexShader from '../shaders/waterfallWaves/vertex.glsl';
 import waterfallWaveFragmentShader from '../shaders/waterfallWaves/fragment.glsl';
 // R3F
@@ -10,25 +7,24 @@ import { useFrame } from '@react-three/fiber';
 // Drei
 import { GLTFNodesMaterials } from '../types';
 function Waterfall({ nodes, materials }: GLTFNodesMaterials) {
-  const waterFallWaveRef = useRef<any>(null);
+  const waterFallRef = useRef<any>(null);
 
   useFrame((state, delta) => {
-    waterFallWaveRef.current.uniforms.uTime.value = state.clock.elapsedTime;
+    waterFallRef.current.uniforms.uTime.value = state.clock.elapsedTime;
   });
   return (
     <>
       <mesh
-        name='waterfall'
+        name='water_surface'
         castShadow
         receiveShadow
-        geometry={nodes.waterfall.geometry}
-        position={[-2.21782, 1.44812, 7.27783]}
-        rotation={[-1.662, 0.05586, -0.5481]}
+        geometry={nodes.water_surface.geometry}
+        position={[-1.54113, -0.13857, 1.71592]}
+        rotation={[0.00754, 0.76818, -0.01133]}
+        scale={[0.86721, 0.91915, 1.41586]}
       >
         <shaderMaterial
-          transparent
-          depthWrite={false}
-          ref={waterFallWaveRef}
+          ref={waterFallRef}
           uniforms={{ uTime: { value: 0 } }}
           vertexShader={waterfallWaveVertexShader}
           fragmentShader={waterfallWaveFragmentShader}

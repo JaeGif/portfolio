@@ -107,7 +107,7 @@ float simplexNoise2d(vec2 v)
     return 130.0 * dot(m, g);
 }
 void main() {
-    float strength = snoise(vec3(vec2(vUv.x * 7.0, vUv.y - uTime * 0.5) * 8.0, uTime));
+    float strength = snoise(vec3(vec2(vUv.x * 15.0, vUv.y - uTime * 0.3) * 8.0, uTime));
   
     vec3 innerColor = vec3(.1, .30, .89);
     vec3 outerColor = vec3(.53, .71, .99);

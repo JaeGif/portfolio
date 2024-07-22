@@ -59,6 +59,8 @@ export type GLTFResult = GLTF & {
     rock4016: THREE.Mesh;
     rock4017: THREE.Mesh;
     waterfall: THREE.Mesh;
+    Cylinder003: THREE.Mesh;
+    Cylinder003_1: THREE.Mesh;
     base: THREE.Mesh;
     base2: THREE.Mesh;
     rope2: THREE.Mesh;
@@ -124,6 +126,8 @@ export type GLTFResult = GLTF & {
 
 export type GLTFNodesMaterials = {
   nodes: {
+    Cylinder003: THREE.Mesh;
+    Cylinder003_1: THREE.Mesh;
     Cylinder014: THREE.Mesh;
     Cylinder014_1: THREE.Mesh;
     Cylinder013: THREE.Mesh;

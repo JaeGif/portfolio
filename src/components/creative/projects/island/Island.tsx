@@ -4,7 +4,6 @@ import Staff from './items/Staff';
 import { GLTFResult } from './types';
 import Path from './nature/Path';
 import Portal from './portal/Portal';
-import Pond from './nature/Pond';
 import Rocks from './nature/Rocks';
 import Lights from './items/Lights';
 import Stark from './items/Stark';
@@ -14,6 +13,7 @@ import Ground from './nature/Ground';
 import Trees from './nature/Trees';
 import Fireflies from './nature/Fireflies';
 import Waterfall from './nature/Waterfall';
+import SunDial from './items/SunDial';
 
 export default function Island(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF(
@@ -27,7 +27,6 @@ export default function Island(props: JSX.IntrinsicElements['group']) {
         <Stark nodes={nodes} materials={materials} />
         <Path nodes={nodes} materials={materials} />
         <Portal nodes={nodes} materials={materials} />
-        <Pond nodes={nodes} materials={materials} />
         <Rocks nodes={nodes} materials={materials} />
         <Lights nodes={nodes} materials={materials} />
         <SmallAxe nodes={nodes} materials={materials} />
@@ -35,6 +34,7 @@ export default function Island(props: JSX.IntrinsicElements['group']) {
         <Ground nodes={nodes} materials={materials} />
         <Trees nodes={nodes} materials={materials} />
         <Waterfall nodes={nodes} materials={materials} />
+        <SunDial nodes={nodes} materials={materials} />
         <Fireflies />
       </group>
     </>
