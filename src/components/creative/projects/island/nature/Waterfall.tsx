@@ -11,13 +11,17 @@ import sprayFragmentShader from '../shaders/spray/fragment.glsl';
 // R3F
 import { useFrame, extend } from '@react-three/fiber';
 // Drei
-import { shaderMaterial } from '@react-three/drei';
+import { shaderMaterial, useTexture } from '@react-three/drei';
+
 function Waterfall({ nodes, materials }: GLTFNodesMaterials) {
   // extend shader materials
+  const particleTexture = useTexture('/assets/creative/textures/particle.png');
+
   const SprayMaterial = shaderMaterial(
     {
       uPixelRatio: Math.min(window.devicePixelRatio, 2),
       uTime: 0,
+      uTexture: particleTexture,
     },
     sprayVertexShader,
     sprayFragmentShader
@@ -26,7 +30,7 @@ function Waterfall({ nodes, materials }: GLTFNodesMaterials) {
   extend({ SprayMaterial });
   const sprayRef = useRef<any>(null);
 
-  const sprayCount = 30;
+  const sprayCount = 100;
 
   const { sprayPositions, sprayScale } = useMemo(() => {
     const sprayPositions = new Float32Array(sprayCount * 3);
@@ -34,9 +38,9 @@ function Waterfall({ nodes, materials }: GLTFNodesMaterials) {
     const sprayScale = new Float32Array(sprayCount);
 
     for (let i = 0; i < sprayCount; i++) {
-      sprayPositions[i * 3 + 0] = (Math.random() - 0.5) * 8;
-      sprayPositions[i * 3 + 1] = Math.random() * 1.5 * 2;
-      sprayPositions[i * 3 + 2] = (Math.random() - 0.5) * 7;
+      sprayPositions[i * 3 + 0] = Math.random() * 0.4 - 0.5;
+      sprayPositions[i * 3 + 1] = Math.random() * 0.4;
+      sprayPositions[i * 3 + 2] = Math.random() - 0.5;
       sprayScale[i] = Math.random();
     }
     return { sprayPositions, sprayScale };
@@ -54,7 +58,7 @@ function Waterfall({ nodes, materials }: GLTFNodesMaterials) {
     <>
       <group>
         <points
-          position={[-2.113, -0.13857, 2.61592]}
+          position={[-2.1, -3.5, 2.6]}
           rotation={[0.00754, 0.76818, -0.01133]}
         >
           <bufferGeometry attach={'geometry'}>
@@ -74,7 +78,12 @@ function Waterfall({ nodes, materials }: GLTFNodesMaterials) {
             />
           </bufferGeometry>
           {/* @ts-ignore */}
-          <sprayMaterial ref={sprayRef} attach={'material'} />
+          <sprayMaterial
+            depthWrite={false}
+            transparent
+            ref={sprayRef}
+            attach={'material'}
+          />
         </points>
         <mesh
           name='water_surface'
