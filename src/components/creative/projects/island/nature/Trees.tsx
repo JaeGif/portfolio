@@ -33,21 +33,7 @@ type ParticlesType = {
 
 function Trees({ nodes, materials }: GLTFNodesMaterials) {
   // gl is instance of renderer
-
   const { gl } = useThree();
-
-  /* // extend shader materials
-
-  const LeavesMaterial = shaderMaterial(
-    {
-      uPixelRatio: Math.min(window.devicePixelRatio, 2),
-      uTime: 0,
-    },
-    leavesVertexShader,
-    leavesFragmentShader
-  );
-
-  extend({ LeavesMaterial }); */
 
   const baseGeometry: BaseGeometryType = {};
   baseGeometry.instance = nodes.leaves.geometry;
@@ -101,9 +87,9 @@ function Trees({ nodes, materials }: GLTFNodesMaterials) {
   gpgpu.particlesVariable.material.uniforms.uFlowFieldInfluence =
     new THREE.Uniform(0.5);
   gpgpu.particlesVariable.material.uniforms.uFlowFieldStrength =
-    new THREE.Uniform(2.0);
+    new THREE.Uniform(3.0);
   gpgpu.particlesVariable.material.uniforms.uFlowFieldFrequency =
-    new THREE.Uniform(0.5);
+    new THREE.Uniform(0.1);
 
   gpgpu.computation.init();
   gpgpu.debug = new THREE.Mesh(
@@ -121,6 +107,7 @@ function Trees({ nodes, materials }: GLTFNodesMaterials) {
   // geometry
   const particlesUvArray = new Float32Array(baseGeometry.count * 2);
   const sizesArray = new Float32Array(baseGeometry.count);
+  const colorsArray = new Float32Array(baseGeometry.count * 3);
 
   for (let y = 0; y < gpgpu.size; y++) {
     for (let x = 0; x < gpgpu.size; x++) {
@@ -137,7 +124,33 @@ function Trees({ nodes, materials }: GLTFNodesMaterials) {
 
       sizesArray[i] = Math.random(); // for randomized size
     }
+
+    for (let i = 0; i < baseGeometry.count; i++) {
+      const i3 = i * 3;
+      // set colors
+      const color1 = { r: 1.0, g: 0.573, b: 0.796 };
+      const color2 = { r: 0.565, g: 0.1216, b: 0.2314 };
+      const color3 = { r: 1.0, g: 1.0, b: 1.0 };
+
+      const randomInt = Math.floor(Math.random() * 10);
+      console.log(randomInt);
+      if (randomInt < 4) {
+        colorsArray[i3 + 0] = color1.r;
+        colorsArray[i3 + 1] = color1.g;
+        colorsArray[i3 + 2] = color1.b;
+      } else if (randomInt < 9) {
+        colorsArray[i3 + 0] = color2.r;
+        colorsArray[i3 + 1] = color2.g;
+        colorsArray[i3 + 2] = color2.b;
+      } else {
+        colorsArray[i3 + 0] = color3.r;
+        colorsArray[i3 + 1] = color3.g;
+        colorsArray[i3 + 2] = color3.b;
+      }
+    }
   }
+
+  console.log(colorsArray);
 
   particles.geometry = new THREE.BufferGeometry();
   particles.geometry.setDrawRange(0, baseGeometry.count);
@@ -145,7 +158,10 @@ function Trees({ nodes, materials }: GLTFNodesMaterials) {
     'aParticlesUv',
     new THREE.BufferAttribute(particlesUvArray, 2)
   );
-
+  particles.geometry.setAttribute(
+    'aColor',
+    new THREE.BufferAttribute(colorsArray, 3)
+  );
   particles.geometry.setAttribute(
     'aSize',
     new THREE.BufferAttribute(sizesArray, 1)
