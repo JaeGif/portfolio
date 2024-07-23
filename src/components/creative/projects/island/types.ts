@@ -126,6 +126,7 @@ export type GLTFResult = GLTF & {
 
 export type GLTFNodesMaterials = {
   nodes: {
+    leaves: THREE.Points;
     Cylinder003: THREE.Mesh;
     Cylinder003_1: THREE.Mesh;
     Cylinder014: THREE.Mesh;
