@@ -92,12 +92,16 @@ function ExperienceContainer() {
         )}
         <span className='flex gap-5 flex-wrap'>
           {isMobile ? (
-            <select className='w-full p-2 text-center rounded-md'>
+            <select
+              value={currentExperience}
+              onChange={(e) => {
+                setCurrentExperience(e.target.value);
+              }}
+              className='w-full p-2 text-center rounded-md'
+            >
               {experiences.map((exp, i) => (
                 <option
-                  onClick={() => {
-                    setCurrentExperience(exp);
-                  }}
+                  value={exp}
                   key={uniqid()}
                   className={`${
                     currentExperience === exp
