@@ -2,24 +2,38 @@ import React, { useRef } from 'react';
 import { GLTFNodesMaterials } from '../types';
 
 import { useFrame } from '@react-three/fiber';
+import { Float } from '@react-three/drei';
 
-function SunDial({ nodes, materials }: GLTFNodesMaterials) {
+function SunDial({ nodes, materials }: GLTFNodesMaterials | any) {
   const sunRef = useRef<any>(null);
 
-  useFrame((state, delta) => {});
+  const rotateYDegrees = (degrees: number) => {
+    // rad = 180 / Math.PI
+    // deg = Math.PI / 180
+    const radians = (180 / Math.PI) * degrees;
+    sunRef.current.rotation.y += radians;
+  };
+
+  useFrame((state, delta) => {
+    rotateYDegrees(-0.00002);
+  });
+
   return (
     <>
+      <Float rotationIntensity={0.1} floatIntensity={0.5} speed={2.5}>
+        <mesh
+          ref={sunRef}
+          name='sun'
+          castShadow
+          receiveShadow
+          geometry={nodes.sun.geometry}
+          material={nodes.sun.material}
+          position={[-0.697, 0.35, 2.633]}
+          rotation={[0, 0.551, 0]}
+          scale={0.832}
+        />
+      </Float>
       <group name='sunDial' position={[-0.704, 0.097, 2.632]}>
-        <group ref={sunRef} name='sun' position={[0.0315, 0, -0.15]}>
-          <mesh position-y={0.2}>
-            <sphereGeometry attach={'geometry'} args={[0.025]} />
-            <meshStandardMaterial
-              color={'rgb(300, 300, 0)'}
-              transparent
-              attach={'material'}
-            />
-          </mesh>
-        </group>
         <mesh
           name='Cylinder003'
           castShadow

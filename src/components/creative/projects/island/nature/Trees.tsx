@@ -36,7 +36,7 @@ function Trees({ nodes, materials }: GLTFNodesMaterials) {
   const { gl } = useThree();
 
   const baseGeometry: BaseGeometryType = {};
-  baseGeometry.instance = nodes.leaves.geometry;
+  baseGeometry.instance = nodes.leaves002.geometry;
   baseGeometry.count = baseGeometry.instance.attributes.position.count;
 
   // GP-GPU
@@ -85,11 +85,11 @@ function Trees({ nodes, materials }: GLTFNodesMaterials) {
     baseParticlesTexture
   );
   gpgpu.particlesVariable.material.uniforms.uFlowFieldInfluence =
-    new THREE.Uniform(0.5);
+    new THREE.Uniform(0.6);
   gpgpu.particlesVariable.material.uniforms.uFlowFieldStrength =
-    new THREE.Uniform(3.0);
+    new THREE.Uniform(4.0);
   gpgpu.particlesVariable.material.uniforms.uFlowFieldFrequency =
-    new THREE.Uniform(0.1);
+    new THREE.Uniform(0.2);
 
   gpgpu.computation.init();
   gpgpu.debug = new THREE.Mesh(
@@ -122,7 +122,7 @@ function Trees({ nodes, materials }: GLTFNodesMaterials) {
       particlesUvArray[i2 + 0] = uvX;
       particlesUvArray[i2 + 1] = uvY;
 
-      sizesArray[i] = Math.random(); // for randomized size
+      sizesArray[i] = Math.random() * 1.25; // for randomized size
     }
 
     for (let i = 0; i < baseGeometry.count; i++) {
@@ -133,8 +133,7 @@ function Trees({ nodes, materials }: GLTFNodesMaterials) {
       const color3 = { r: 1.0, g: 1.0, b: 1.0 };
 
       const randomInt = Math.floor(Math.random() * 10);
-      console.log(randomInt);
-      if (randomInt < 4) {
+      if (randomInt < 3) {
         colorsArray[i3 + 0] = color1.r;
         colorsArray[i3 + 1] = color1.g;
         colorsArray[i3 + 2] = color1.b;
@@ -149,8 +148,6 @@ function Trees({ nodes, materials }: GLTFNodesMaterials) {
       }
     }
   }
-
-  console.log(colorsArray);
 
   particles.geometry = new THREE.BufferGeometry();
   particles.geometry.setDrawRange(0, baseGeometry.count);

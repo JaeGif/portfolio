@@ -7,5 +7,5 @@ void main()
     if(distanceToCenter > 0.5)
         discard;
 
-    gl_FragColor = vec4(vColor, 1.0);
+    gl_FragColor = vec4(vColor.r * 2.0, vColor.g * 2.0, vColor.b * 2.0, 1.0);
 }

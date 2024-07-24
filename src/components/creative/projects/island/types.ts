@@ -11,6 +11,8 @@ interface MaterialsDictionary {
 
 export type GLTFResult = GLTF & {
   nodes: {
+    leaves: THREE.Points;
+    leaves002: THREE.Points;
     Cylinder014: THREE.Mesh;
     Cylinder014_1: THREE.Mesh;
     Cylinder013: THREE.Mesh;
@@ -97,14 +99,16 @@ export type GLTFResult = GLTF & {
     Cylinder008: THREE.Mesh;
     Cylinder008_1: THREE.Mesh;
     Cylinder009: THREE.Mesh;
+    grassPieces: THREE.Mesh;
     Cylinder009_1: THREE.Mesh;
+    grassPieces001: THREE.Mesh;
+    sun: THREE.Mesh;
   };
   materials: {
     ['staff gold']: THREE.MeshStandardMaterial;
     ['red gemstone']: THREE.MeshStandardMaterial;
     ['staff wood']: THREE.MeshStandardMaterial;
     lampLightEmissive: THREE.MeshStandardMaterial;
-    waterfall: THREE.MeshStandardMaterial;
     rocks: THREE.MeshStandardMaterial;
     path: THREE.MeshStandardMaterial;
     dirt: THREE.MeshStandardMaterial;
@@ -116,6 +120,7 @@ export type GLTFResult = GLTF & {
     ['blue gemstone']: THREE.MeshPhysicalMaterial;
     grass: THREE.MeshStandardMaterial;
     basin: THREE.MeshStandardMaterial;
+    grassBlades: THREE.MeshStandardMaterial;
     ['tree wood']: THREE.MeshStandardMaterial;
     roots: THREE.MeshStandardMaterial;
     gilding: THREE.MeshStandardMaterial;
@@ -126,7 +131,10 @@ export type GLTFResult = GLTF & {
 
 export type GLTFNodesMaterials = {
   nodes: {
+    sun: THREE.Mesh;
+    grassPieces001: THREE.Mesh;
     leaves: THREE.Points;
+    leaves002: THREE.Points;
     Cylinder003: THREE.Mesh;
     Cylinder003_1: THREE.Mesh;
     Cylinder014: THREE.Mesh;
@@ -214,13 +222,13 @@ export type GLTFNodesMaterials = {
     Cylinder008_1: THREE.Mesh;
     Cylinder009: THREE.Mesh;
     Cylinder009_1: THREE.Mesh;
+    grassPieces: THREE.Mesh;
   };
   materials: {
     ['staff gold']: THREE.MeshStandardMaterial;
     ['red gemstone']: THREE.MeshStandardMaterial;
     ['staff wood']: THREE.MeshStandardMaterial;
     lampLightEmissive: THREE.MeshStandardMaterial;
-    waterfall: THREE.MeshStandardMaterial;
     rocks: THREE.MeshStandardMaterial;
     path: THREE.MeshStandardMaterial;
     dirt: THREE.MeshStandardMaterial;
@@ -232,6 +240,7 @@ export type GLTFNodesMaterials = {
     ['blue gemstone']: THREE.MeshPhysicalMaterial;
     grass: THREE.MeshStandardMaterial;
     basin: THREE.MeshStandardMaterial;
+    grassBlades: THREE.MeshStandardMaterial;
     ['tree wood']: THREE.MeshStandardMaterial;
     roots: THREE.MeshStandardMaterial;
     gilding: THREE.MeshStandardMaterial;

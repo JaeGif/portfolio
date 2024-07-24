@@ -13,8 +13,10 @@ import Ground from './nature/Ground';
 import Trees from './nature/Trees';
 import Fireflies from './nature/Fireflies';
 import Waterfall from './nature/Waterfall';
+import Grass from './nature/Grass';
+import SunDial from './items/SunDial';
 
-export default function Island(props: JSX.IntrinsicElements['group']) {
+export default function Island(props: any) {
   const { nodes, materials } = useGLTF(
     '/assets/creative/models/portalData.glb'
   ) as GLTFResult;
@@ -30,6 +32,8 @@ export default function Island(props: JSX.IntrinsicElements['group']) {
         <Lights nodes={nodes} materials={materials} />
         <SmallAxe nodes={nodes} materials={materials} />
         <Stumps nodes={nodes} materials={materials} />
+        <Grass nodes={nodes} materials={materials} />
+        <SunDial nodes={nodes} materials={materials} />
         <Ground nodes={nodes} materials={materials} />
         <Trees nodes={nodes} materials={materials} />
         <Waterfall nodes={nodes} materials={materials} />
