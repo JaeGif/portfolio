@@ -15,11 +15,11 @@ function ExperienceContainer() {
     switch (currentExperience) {
       case 'Portal':
         return <PortalExperience />;
-      case 'Laptop':
+      case 'Fireworks':
         return (
           <iframe
             className='h-full w-full'
-            src='https://laptop-beryl.vercel.app/'
+            src='https://fireworks-eta.vercel.app/'
           />
         );
       case 'GP-GPU Animation':
@@ -80,7 +80,7 @@ function ExperienceContainer() {
     'Earth',
     'Morphing',
     'Cursor Effects',
-    'Laptop',
+    'Fireworks',
   ];
   return (
     <>
