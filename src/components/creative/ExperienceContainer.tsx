@@ -69,6 +69,17 @@ function ExperienceContainer() {
             }
           />
         );
+      case 'Galaxy':
+        return (
+          <iframe
+            className='h-full w-full'
+            src={
+              isMobile
+                ? 'https://galaxy-bay.vercel.app/'
+                : 'https://galaxy-bay.vercel.app/#debug'
+            }
+          />
+        );
       default:
         return <PortalExperience />;
     }
@@ -81,6 +92,7 @@ function ExperienceContainer() {
     'Morphing',
     'Cursor Effects',
     'Fireworks',
+    'Galaxy',
   ];
   return (
     <>
