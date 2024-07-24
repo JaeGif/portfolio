@@ -74,9 +74,9 @@ function Footer() {
             title='Digital Ocean'
           />
         </div>
-        {/*         <em className='text-sm text-gray-100'>
+        <em className='text-sm text-gray-100'>
           Copyright &#169; {new Date().getFullYear()} Jacob Gifford
-        </em> */}
+        </em>
       </div>
     </div>
   );
