@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { Center, OrbitControls, Sky } from '@react-three/drei';
 import Island from '../projects/island/Island';
 import {

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useMemo } from 'react';
+import React, { useRef, useMemo } from 'react';
 import * as THREE from 'three';
 // Shaders
 import firefliesVertexShader from '../shaders/fireflies/vertex.glsl';

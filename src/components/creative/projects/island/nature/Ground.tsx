@@ -1,6 +1,5 @@
 import React from 'react';
 import { GLTFNodesMaterials } from '../types';
-import { Bloom, EffectComposer } from '@react-three/postprocessing';
 
 function Ground({ nodes, materials }: GLTFNodesMaterials) {
   return (
