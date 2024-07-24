@@ -36,6 +36,18 @@ function Footer() {
           <Image
             height={32}
             width={32}
+            src={
+              currentTheme === 'dark'
+                ? '/assets/favicons/three-dark.svg'
+                : '/assets/favicons/threejs-original-wordmark.svg'
+            }
+            alt='technologies I use'
+            aria-label='three js'
+            title='Three.js'
+          />
+          <Image
+            height={32}
+            width={32}
             src='/assets/favicons/tailwindcss-plain.svg'
             alt='technologies I use'
             aria-label='tailwind'

@@ -191,7 +191,7 @@ function Technologies() {
                 aria-label='express'
                 title='Express'
               />
-              <Image
+              {/*               <Image
                 height={54}
                 width={54}
                 src={
@@ -214,7 +214,7 @@ function Technologies() {
                 alt='technologies I use'
                 aria-label='flask'
                 title='Flask'
-              />
+              /> */}
               <Image
                 height={54}
                 width={54}
@@ -353,14 +353,14 @@ function Technologies() {
                 aria-label='digital ocean'
                 title='Digital Ocean'
               />
-              <Image
+              {/*               <Image
                 height={54}
                 width={54}
                 src='/assets/favicons/docker-original-wordmark.svg'
                 alt='technologies I use'
                 aria-label='docker'
                 title='Docker'
-              />
+              /> */}
               <Image
                 height={54}
                 width={54}
