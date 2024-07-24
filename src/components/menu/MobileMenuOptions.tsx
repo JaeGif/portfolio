@@ -33,6 +33,13 @@ function MobileMenuOptions({ toggleMenu }: MobileMenuOptionsProps) {
         Projects
       </Link>
       <Link
+        className={urlParam === '/creative' ? 'text-blue-500' : ''}
+        onClick={() => toggleMenu()}
+        href='/creative'
+      >
+        Creative
+      </Link>
+      <Link
         className={urlParam === '/about' ? 'text-blue-500' : ''}
         onClick={() => toggleMenu()}
         href='/about'

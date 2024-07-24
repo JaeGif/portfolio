@@ -2,6 +2,7 @@ import React from 'react';
 import Github from '../svg/Github';
 import LinkedIn from '../svg/LinkedIn';
 import Link from 'next/link';
+import Twitter from '../svg/Twitter';
 function SocialLinks() {
   return (
     <div className='flex gap-5'>
@@ -18,6 +19,13 @@ function SocialLinks() {
         target='_blank'
       >
         <LinkedIn />
+      </Link>
+      <Link
+        href='https://x.com/jgifforddev'
+        aria-label='twitter'
+        target='_blank'
+      >
+        <Twitter />
       </Link>
     </div>
   );

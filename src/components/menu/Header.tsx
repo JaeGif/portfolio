@@ -3,6 +3,7 @@ import React from 'react';
 import ThemeToggle from '../svg/ThemeToggle';
 import LinkedIn from '../svg/LinkedIn';
 import Github from '../svg/Github';
+import Twitter from '../svg/Twitter';
 import { useState, useEffect } from 'react';
 import MobileHeader from './MobileHeader';
 import { motion } from 'framer-motion';
@@ -25,9 +26,9 @@ function Header({ toggleMenu }: HeaderProps) {
     animate: { x: '0' },
   };
   return (
-    <header className='invisible sm:visible sm:w-full sm:flex sm:px-28 sm:py-3 sm:justify-between'>
+    <header className='invisible md:visible sm:w-full sm:flex md:px-16 lg:px-24 md:py-3 md:justify-between'>
       <MobileHeader toggleMenu={toggleMenu} />
-      <nav className='hidden sm:flex w-1/3 justify-start sm:gap-3 md:gap-8'>
+      <nav className='hidden md:flex w-1/3 justify-start sm:gap-3 md:gap-8'>
         <motion.div
           initial='initial'
           animate='initial'
@@ -105,7 +106,7 @@ function Header({ toggleMenu }: HeaderProps) {
         </motion.div>
       </nav>
 
-      <div className='hidden sm:flex w-1/3 justify-end items-center gap-3'>
+      <div className='hidden md:flex w-1/3 justify-end items-center gap-3'>
         <Link
           href={'https://github.com/JaeGif'}
           target='_blank'
@@ -121,6 +122,13 @@ function Header({ toggleMenu }: HeaderProps) {
           aria-label='linkedin out link'
         >
           <LinkedIn />
+        </Link>
+        <Link
+          href='https://x.com/jgifforddev'
+          aria-label='twitter'
+          target='_blank'
+        >
+          <Twitter />
         </Link>
         <ThemeToggle />
       </div>
