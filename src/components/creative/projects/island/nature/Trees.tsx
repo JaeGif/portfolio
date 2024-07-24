@@ -1,7 +1,6 @@
 import React from 'react';
 import { GLTFNodesMaterials } from '../types';
-import { shaderMaterial } from '@react-three/drei';
-import { extend, useFrame, useThree } from '@react-three/fiber';
+import { useFrame, useThree } from '@react-three/fiber';
 
 // shaders
 import leavesVertexShader from '../shaders/leaves/vertex.glsl';
@@ -11,8 +10,6 @@ import particleShader from '../shaders/leaves/particle.glsl';
 
 import * as THREE from 'three';
 import { GPUComputationRenderer } from 'three/examples/jsm/misc/GPUComputationRenderer.js';
-
-import { useControls } from 'leva';
 
 type BaseGeometryType = {
   instance?: THREE.BufferGeometry;
