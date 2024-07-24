@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "npm run build && next export -o _static"
+    "export": "nvm install node --latest-npm && npm run build && next export -o _static"
   },
   "dependencies": {
     "@react-three/drei": "^9.108.4",
@@ -20,11 +20,9 @@
     "eslint-config-next": "13.3.1",
     "framer-motion": "^10.12.4",
     "glslify-loader": "^2.0.0",
-    "leva": "file:.9.34",
     "next": "^14.2.5",
     "next-themes": "^0.2.1",
     "postprocessing": "^6.35.6",
-    "r3f-perf": "^7.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-loading-icons": "^1.1.0",
