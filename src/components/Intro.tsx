@@ -22,7 +22,11 @@ function Intro() {
         <p>Full Stack Developer</p>
       </div>
       <nav className='flex gap-5 justify-center'>
-        <a href='/assets/fullstackResume.pdf' target='_blank'>
+        <Link
+          href='./assets/fullstackResume.pdf'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           <motion.button
             whileHover={{ scale: 1.05 }}
             className='p-2 border-2 dark:border-white border-black rounded-md flex items-center gap-1 text-lg hover:border-pink-500 hover:dark:border-pink-500'
@@ -42,7 +46,7 @@ function Intro() {
               />
             </svg>
           </motion.button>
-        </a>
+        </Link>
         <Link href={'/contact'}>
           <motion.p
             className='p-2 border-2 dark:border-white border-black rounded-md text-lg hover:border-pink-500 hover:dark:border-pink-500'
