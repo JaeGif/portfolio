@@ -16,13 +16,13 @@ function InstagramLinks() {
         <div className='flex gap-2 flex-wrap'>
           <Link href={'https://github.com/JaeGif/BlogAPI'} target='_blank'>
             <div className='p-2 border-2 dark:border-white border-black rounded-md flex gap-1 hover:border-pink-500 dark:hover:border-pink-500'>
-              <Client /> Client
+              <Client /> Client Code
             </div>
           </Link>
           <Link href={'https://github.com/JaeGif/RESTful_API'} target='_blank'>
             <div className='p-2 border-2 dark:border-white border-black rounded-md flex gap-1 hover:border-pink-500 dark:hover:border-pink-500'>
               <Server />
-              Server
+              Server Code
             </div>
           </Link>
           <Link href={'https://jaegif.github.io/BlogAPI/'} target='_blank'>

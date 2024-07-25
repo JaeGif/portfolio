@@ -69,33 +69,34 @@ function PortfolioDetails() {
             </div>
           </div>
         </div>
-        <div className='flex flex-col gap-4 w-fit'>
-          {isMd && (
-            <>
-              <span className='overflow-hidden rounded-sm'>
-                <iframe
-                  className='h-full max-w-fit'
-                  src='https://halftone-shading-pi.vercel.app/'
-                  aria-label='project view iframe'
-                />
-              </span>
-              <span className='overflow-hidden rounded-sm'>
-                <iframe
-                  className='h-full max-w-fit'
-                  src='https://laptop-beryl.vercel.app/'
-                  aria-label='project view iframe'
-                />
-              </span>
-              <span className='overflow-hidden rounded-sm'>
-                <iframe
-                  className='h-full max-w-fit'
-                  src='https://hologram-zeta.vercel.app/'
-                  aria-label='project view iframe'
-                />
-              </span>
-            </>
-          )}
-        </div>
+        {isMd && (
+          <div className='flex flex-col gap-4 w-fit items-center'>
+            <p className='text-gray-100'>
+              <em>Pssst</em>. These are interactive ...
+            </p>
+            <span className='overflow-hidden rounded-sm'>
+              <iframe
+                className='h-full max-w-fit'
+                src='https://halftone-shading-pi.vercel.app/'
+                aria-label='project view iframe'
+              />
+            </span>
+            <span className='overflow-hidden rounded-sm'>
+              <iframe
+                className='h-full max-w-fit'
+                src='https://laptop-beryl.vercel.app/'
+                aria-label='project view iframe'
+              />
+            </span>
+            <span className='overflow-hidden rounded-sm'>
+              <iframe
+                className='h-full max-w-fit'
+                src='https://hologram-zeta.vercel.app/'
+                aria-label='project view iframe'
+              />
+            </span>
+          </div>
+        )}
       </div>
     </span>
   );

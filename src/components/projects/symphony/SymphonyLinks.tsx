@@ -18,7 +18,7 @@ function SymphonyLinks() {
           target='_blank'
         >
           <div className='p-2 border-2 dark:border-white border-black rounded-md flex gap-2 hover:border-pink-500 dark:hover:border-pink-500 hover:text-pink-500'>
-            <Client /> Client
+            <Client /> Client Code
           </div>
         </Link>
         <Link
@@ -27,7 +27,7 @@ function SymphonyLinks() {
         >
           <div className='p-2 border-2 dark:border-white border-black rounded-md flex gap-2 hover:border-pink-500 dark:hover:border-pink-500 hover:text-pink-500'>
             <Server />
-            Server
+            Server Code
           </div>
         </Link>
         <Link
