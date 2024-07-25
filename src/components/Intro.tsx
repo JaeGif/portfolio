@@ -23,7 +23,7 @@ function Intro() {
       </div>
       <nav className='flex gap-5 justify-center'>
         <Link
-          href='./assets/fullstackResume.pdf'
+          href='./assets/images/fullstackResume.pdf'
           target='_blank'
           rel='noopener noreferrer'
         >
