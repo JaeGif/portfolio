@@ -158,6 +158,14 @@ function Technologies() {
                 aria-label='Photoshop'
                 title='Adobe Photoshop'
               />
+              <Image
+                height={54}
+                width={54}
+                src='/assets/favicons/blender-original.svg'
+                alt='technologies I use'
+                aria-label='blender'
+                title='Blender'
+              />
             </div>
           </div>
           <div className='flex flex-col w-full sm:w-[calc(33%-4rem)] dark:bg-gray-800'>
@@ -191,18 +199,7 @@ function Technologies() {
                 aria-label='express'
                 title='Express'
               />
-              {/*               <Image
-                height={54}
-                width={54}
-                src={
-                  currentTheme === 'dark'
-                    ? '/assets/favicons/django-dark.svg'
-                    : '/assets/favicons/django-plain.svg'
-                }
-                alt='technologies I use'
-                aria-label='django'
-                title='Django'
-              />
+
               <Image
                 height={54}
                 width={54}
@@ -214,7 +211,7 @@ function Technologies() {
                 alt='technologies I use'
                 aria-label='flask'
                 title='Flask'
-              /> */}
+              />
               <Image
                 height={54}
                 width={54}
@@ -353,14 +350,14 @@ function Technologies() {
                 aria-label='digital ocean'
                 title='Digital Ocean'
               />
-              {/*               <Image
+              <Image
                 height={54}
                 width={54}
                 src='/assets/favicons/docker-original-wordmark.svg'
                 alt='technologies I use'
                 aria-label='docker'
                 title='Docker'
-              /> */}
+              />
               <Image
                 height={54}
                 width={54}

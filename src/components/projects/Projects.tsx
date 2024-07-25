@@ -3,10 +3,10 @@ import React from 'react';
 import SymphonyDetails from './symphony/SymphonyDetails';
 import InstagramDetails from './instagram/InstagramDetails';
 import BattleshipDetails from './battleship/BattleshipDetails';
-import ShoppingDetails from './shopping/ShoppingDetails';
-import WeatherDetails from './weather/WeatherDetails';
+
 import GradientDetails from './gradient/GradientDetails';
 import FreelanceDetails from './freelance/FreelanceDetails';
+import PortfolioDetails from './portfolio/PortfolioDetails';
 
 function Projects() {
   return (
@@ -16,12 +16,11 @@ function Projects() {
       </span>
       <div className='flex flex-col items-center gap-20'>
         <GradientDetails />
+        <PortfolioDetails />
         <SymphonyDetails />
         <InstagramDetails />
         <BattleshipDetails />
         <FreelanceDetails />
-        {/*         <ShoppingDetails />
-        <WeatherDetails /> */}
       </div>
     </section>
   );

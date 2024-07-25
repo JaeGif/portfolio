@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Client from '@/components/svg/Client';
-import Server from '@/components/svg/Server';
+
 import { useTheme } from 'next-themes';
-function ShoppingLinks() {
+function PortfolioLinks() {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === 'system' ? systemTheme : theme;
   const [mounted, setMounted] = useState(false);
@@ -14,20 +14,14 @@ function ShoppingLinks() {
     <>
       {mounted && (
         <div className='flex gap-2 flex-wrap'>
-          <Link
-            href={'https://github.com/JaeGif/Shopping-Card'}
-            target='_blank'
-          >
+          <Link href={'https://github.com/JaeGif/Portfolio'} target='_blank'>
             <div className='p-2 border-2 dark:border-white border-black rounded-md flex gap-1 hover:border-pink-500 dark:hover:border-pink-500 '>
-              <Client /> Client
+              <Client /> Client Code
             </div>
           </Link>
-          <Link
-            href={'https://jaegif.github.io/Shopping-Card/'}
-            target='_blank'
-          >
+          <Link href={'/creative'}>
             <button className='p-2 border-2 dark:border-white border-black rounded-md flex gap-1 hover:border-pink-500 dark:hover:border-pink-500'>
-              Live
+              Creative
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 height='24'
@@ -47,4 +41,4 @@ function ShoppingLinks() {
   );
 }
 
-export default ShoppingLinks;
+export default PortfolioLinks;
