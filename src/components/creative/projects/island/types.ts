@@ -11,6 +11,19 @@ interface MaterialsDictionary {
 
 export type GLTFResult = GLTF & {
   nodes: {
+    goldBase: THREE.Mesh;
+    Plane002: THREE.Mesh;
+    goldPlate: THREE.Mesh;
+    goldPlate002: THREE.Mesh;
+    Plane001: THREE.Mesh;
+    goldBadge: THREE.Mesh;
+    Plane005: THREE.Mesh;
+    Plane006: THREE.Mesh;
+    goldLogo: THREE.Mesh;
+    goldBase001: THREE.Mesh;
+    goldPlate001: THREE.Mesh;
+    Plane: THREE.Mesh;
+    Text: THREE.Mesh;
     leaves: THREE.Points;
     leaves002: THREE.Points;
     Cylinder014: THREE.Mesh;
@@ -105,6 +118,10 @@ export type GLTFResult = GLTF & {
     sun: THREE.Mesh;
   };
   materials: {
+    gold: THREE.MeshStandardMaterial;
+    purple: THREE.MeshStandardMaterial;
+    white: THREE.MeshStandardMaterial;
+    red: THREE.MeshStandardMaterial;
     ['staff gold']: THREE.MeshStandardMaterial;
     ['red gemstone']: THREE.MeshStandardMaterial;
     ['staff wood']: THREE.MeshStandardMaterial;
@@ -223,8 +240,25 @@ export type GLTFNodesMaterials = {
     Cylinder009: THREE.Mesh;
     Cylinder009_1: THREE.Mesh;
     grassPieces: THREE.Mesh;
+    goldBase: THREE.Mesh;
+    Plane002: THREE.Mesh;
+    goldPlate: THREE.Mesh;
+    goldPlate002: THREE.Mesh;
+    Plane001: THREE.Mesh;
+    goldBadge: THREE.Mesh;
+    Plane005: THREE.Mesh;
+    Plane006: THREE.Mesh;
+    goldLogo: THREE.Mesh;
+    goldBase001: THREE.Mesh;
+    goldPlate001: THREE.Mesh;
+    Plane: THREE.Mesh;
+    Text: THREE.Mesh;
   };
   materials: {
+    gold: THREE.MeshStandardMaterial;
+    purple: THREE.MeshStandardMaterial;
+    white: THREE.MeshStandardMaterial;
+    red: THREE.MeshStandardMaterial;
     ['staff gold']: THREE.MeshStandardMaterial;
     ['red gemstone']: THREE.MeshStandardMaterial;
     ['staff wood']: THREE.MeshStandardMaterial;
