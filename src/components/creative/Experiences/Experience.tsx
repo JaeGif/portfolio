@@ -18,6 +18,7 @@ function Experience() {
         position: [3, 5, 11],
       }}
     >
+      <ambientLight intensity={0.75} />
       <OrbitControls makeDefault maxPolarAngle={Math.PI / 2 - 0.1} />
       <Postprocessing />
       <Lights />

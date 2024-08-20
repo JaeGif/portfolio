@@ -4,19 +4,14 @@ import { SpotLight, useDepthBuffer } from '@react-three/drei';
 import { Vector3 } from 'three';
 
 function Lights() {
-  const depthBuffer = useDepthBuffer({ frames: 1 });
+  const depthBuffer = useDepthBuffer();
 
   return (
     <>
       <MovingSpot
         depthBuffer={depthBuffer}
-        color='white'
+        color='pink'
         position={[-5, 15, 0]}
-      />
-      <MovingSpot
-        depthBuffer={depthBuffer}
-        color='blue'
-        position={[5, 15, 0]}
       />
     </>
   );
