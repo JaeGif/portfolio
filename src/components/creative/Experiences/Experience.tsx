@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { OrbitControls } from '@react-three/drei';
-
+import { Environment } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import Scene from './Scene';
 import Lights from './Lights';
 import Postprocessing from './Postprocessing';
-import StaticLights from './StaticLights';
 
 function Experience() {
   return (
@@ -19,7 +18,12 @@ function Experience() {
         position: [3, 5, 11],
       }}
     >
-      <StaticLights />
+      <Environment
+        preset='sunset'
+        background
+        backgroundBlurriness={0.9}
+        environmentIntensity={0.5}
+      />
       <OrbitControls makeDefault maxPolarAngle={Math.PI / 2 - 0.1} />
       <Postprocessing />
       <Scene />
