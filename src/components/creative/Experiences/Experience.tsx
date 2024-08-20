@@ -5,6 +5,7 @@ import { Canvas } from '@react-three/fiber';
 import Scene from './Scene';
 import Lights from './Lights';
 import Postprocessing from './Postprocessing';
+import StaticLights from './StaticLights';
 
 function Experience() {
   return (
@@ -18,10 +19,9 @@ function Experience() {
         position: [3, 5, 11],
       }}
     >
-      <ambientLight intensity={0.75} />
+      <StaticLights />
       <OrbitControls makeDefault maxPolarAngle={Math.PI / 2 - 0.1} />
       <Postprocessing />
-      <Lights />
       <Scene />
     </Canvas>
   );
