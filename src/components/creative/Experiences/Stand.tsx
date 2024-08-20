@@ -30,7 +30,7 @@ export function Stand({
       arm;
 
   return (
-    <group dispose={null}>
+    <group scale={3} dispose={null}>
       <mesh
         castShadow
         receiveShadow
