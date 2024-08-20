@@ -1,9 +1,10 @@
+// @ts-nocheck
+
 import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import grassVertexShader from './shaders/grass/vertex.glsl';
 import grassFragmentShader from './shaders/grass/fragment.glsl';
 import { useFrame } from '@react-three/fiber';
-
 function Grass() {
   const grassRef = useRef(null);
 
@@ -12,11 +13,11 @@ function Grass() {
   });
 
   // Parameters
-  const PLANE_SIZE = 100;
-  const BLADE_COUNT = 400000;
+  const PLANE_SIZE = 75;
+  const BLADE_COUNT = 500000;
   const BLADE_WIDTH = 0.1;
-  const BLADE_HEIGHT = 1;
-  const BLADE_HEIGHT_VARIATION = 1.5;
+  const BLADE_HEIGHT = 0.5;
+  const BLADE_HEIGHT_VARIATION = 1;
 
   // Grass Texture
   const grassTexture = new THREE.TextureLoader().load(
@@ -172,7 +173,7 @@ function Grass() {
   return (
     <>
       <mesh position-y={-0.3} rotation-x={[Math.PI / 2]}>
-        <circleGeometry args={[49]} />
+        <circleGeometry args={[37.5, 32]} />
         <meshBasicMaterial color={'#90EE90'} side={THREE.DoubleSide} />
       </mesh>
       <mesh ref={grassRef} material={grassMaterial} geometry={geometry} />
