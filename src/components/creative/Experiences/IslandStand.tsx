@@ -1,16 +1,18 @@
 import React from 'react';
-import { useTexture } from '@react-three/drei';
+import { Float, useTexture } from '@react-three/drei';
 import { Stand } from './Stand';
 
-function IslandStand() {
-  const marbleTextures = useTexture({
-    map: '/assets/creative/textures/quartzite/Poliigon_StoneQuartzite_8060_BaseColor.jpg',
-    arm: '/assets/creative/textures/quartzite/Poliigon_StoneQuartzite_8060_ORM.jpg',
-  });
+import Island from '../projects/island/Island';
 
+function IslandStand() {
   return (
     <group>
-      <Stand {...marbleTextures} />
+      <Stand />
+      <Float>
+        <group position={[0.1, 6, 0]} scale={0.5}>
+          <Island />
+        </group>
+      </Float>
     </group>
   );
 }

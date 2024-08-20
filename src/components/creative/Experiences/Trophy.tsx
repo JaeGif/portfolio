@@ -9,7 +9,7 @@ export default function Trophy(props: any) {
 
   return (
     <>
-      <group {...props} dispose={null}>
+      <group scale={2} {...props} dispose={null}>
         <mesh
           name='Text'
           castShadow

@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import React, { useRef } from 'react';
-import { useGLTF } from '@react-three/drei';
+import { useGLTF, useTexture } from '@react-three/drei';
 import { GLTF } from 'three-stdlib';
 
 type GLTFResult = GLTF & {
@@ -13,16 +13,16 @@ type GLTFResult = GLTF & {
 
 const marbleMaterial = new THREE.MeshStandardMaterial();
 
-export function Stand({
-  map,
-  arm,
-}: {
-  map: THREE.Texture;
-  arm: THREE.Texture;
-}) {
+export function Stand() {
   const { nodes, materials } = useGLTF(
     '/assets/creative/models/stand.glb'
   ) as GLTFResult;
+
+  const { map, arm } = useTexture({
+    map: '/assets/creative/textures/quartzite/Poliigon_StoneQuartzite_8060_BaseColor.jpg',
+    arm: '/assets/creative/textures/quartzite/Poliigon_StoneQuartzite_8060_ORM.jpg',
+  });
+
   marbleMaterial.map = map;
   marbleMaterial.aoMap =
     marbleMaterial.roughnessMap =
