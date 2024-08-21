@@ -9,9 +9,10 @@ import TrophyStand from './TrophyStand';
 function Scene() {
   return (
     <>
-      {/*       <IslandStand />
-       */}
-      <TrophyStand />
+      <group>
+        <IslandStand />
+        <TrophyStand />
+      </group>
       <Floor />
     </>
   );

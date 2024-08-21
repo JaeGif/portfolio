@@ -4,9 +4,8 @@ import { Stand } from './Stand';
 
 function TrophyStand() {
   return (
-    <group>
+    <group position={[0, 0, -25]}>
       <Trophy />
-      <Stand />
     </group>
   );
 }

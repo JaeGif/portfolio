@@ -6,7 +6,7 @@ import Island from '../projects/island/Island';
 
 function IslandStand() {
   return (
-    <group>
+    <group position={[-15, 0, -20]}>
       <Stand />
       <Float>
         <group position={[0.1, 6, 0]} scale={0.5}>
