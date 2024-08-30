@@ -2,21 +2,22 @@ import React from 'react';
 import gsap from 'gsap';
 import { Brush, Evaluator, SUBTRACTION } from 'three-bvh-csg';
 import * as THREE from 'three';
-import { useGLTF, useTexture, shaderMaterial } from '@react-three/drei';
-import { extend, useFrame } from '@react-three/fiber';
-
-const terrainMaterial = shaderMaterial(
-  {
-    uPixelRatio: Math.min(window.devicePixelRatio, 2),
-    uTime: 0,
-  },
-  firefliesVertexShader,
-  firefliesFragmentShader
-);
-
-extend({ FirefliesMaterial });
+import { useGLTF, useAnimations, useTexture } from '@react-three/drei';
+import { useFrame } from '@react-three/fiber';
+import CustomShaderMaterial from 'three-custom-shader-material/vanilla';
+import terrainVertexShader from './shaders/terrain/vertex.glsl';
+import terrainFragmentShader from './shaders/terrain/fragment.glsl';
+import waterVertexShader from './shaders/water/vertex.glsl';
+import waterFragmentShader from './shaders/water/fragment.glsl';
 
 function ProceduralTerrain() {
+  const { scene, animations } = useGLTF('/assets/creative/models/plane.glb');
+
+  const skins = useTexture({
+    map: '/assets/creative/textures/procedural/oak_diff.jpg',
+    arm: '/assets/creative/textures/procedural/oak_arm.jpg',
+  });
+
   const geometry = new THREE.PlaneGeometry(10, 10, 500, 500);
   geometry.deleteAttribute('uv');
   geometry.deleteAttribute('normal');
@@ -42,12 +43,12 @@ function ProceduralTerrain() {
   // HERE
 
   // Material
-  const material = new CustomShaderMaterial({
+  const terrainMaterial = new CustomShaderMaterial({
     // csm
     baseMaterial: THREE.MeshStandardMaterial,
     silent: true,
-    vertexShader: terrainVertex,
-    fragmentShader: terrainFragment,
+    vertexShader: terrainVertexShader,
+    fragmentShader: terrainFragmentShader,
     uniforms: uniforms,
 
     // msm
@@ -60,41 +61,16 @@ function ProceduralTerrain() {
     // csm
     baseMaterial: THREE.MeshDepthMaterial,
     silent: true,
-    vertexShader: terrainVertex,
+    vertexShader: terrainVertexShader,
     uniforms: uniforms,
-
     depthPacking: THREE.RGBADepthPacking,
   });
 
-  // plane whee
-  let plane = null;
-  gltfLoader.load('./models/planeUV.glb', (gltf) => {
-    plane = gltf.scene;
-    // cast shadows
-    plane.traverse((child) => {
-      if (child.isMesh) {
-        child.castShadow = true;
-      }
-    });
-
-    animationMixer = new THREE.AnimationMixer(plane);
-    const action = animationMixer.clipAction(gltf.animations[0]);
-    action.play();
-    plane.scale.setScalar(0.125);
-    plane.position.y = 0.7;
-    plane.position.x = 0;
-    plane.position.z = 0;
-    plane.rotation.y = Math.PI;
-    scene.add(plane);
-  });
-
   // mesh
-  const terrain = new THREE.Mesh(geometry, material);
+  const terrain = new THREE.Mesh(geometry, terrainMaterial);
   terrain.castShadow = true;
   terrain.receiveShadow = true;
   terrain.customDepthMaterial = depthMaterial;
-
-  scene.add(terrain);
 
   const waterUniforms = {
     uTime: new THREE.Uniform(0),
@@ -108,22 +84,18 @@ function ProceduralTerrain() {
     new THREE.PlaneGeometry(10, 10, 128, 128),
     new THREE.ShaderMaterial({
       transparent: true,
-      vertexShader: waterVertex,
-      fragmentShader: waterFragment,
+      vertexShader: waterVertexShader,
+      fragmentShader: waterFragmentShader,
       uniforms: waterUniforms,
     })
   );
   water.rotation.x = -Math.PI / 2;
   water.position.y = -0.075;
 
-  scene.add(water);
-
   // Brushes
 
   const boardFill = new Brush(new THREE.BoxGeometry(11, 2, 11));
   const boardHole = new Brush(new THREE.BoxGeometry(10, 2.1, 10));
-  // boardHole.position.y = 0.2;
-  // boardHole.updateMatrixWorld();
 
   const evaluator = new Evaluator();
   const board = evaluator.evaluate(boardFill, boardHole, SUBTRACTION);
@@ -131,21 +103,19 @@ function ProceduralTerrain() {
   board.geometry.clearGroups();
   board.material = new THREE.MeshStandardMaterial({
     color: '#ffffff',
-    metalnessMap: armWood,
-    roughnessMap: armWood,
-    aoMap: armWood,
-    map: diffWood,
+    metalnessMap: skins.arm,
+    roughnessMap: skins.arm,
+    aoMap: skins.arm,
+    map: skins.map,
   });
 
   board.castShadow = true;
   board.receiveShadow = true;
 
-  scene.add(board);
-
-  const clock = new THREE.Clock();
+  /*   const clock = new THREE.Clock();
 
   // add plane movement
-  const movePlane = (theta) => {
+  const movePlane = (theta: number) => {
     const angle = Math.sin(theta) / 3;
     plane.position.z = angle;
   };
@@ -169,8 +139,13 @@ function ProceduralTerrain() {
     // Call tick again on the next frame
     window.requestAnimationFrame(tick);
   };
-
-  return <></>;
+ */
+  return (
+    <>
+      <mesh geometry={board.geometry} material={board.material} />
+      <primitive object={scene} />
+    </>
+  );
 }
 
 export default ProceduralTerrain;
