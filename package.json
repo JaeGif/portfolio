@@ -29,6 +29,7 @@
     "react-loading-icons": "^1.1.0",
     "three": "^0.165.0",
     "three-bvh-csg": "^0.0.16",
+    "three-custom-shader-material": "^5.4.0",
     "typescript": "5.0.4",
     "uniqid": "^5.4.0"
   },
