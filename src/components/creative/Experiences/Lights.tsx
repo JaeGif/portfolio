@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React, { useRef } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
 import { SpotLight, useDepthBuffer } from '@react-three/drei';
@@ -18,12 +17,12 @@ function Lights() {
   );
 }
 export function MovingSpot({ vec = new Vector3(), ...props }) {
-  const light = useRef(null);
+  const light = useRef<any>(null);
   const viewport = useThree((state) => state.viewport);
 
   useFrame((state) => {
     if (!light.current) return;
-    light.current?.target.position.lerp(
+    light.current.target.position.lerp(
       vec.set(
         (state.mouse.x * viewport.width) / 2,
         (state.mouse.y * viewport.height) / 2,
