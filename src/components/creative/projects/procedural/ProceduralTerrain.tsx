@@ -11,18 +11,19 @@ import waterVertexShader from './shaders/water/vertex.glsl';
 import waterFragmentShader from './shaders/water/fragment.glsl';
 
 function ProceduralTerrain() {
-  const { scene, animations } = useGLTF('/assets/creative/models/plane.glb');
+  const { scene, animations } = useGLTF('/assets/creative/models/planeUV.glb');
+
+  // set plane
+  scene.scale.setScalar(0.5);
+  scene.position.y = 0.7;
+  scene.position.x = 0;
+  scene.position.z = 0;
+  scene.rotation.y = Math.PI;
 
   const skins = useTexture({
     map: '/assets/creative/textures/procedural/oak_diff.jpg',
     arm: '/assets/creative/textures/procedural/oak_arm.jpg',
   });
-
-  const geometry = new THREE.PlaneGeometry(10, 10, 500, 500);
-  geometry.deleteAttribute('uv');
-  geometry.deleteAttribute('normal');
-
-  geometry.rotateX(-Math.PI / 2);
 
   const uniforms = {
     uPositionFrequency: new THREE.Uniform(0.2),
@@ -40,8 +41,12 @@ function ProceduralTerrain() {
     uColorRock: new THREE.Uniform(new THREE.Color('#bfbd8d')),
   };
 
-  // HERE
+  // terrain geom
+  const geometry = new THREE.PlaneGeometry(10, 10, 500, 500);
+  geometry.deleteAttribute('uv');
+  geometry.deleteAttribute('normal');
 
+  geometry.rotateX(-Math.PI / 2);
   // Material
   const terrainMaterial = new CustomShaderMaterial({
     // csm
@@ -66,12 +71,6 @@ function ProceduralTerrain() {
     depthPacking: THREE.RGBADepthPacking,
   });
 
-  // mesh
-  const terrain = new THREE.Mesh(geometry, terrainMaterial);
-  terrain.castShadow = true;
-  terrain.receiveShadow = true;
-  terrain.customDepthMaterial = depthMaterial;
-
   const waterUniforms = {
     uTime: new THREE.Uniform(0),
     uSmallWavesElevation: new THREE.Uniform(0.02),
@@ -80,17 +79,16 @@ function ProceduralTerrain() {
     uSmallWavesIterations: new THREE.Uniform(4),
   };
   // water
-  const water = new THREE.Mesh(
-    new THREE.PlaneGeometry(10, 10, 128, 128),
-    new THREE.ShaderMaterial({
+
+  const water = {
+    geometry: new THREE.PlaneGeometry(10, 10, 128, 128),
+    material: new THREE.ShaderMaterial({
       transparent: true,
       vertexShader: waterVertexShader,
       fragmentShader: waterFragmentShader,
       uniforms: waterUniforms,
-    })
-  );
-  water.rotation.x = -Math.PI / 2;
-  water.position.y = -0.075;
+    }),
+  };
 
   // Brushes
 
@@ -108,9 +106,6 @@ function ProceduralTerrain() {
     aoMap: skins.arm,
     map: skins.map,
   });
-
-  board.castShadow = true;
-  board.receiveShadow = true;
 
   /*   const clock = new THREE.Clock();
 
@@ -140,9 +135,31 @@ function ProceduralTerrain() {
     window.requestAnimationFrame(tick);
   };
  */
+
+  useFrame((state, delta) => {
+    uniforms.uTime.value = waterUniforms.uTime.value = state.clock.elapsedTime;
+  });
   return (
     <>
-      <mesh geometry={board.geometry} material={board.material} />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={board.geometry}
+        material={board.material}
+      />
+      <mesh
+        receiveShadow
+        position-y={-0.075}
+        rotation-x={-Math.PI / 2}
+        geometry={water.geometry}
+        material={water.material}
+      />
+      <mesh
+        receiveShadow
+        customDepthMaterial={depthMaterial}
+        material={terrainMaterial}
+        geometry={geometry}
+      />
       <primitive object={scene} />
     </>
   );
