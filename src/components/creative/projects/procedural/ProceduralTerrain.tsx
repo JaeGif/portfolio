@@ -1,8 +1,7 @@
-import React from 'react';
-import gsap from 'gsap';
+import React, { useRef } from 'react';
 import { Brush, Evaluator, SUBTRACTION } from 'three-bvh-csg';
 import * as THREE from 'three';
-import { useGLTF, useAnimations, useTexture } from '@react-three/drei';
+import { useGLTF, useTexture } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import CustomShaderMaterial from 'three-custom-shader-material/vanilla';
 import terrainVertexShader from './shaders/terrain/vertex.glsl';
@@ -11,8 +10,8 @@ import waterVertexShader from './shaders/water/vertex.glsl';
 import waterFragmentShader from './shaders/water/fragment.glsl';
 
 function ProceduralTerrain() {
-  const { scene, animations } = useGLTF('/assets/creative/models/planeUV.glb');
-
+  const { scene } = useGLTF('/assets/creative/models/planeUV.glb');
+  const plane = useRef<any>(null);
   // set plane
   scene.scale.setScalar(0.5);
   scene.position.y = 0.7;
@@ -106,38 +105,14 @@ function ProceduralTerrain() {
     aoMap: skins.arm,
     map: skins.map,
   });
-
-  /*   const clock = new THREE.Clock();
-
-  // add plane movement
   const movePlane = (theta: number) => {
-    const angle = Math.sin(theta) / 3;
-    plane.position.z = angle;
+    const angle = Math.sin(theta);
+    plane.current.position.z = angle;
   };
-  const tick = () => {
-    const elapsedTime = clock.getElapsedTime();
-    // uniforms
-    uniforms.uTime.value = waterUniforms.uTime.value = elapsedTime;
-    if (animationMixer) animationMixer.update(elapsedTime);
-
-    // Update controls
-    controls.update();
-
-    // animate plane motion
-    if (plane) {
-      movePlane(elapsedTime);
-    }
-
-    // Render
-    renderer.render(scene, camera);
-
-    // Call tick again on the next frame
-    window.requestAnimationFrame(tick);
-  };
- */
 
   useFrame((state, delta) => {
     uniforms.uTime.value = waterUniforms.uTime.value = state.clock.elapsedTime;
+    if (plane.current) movePlane(state.clock.elapsedTime);
   });
   return (
     <>
@@ -160,7 +135,7 @@ function ProceduralTerrain() {
         material={terrainMaterial}
         geometry={geometry}
       />
-      <primitive object={scene} />
+      <primitive ref={plane} object={scene} />
     </>
   );
 }
