@@ -9,7 +9,7 @@ function IslandStand() {
     <group position={[-15, 0, -20]}>
       <Stand />
       <Float>
-        <group position={[0.1, 6, 0]} scale={0.5}>
+        <group position={[0.1, 7.5, 0]} scale={0.75}>
           <Island />
         </group>
       </Float>

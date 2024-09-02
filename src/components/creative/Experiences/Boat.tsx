@@ -27,7 +27,8 @@ type ParticlesType = {
 function Boat() {
   // gl is instance of renderer
   const { gl } = useThree();
-  const nodes = useGLTF('/assets/creative/models/boat.glb').scene.children[0];
+  const nodes = useGLTF('/assets/creative/models/boat.glb').scene
+    .children[0] as any;
   const baseGeometry: BaseGeometryType = {};
 
   baseGeometry.instance = nodes.geometry;
@@ -45,11 +46,11 @@ function Boat() {
     const i3 = i * 3;
     const i4 = i * 4;
     baseParticlesTexture.image.data[i4 + 0] =
-      baseGeometry.instance.attributes.position.array[i3 + 0];
+      baseGeometry.instance!.attributes.position.array[i3 + 0];
     baseParticlesTexture.image.data[i4 + 1] =
-      baseGeometry.instance.attributes.position.array[i3 + 1];
+      baseGeometry.instance!.attributes.position.array[i3 + 1];
     baseParticlesTexture.image.data[i4 + 2] =
-      baseGeometry.instance.attributes.position.array[i3 + 2];
+      baseGeometry.instance!.attributes.position.array[i3 + 2];
     baseParticlesTexture.image.data[i4 + 3] = Math.random();
   }
 
@@ -127,7 +128,7 @@ function Boat() {
   );
   particles.geometry.setAttribute(
     'aColor',
-    baseGeometry.instance.attributes.color
+    baseGeometry.instance!.attributes.color
   );
   particles.geometry.setAttribute(
     'aSize',

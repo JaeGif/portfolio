@@ -8,15 +8,17 @@ import TrophyStand from './TrophyStand';
 import ProceduralTerrainStand from './ProceduralTerrainStand';
 import { Stand } from './Stand';
 import BoatStand from './BoatStand';
+import MorphingStand from './MorphingStand';
 
 function Scene() {
   return (
     <>
       <group>
-        {/*    <IslandStand />
+        <IslandStand />
         <TrophyStand />
-        <ProceduralTerrainStand /> */}
+        <ProceduralTerrainStand />
         <BoatStand />
+        <MorphingStand />
       </group>
       <Floor />
     </>
