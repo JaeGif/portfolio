@@ -14,10 +14,10 @@ function Scene() {
   return (
     <>
       <group>
-        <IslandStand />
+        {/*         <IslandStand />
         <TrophyStand />
         <ProceduralTerrainStand />
-        <BoatStand />
+        <BoatStand /> */}
         <MorphingStand />
       </group>
       <Floor />
