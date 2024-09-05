@@ -24,7 +24,6 @@ function Experience() {
         backgroundBlurriness={0.9}
         environmentIntensity={0.5}
       />
-      <OrbitControls makeDefault maxPolarAngle={Math.PI / 2 - 0.1} />
       <Postprocessing />
       <Scene />
     </Canvas>

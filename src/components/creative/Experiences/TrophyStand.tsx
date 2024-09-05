@@ -1,11 +1,12 @@
 import React from 'react';
 import Trophy from './Trophy';
-import { Stand } from './Stand';
-
+import { Float } from '@react-three/drei';
 function TrophyStand() {
   return (
-    <group position={[0, 0, -25]}>
-      <Trophy />
+    <group position={[0, 3, -25]}>
+      <Float floatIntensity={3} speed={3} rotationIntensity={0}>
+        <Trophy />
+      </Float>
     </group>
   );
 }

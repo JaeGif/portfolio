@@ -56,6 +56,7 @@ export function BlockSpinner({ position = [0, 0, 0] }) {
 
   const obstacleRef = useRef();
   useFrame((state) => {
+    if (!obstacleRef.current) return;
     const time = state.clock.getElapsedTime();
     const rotation = new THREE.Quaternion();
     rotation.setFromEuler(new THREE.Euler(0, time * speed, 0));

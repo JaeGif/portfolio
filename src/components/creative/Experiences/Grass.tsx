@@ -13,10 +13,10 @@ function Grass() {
   });
 
   // Parameters
-  const PLANE_SIZE = 75;
-  const BLADE_COUNT = 500000;
+  const PLANE_SIZE = 65;
+  const BLADE_COUNT = 300000;
   const BLADE_WIDTH = 0.1;
-  const BLADE_HEIGHT = 0.5;
+  const BLADE_HEIGHT = 0.3;
   const BLADE_HEIGHT_VARIATION = 1;
 
   // Grass Texture
@@ -172,9 +172,8 @@ function Grass() {
 
   return (
     <>
-      <mesh position-y={-0.3} rotation-x={[Math.PI / 2]}>
-        <circleGeometry args={[37.5, 32]} />
-        <meshBasicMaterial color={'#90EE90'} side={THREE.DoubleSide} />
+      <mesh position-y={-0.3} rotation-x={[-Math.PI / 2]}>
+        <circleGeometry args={[37.5, 1]} />
       </mesh>
       <mesh ref={grassRef} material={grassMaterial} geometry={geometry} />
     </>
