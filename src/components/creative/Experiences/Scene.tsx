@@ -18,7 +18,8 @@ function Scene() {
         <TrophyStand />
         <ProceduralTerrainStand />
         <BoatStand /> */}
-        <MorphingStand />
+        {/*         <MorphingStand />
+         */}{' '}
       </group>
       <Floor />
     </>
