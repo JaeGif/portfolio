@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useGLTF, Outlines } from '@react-three/drei';
 import { GLTFResult } from '../projects/island/types';
 
@@ -7,9 +7,17 @@ export default function Trophy(props: any) {
     '/assets/creative/models/trophy.glb'
   ) as GLTFResult;
 
+  const [hovered, setHovered] = useState(false);
+
   return (
     <>
-      <group scale={2} {...props} dispose={null}>
+      <group
+        onPointerEnter={() => setHovered(true)}
+        onPointerLeave={() => setHovered(false)}
+        scale={2}
+        {...props}
+        dispose={null}
+      >
         <mesh
           name='Text'
           castShadow
@@ -29,7 +37,7 @@ export default function Trophy(props: any) {
             material={materials.gold}
             position={[0, -0.294, -0.748]}
           >
-            <Outlines thickness={0.05} color='lightblue' />
+            {hovered && <Outlines thickness={0.05} color='lightblue' />}
           </mesh>
           <mesh
             name='goldPlate002'
@@ -40,7 +48,7 @@ export default function Trophy(props: any) {
             position={[0, -0.734, -0.748]}
             scale={[1, 2.496, 1]}
           >
-            <Outlines thickness={0.05} color='lightblue' />
+            {hovered && <Outlines thickness={0.05} color='lightblue' />}
           </mesh>
           <mesh
             name='Plane001'
@@ -50,7 +58,7 @@ export default function Trophy(props: any) {
             material={materials.wood}
             position={[0, -0.294, -0.748]}
           >
-            <Outlines thickness={0.05} color='lightblue' />
+            {hovered && <Outlines thickness={0.05} color='lightblue' />}
           </mesh>
         </group>
         <group name='sculpture' position={[0, 2.137, 0]}>
@@ -63,7 +71,7 @@ export default function Trophy(props: any) {
               material={materials.purple}
               scale={0.379}
             >
-              <Outlines thickness={0.05} color='lightblue' />
+              {hovered && <Outlines thickness={0.05} color='lightblue' />}
             </mesh>
             <mesh
               name='goldBadge'
@@ -75,7 +83,7 @@ export default function Trophy(props: any) {
               rotation={[Math.PI / 2, 0, 0]}
               scale={0.379}
             >
-              <Outlines thickness={0.05} color='lightblue' />
+              {hovered && <Outlines thickness={0.05} color='lightblue' />}
             </mesh>
             <mesh
               name='Plane005'
@@ -87,7 +95,7 @@ export default function Trophy(props: any) {
               rotation={[Math.PI / 2, -Math.PI / 4, 0]}
               scale={0.379}
             >
-              <Outlines thickness={0.05} color='lightblue' />
+              {hovered && <Outlines thickness={0.05} color='lightblue' />}
             </mesh>
             <mesh
               name='Plane006'
@@ -99,7 +107,7 @@ export default function Trophy(props: any) {
               rotation={[-0.033, 0.184, 0.181]}
               scale={0.379}
             >
-              <Outlines thickness={0.05} color='lightblue' />
+              {hovered && <Outlines thickness={0.05} color='lightblue' />}
             </mesh>
           </group>
           <mesh
@@ -110,7 +118,7 @@ export default function Trophy(props: any) {
             material={materials.gold}
             rotation={[Math.PI / 2, 0, 0]}
           >
-            <Outlines thickness={0.05} color='lightblue' />
+            {hovered && <Outlines thickness={0.05} color='lightblue' />}
           </mesh>
         </group>
         <group name='up' position={[0, 0.694, 0.439]}>
@@ -122,7 +130,7 @@ export default function Trophy(props: any) {
             material={materials.gold}
             position={[0, -0.694, -0.439]}
           >
-            <Outlines thickness={0.05} color='lightblue' />
+            {hovered && <Outlines thickness={0.05} color='lightblue' />}
           </mesh>
           <mesh
             name='goldPlate001'
@@ -132,7 +140,7 @@ export default function Trophy(props: any) {
             material={materials.gold}
             position={[0, -0.694, -0.439]}
           >
-            <Outlines thickness={0.05} color='lightblue' />
+            {hovered && <Outlines thickness={0.05} color='lightblue' />}
           </mesh>
           <mesh
             name='Plane'
@@ -142,7 +150,7 @@ export default function Trophy(props: any) {
             material={materials.wood}
             position={[0, -0.694, -0.439]}
           >
-            <Outlines thickness={0.05} color='lightblue' />
+            {hovered && <Outlines thickness={0.05} color='lightblue' />}
           </mesh>
         </group>
         <mesh
@@ -152,7 +160,7 @@ export default function Trophy(props: any) {
           geometry={nodes.goldBase.geometry}
           material={materials.gold}
         >
-          <Outlines thickness={0.05} color='lightblue' />
+          {hovered && <Outlines thickness={0.05} color='lightblue' />}
         </mesh>
         <mesh
           name='Plane002'
@@ -161,7 +169,7 @@ export default function Trophy(props: any) {
           geometry={nodes.Plane002.geometry}
           material={materials.wood}
         >
-          <Outlines thickness={0.05} color='lightblue' />
+          {hovered && <Outlines thickness={0.05} color='lightblue' />}
         </mesh>
       </group>
     </>
