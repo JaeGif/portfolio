@@ -173,7 +173,7 @@ function Grass() {
   return (
     <>
       <mesh position-y={-0.3} rotation-x={[-Math.PI / 2]}>
-        <circleGeometry args={[37.5, 1]} />
+        <circleGeometry args={[32, 64]} />
       </mesh>
       <mesh ref={grassRef} material={grassMaterial} geometry={geometry} />
     </>
