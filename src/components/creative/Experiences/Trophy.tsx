@@ -1,5 +1,5 @@
 import React from 'react';
-import { useGLTF } from '@react-three/drei';
+import { useGLTF, Outlines } from '@react-three/drei';
 import { GLTFResult } from '../projects/island/types';
 
 export default function Trophy(props: any) {
@@ -28,7 +28,9 @@ export default function Trophy(props: any) {
             geometry={nodes.goldPlate.geometry}
             material={materials.gold}
             position={[0, -0.294, -0.748]}
-          />
+          >
+            <Outlines thickness={0.05} color='lightblue' />
+          </mesh>
           <mesh
             name='goldPlate002'
             castShadow
@@ -37,7 +39,9 @@ export default function Trophy(props: any) {
             material={materials.gold}
             position={[0, -0.734, -0.748]}
             scale={[1, 2.496, 1]}
-          />
+          >
+            <Outlines thickness={0.05} color='lightblue' />
+          </mesh>
           <mesh
             name='Plane001'
             castShadow
@@ -45,7 +49,9 @@ export default function Trophy(props: any) {
             geometry={nodes.Plane001.geometry}
             material={materials.wood}
             position={[0, -0.294, -0.748]}
-          />
+          >
+            <Outlines thickness={0.05} color='lightblue' />
+          </mesh>
         </group>
         <group name='sculpture' position={[0, 2.137, 0]}>
           <group name='badge' position={[0.555, -0.331, 0.17]}>
@@ -56,7 +62,9 @@ export default function Trophy(props: any) {
               geometry={nodes.Circle.geometry}
               material={materials.purple}
               scale={0.379}
-            />
+            >
+              <Outlines thickness={0.05} color='lightblue' />
+            </mesh>
             <mesh
               name='goldBadge'
               castShadow
@@ -66,7 +74,9 @@ export default function Trophy(props: any) {
               position={[0, 0, 0.132]}
               rotation={[Math.PI / 2, 0, 0]}
               scale={0.379}
-            />
+            >
+              <Outlines thickness={0.05} color='lightblue' />
+            </mesh>
             <mesh
               name='Plane005'
               castShadow
@@ -76,7 +86,9 @@ export default function Trophy(props: any) {
               position={[0, 0, 0.13]}
               rotation={[Math.PI / 2, -Math.PI / 4, 0]}
               scale={0.379}
-            />
+            >
+              <Outlines thickness={0.05} color='lightblue' />
+            </mesh>
             <mesh
               name='Plane006'
               castShadow
@@ -86,7 +98,9 @@ export default function Trophy(props: any) {
               position={[0.092, -0.306, 0.111]}
               rotation={[-0.033, 0.184, 0.181]}
               scale={0.379}
-            />
+            >
+              <Outlines thickness={0.05} color='lightblue' />
+            </mesh>
           </group>
           <mesh
             name='goldLogo'
@@ -95,7 +109,9 @@ export default function Trophy(props: any) {
             geometry={nodes.goldLogo.geometry}
             material={materials.gold}
             rotation={[Math.PI / 2, 0, 0]}
-          />
+          >
+            <Outlines thickness={0.05} color='lightblue' />
+          </mesh>
         </group>
         <group name='up' position={[0, 0.694, 0.439]}>
           <mesh
@@ -105,7 +121,9 @@ export default function Trophy(props: any) {
             geometry={nodes.goldBase001.geometry}
             material={materials.gold}
             position={[0, -0.694, -0.439]}
-          />
+          >
+            <Outlines thickness={0.05} color='lightblue' />
+          </mesh>
           <mesh
             name='goldPlate001'
             castShadow
@@ -113,7 +131,9 @@ export default function Trophy(props: any) {
             geometry={nodes.goldPlate001.geometry}
             material={materials.gold}
             position={[0, -0.694, -0.439]}
-          />
+          >
+            <Outlines thickness={0.05} color='lightblue' />
+          </mesh>
           <mesh
             name='Plane'
             castShadow
@@ -121,7 +141,9 @@ export default function Trophy(props: any) {
             geometry={nodes.Plane.geometry}
             material={materials.wood}
             position={[0, -0.694, -0.439]}
-          />
+          >
+            <Outlines thickness={0.05} color='lightblue' />
+          </mesh>
         </group>
         <mesh
           name='goldBase'
@@ -129,14 +151,18 @@ export default function Trophy(props: any) {
           receiveShadow
           geometry={nodes.goldBase.geometry}
           material={materials.gold}
-        />
+        >
+          <Outlines thickness={0.05} color='lightblue' />
+        </mesh>
         <mesh
           name='Plane002'
           castShadow
           receiveShadow
           geometry={nodes.Plane002.geometry}
           material={materials.wood}
-        />
+        >
+          <Outlines thickness={0.05} color='lightblue' />
+        </mesh>
       </group>
     </>
   );
