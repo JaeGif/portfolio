@@ -176,4 +176,4 @@ function Boat() {
   );
 }
 
-export default Boat;
+export default React.memo(Boat);

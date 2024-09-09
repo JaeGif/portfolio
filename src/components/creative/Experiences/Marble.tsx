@@ -13,4 +13,4 @@ function Marble() {
   );
 }
 
-export default Marble;
+export default React.memo(Marble);

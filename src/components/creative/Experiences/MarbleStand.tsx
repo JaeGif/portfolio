@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Stand } from './Stand';
 import { Float } from '@react-three/drei';
 import Marble from './Marble';
 
 function MarbleStand() {
+  const [hovered, setHovered] = useState(false);
+
   return (
-    <group rotation={[0, -Math.PI / 4, 0]} position={[25, 0, -10]}>
-      <Stand />
+    <group
+      onPointerEnter={() => setHovered(true)}
+      onPointerLeave={() => setHovered(false)}
+      rotation={[0, -Math.PI / 4, 0]}
+      position={[25, 0, -10]}
+    >
+      <Stand hovered={hovered} />
       <Float>
         <group
           rotation={[0, -Math.PI / 2, 0]}

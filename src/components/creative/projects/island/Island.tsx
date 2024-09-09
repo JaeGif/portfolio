@@ -16,7 +16,7 @@ import Waterfall from './nature/Waterfall';
 import Grass from './nature/Grass';
 import SunDial from './items/SunDial';
 
-export default function Island(props: any) {
+function Island(props: any) {
   const { nodes, materials } = useGLTF(
     '/assets/creative/models/portalData.glb'
   ) as GLTFResult;
@@ -44,3 +44,5 @@ export default function Island(props: any) {
 }
 
 useGLTF.preload('/assets/creative/models/portalData.glb');
+
+export default React.memo(Island);

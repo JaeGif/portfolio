@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useGLTF, Outlines } from '@react-three/drei';
 import { GLTFResult } from '../projects/island/types';
 
-export default function Trophy(props: any) {
+function Trophy(props: any) {
   const { nodes, materials } = useGLTF(
     '/assets/creative/models/trophy.glb'
   ) as GLTFResult;
@@ -177,3 +177,4 @@ export default function Trophy(props: any) {
 }
 
 useGLTF.preload('/assets/creative/models/trophy.glb');
+export default React.memo(Trophy);

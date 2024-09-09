@@ -1,6 +1,6 @@
 import * as THREE from 'three';
-import React, { useRef } from 'react';
-import { useGLTF, useTexture } from '@react-three/drei';
+import React from 'react';
+import { useGLTF, useTexture, Outlines } from '@react-three/drei';
 import { GLTF } from 'three-stdlib';
 
 type GLTFResult = GLTF & {
@@ -13,7 +13,7 @@ type GLTFResult = GLTF & {
 
 const marbleMaterial = new THREE.MeshStandardMaterial();
 
-export function Stand() {
+export function Stand({ hovered = false }: { hovered: boolean }) {
   const { nodes, materials } = useGLTF(
     '/assets/creative/models/stand.glb'
   ) as GLTFResult;
@@ -38,7 +38,9 @@ export function Stand() {
         material={marbleMaterial}
         position={[0, 0.305, 0]}
         scale={[1.057, 0.304, 1.057]}
-      />
+      >
+        {hovered && <Outlines thickness={0.05} color='lightblue' />}
+      </mesh>
       <mesh
         castShadow
         receiveShadow
@@ -46,7 +48,9 @@ export function Stand() {
         material={marbleMaterial}
         position={[0, 0.944, 0]}
         scale={[0.78, 0.378, 0.78]}
-      />
+      >
+        {hovered && <Outlines thickness={0.05} color='lightblue' />}
+      </mesh>
     </group>
   );
 }

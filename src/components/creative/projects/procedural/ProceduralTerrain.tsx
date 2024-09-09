@@ -140,4 +140,4 @@ function ProceduralTerrain() {
   );
 }
 
-export default ProceduralTerrain;
+export default React.memo(ProceduralTerrain);
