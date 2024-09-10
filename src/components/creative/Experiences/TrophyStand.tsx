@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Trophy from './Trophy';
 import { Float } from '@react-three/drei';
 function TrophyStand() {

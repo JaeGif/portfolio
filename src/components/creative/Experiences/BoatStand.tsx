@@ -14,7 +14,11 @@ function BoatStand() {
     >
       <Stand hovered={hovered} />
       <Float>
-        <group position={[0.1, 6, 0]} scale={0.5}>
+        <group
+          rotation={[0, Math.PI / 2, 0]}
+          position={[-0.2, 6, 0.1]}
+          scale={0.5}
+        >
           <Boat />
         </group>
       </Float>
