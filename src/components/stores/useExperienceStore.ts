@@ -7,15 +7,19 @@ type SelectedProjectsType =
   | 'terrain'
   | 'boat'
   | 'marble'
+  | 'string'
   | null;
 
 interface ExperienceState {
   selected: SelectedProjectsType;
+  select: (arg: SelectedProjectsType) => void;
 }
 
-const useExperienceStore = create<ExperienceState>(() => {
+const useExperienceStore = create<ExperienceState>((set) => {
   return {
     selected: null,
+    select: (project: SelectedProjectsType) =>
+      set((state) => ({ selected: project })),
   };
 });
 
