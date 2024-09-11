@@ -13,7 +13,7 @@ function ProceduralTerrainStand() {
   const marbleRef = useRef<any>(null);
 
   useEffect(() => {
-    if (selected === 'island') setActive(true);
+    if (selected === 'terrain') setActive(true);
     else if (selected) setActive(false);
   }, [selected]);
 
@@ -27,7 +27,7 @@ function ProceduralTerrainStand() {
     <group
       onPointerEnter={() => setHovered(true)}
       onPointerLeave={() => setHovered(false)}
-      onClick={() => select('island')}
+      onClick={() => select('terrain')}
       position={[15, 0, -20]}
     >
       <Stand hovered={hovered} />
