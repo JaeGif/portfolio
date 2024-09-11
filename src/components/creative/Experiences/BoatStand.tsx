@@ -9,7 +9,7 @@ function BoatStand() {
   const selected = useExperienceStore((state) => state.selected);
   const select = useExperienceStore((state) => state.select);
   const [active, setActive] = useState<boolean>(false);
-  const boatRef = useRef(null);
+  const boatRef = useRef<any>(null);
 
   useEffect(() => {
     if (selected === 'boat') setActive(true);
@@ -19,7 +19,6 @@ function BoatStand() {
   useFrame((state, delta) => {
     if (active) {
       boatRef.current!.rotation.y += delta;
-      // can animate on frame it works!
     }
   });
   return (

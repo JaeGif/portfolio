@@ -10,7 +10,7 @@ function IslandStand() {
   const selected = useExperienceStore((state) => state.selected);
   const select = useExperienceStore((state) => state.select);
   const [active, setActive] = useState<boolean>(false);
-  const islandRef = useRef(null);
+  const islandRef = useRef<any>(null);
 
   useEffect(() => {
     if (selected === 'island') setActive(true);
@@ -20,7 +20,6 @@ function IslandStand() {
   useFrame((state, delta) => {
     if (active) {
       islandRef.current!.rotation.y += delta;
-      // can animate on frame it works!
     }
   });
 
