@@ -18,7 +18,7 @@ function BoatStand() {
 
   useFrame((state, delta) => {
     if (active) {
-      boatRef.current!.rotation.y += delta;
+      boatRef.current!.rotation.y += delta * 0.2;
     }
   });
   return (

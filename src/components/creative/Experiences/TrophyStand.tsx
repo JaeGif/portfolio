@@ -16,24 +16,16 @@ function TrophyStand() {
     else if (selected) setActive(false);
   }, [selected]);
 
-  const objectRotate = () => {
-    gsap.to(trophyRef.current.rotation, {
-      duration: 1,
-      ease: 'power2.out',
-      y: `+=${Math.PI}`,
-    });
-  };
+  useFrame((state, delta) => {
+    if (active) {
+      trophyRef.current!.rotation.y += delta * 0.2;
+    }
+  });
 
   return (
     <group position={[0, 3, -25]}>
       <Float floatIntensity={3} speed={3} rotationIntensity={0}>
-        <group
-          onClick={() => {
-            select('trophy');
-            objectRotate();
-          }}
-          ref={trophyRef}
-        >
+        <group onClick={() => select('trophy')} ref={trophyRef}>
           <Trophy />
         </group>
       </Float>

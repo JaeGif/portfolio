@@ -19,7 +19,7 @@ function IslandStand() {
 
   useFrame((state, delta) => {
     if (active) {
-      islandRef.current!.rotation.y += delta;
+      islandRef.current!.rotation.y += delta * 0.2;
     }
   });
 

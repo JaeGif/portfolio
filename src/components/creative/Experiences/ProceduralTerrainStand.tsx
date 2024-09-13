@@ -19,7 +19,7 @@ function ProceduralTerrainStand() {
 
   useFrame((state, delta) => {
     if (active) {
-      marbleRef.current!.rotation.y += delta;
+      marbleRef.current!.rotation.y += delta * 0.2;
     }
   });
 
