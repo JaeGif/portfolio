@@ -11,7 +11,7 @@ function Postprocessing() {
   return (
     <>
       <EffectComposer>
-        <Bloom mipmapBlur luminanceThreshold={1.1} intensity={0.2} />
+        <Bloom mipmapBlur luminanceThreshold={1.1} intensity={0.1} />
         <ToneMapping mode={ToneMappingMode.ACES_FILMIC} />
       </EffectComposer>
     </>

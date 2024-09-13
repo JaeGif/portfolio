@@ -20,7 +20,6 @@ function Experience() {
         position: [3, 5, 11],
       }}
     >
-      <Perf position={'top-left'} />
       <Environment
         preset='sunset'
         background
