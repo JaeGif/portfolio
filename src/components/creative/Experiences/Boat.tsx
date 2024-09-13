@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import gpgpuFragment from '../projects/island/shaders/leaves/fragment.glsl';
 import gpgpuVertex from '../projects/island/shaders/leaves/vertex.glsl';
 import gpgpuParticle from '../projects/island/shaders/leaves/particle.glsl';
@@ -31,6 +31,7 @@ function Boat() {
     .children[0] as any;
   const baseGeometry: BaseGeometryType = {};
 
+  baseGeometry.count = 249440;
   baseGeometry.instance = nodes.geometry;
   baseGeometry.count = baseGeometry.instance!.attributes.position.count;
 

@@ -11,11 +11,12 @@ function Scene() {
   return (
     <>
       <group>
-        <IslandStand />
+        {/*         <IslandStand />
         <TrophyStand />
-        <ProceduralTerrainStand />
+        <ProceduralTerrainStand /> */}
         <BoatStand />
-        <MarbleStand />
+        {/*         <MarbleStand />
+         */}{' '}
       </group>
       <Floor />
     </>

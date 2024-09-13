@@ -15,7 +15,7 @@ function Player() {
     >
       <mesh>
         <icosahedronGeometry args={[BALLSIZE, 4]} />
-        <meshStandardMaterial color={'orangeyellow'} />
+        <meshStandardMaterial color={'yellow'} />
       </mesh>
     </RigidBody>
   );
