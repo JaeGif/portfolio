@@ -28,17 +28,12 @@ function MarbleStand() {
       onPointerEnter={() => setHovered(true)}
       onPointerLeave={() => setHovered(false)}
       onClick={() => select('marble')}
-      rotation={[0, -Math.PI / 4, 0]}
-      position={[25, 0, -10]}
+      rotation={[0, 0.1, 0]}
+      position={[12, 0, -7]}
     >
       <Stand hovered={hovered} />
       <Float>
-        <group
-          ref={marbleRef}
-          rotation={[0, -Math.PI / 2, 0]}
-          position={[-3.5, 5.5, 0]}
-          scale={0.6}
-        >
+        <group ref={marbleRef} position={[0, 5.5, 3.5]} scale={0.6}>
           <Marble />
         </group>
       </Float>

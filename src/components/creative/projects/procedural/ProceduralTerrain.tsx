@@ -131,6 +131,7 @@ function ProceduralTerrain() {
       />
       <mesh
         receiveShadow
+        castShadow
         customDepthMaterial={depthMaterial}
         material={terrainMaterial}
         geometry={geometry}

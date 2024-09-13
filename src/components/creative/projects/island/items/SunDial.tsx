@@ -19,7 +19,7 @@ function SunDial({ nodes, materials }: GLTFNodesMaterials | any) {
   });
 
   return (
-    <>
+    <group scale={0.5} position={[-2.5, -0.065, 0]}>
       <Float rotationIntensity={0.1} floatIntensity={0.5} speed={2.5}>
         <mesh
           ref={sunRef}
@@ -49,7 +49,7 @@ function SunDial({ nodes, materials }: GLTFNodesMaterials | any) {
           material={materials.axeBite}
         />
       </group>
-    </>
+    </group>
   );
 }
 

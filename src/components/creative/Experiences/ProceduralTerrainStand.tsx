@@ -28,7 +28,8 @@ function ProceduralTerrainStand() {
       onPointerEnter={() => setHovered(true)}
       onPointerLeave={() => setHovered(false)}
       onClick={() => select('terrain')}
-      position={[15, 0, -20]}
+      rotation={[0, 2, 0]}
+      position={[10, 0, 22]}
     >
       <Stand hovered={hovered} />
       <Float>

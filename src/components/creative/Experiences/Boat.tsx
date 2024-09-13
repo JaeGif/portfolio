@@ -117,7 +117,7 @@ function Boat() {
       particlesUvArray[i2 + 0] = uvX;
       particlesUvArray[i2 + 1] = uvY;
 
-      sizesArray[i] = Math.random() * 1.25; // for randomized size
+      sizesArray[i] = Math.random() * 0.1; // for randomized size
     }
   }
 

@@ -3,8 +3,8 @@ import React from 'react';
 function StaticLights() {
   return (
     <>
-      <ambientLight intensity={0.35} />
-      <directionalLight castShadow position={[-5, 10, 5]} intensity={3} />
+      <ambientLight intensity={0.2} />
+      <directionalLight castShadow position={[5, 7.5, 5]} intensity={1} />
     </>
   );
 }

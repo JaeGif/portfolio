@@ -1,24 +1,22 @@
 import React from 'react';
 
 import Floor from './Floor';
-import IslandStand from './IslandStand';
 import TrophyStand from './TrophyStand';
 import ProceduralTerrainStand from './ProceduralTerrainStand';
 import BoatStand from './BoatStand';
 import MarbleStand from './MarbleStand';
+import Island from '../projects/island/Island';
 
 function Scene() {
   return (
     <>
-      <group>
-        {/*         <IslandStand />
+      <group scale={0.075}>
         <TrophyStand />
-        <ProceduralTerrainStand /> */}
+        <ProceduralTerrainStand />
         <BoatStand />
-        {/*         <MarbleStand />
-         */}{' '}
+        <MarbleStand />
       </group>
-      <Floor />
+      <Island />
     </>
   );
 }

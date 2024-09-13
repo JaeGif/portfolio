@@ -6,6 +6,7 @@ import Scene from './Scene';
 import Lights from './Lights';
 import Postprocessing from './Postprocessing';
 import { Perf } from 'r3f-perf';
+import StaticLights from './StaticLights';
 
 function Experience() {
   return (
@@ -24,10 +25,11 @@ function Experience() {
         preset='sunset'
         background
         backgroundBlurriness={0.9}
-        environmentIntensity={0.5}
+        environmentIntensity={0.25}
       />
       <OrbitControls makeDefault maxPolarAngle={Math.PI / 2 - 0.1} />
       <Postprocessing />
+      <StaticLights />
       <Scene />
     </Canvas>
   );
