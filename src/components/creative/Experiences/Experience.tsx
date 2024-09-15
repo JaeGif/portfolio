@@ -20,7 +20,7 @@ function Experience() {
         position: [3, 5, 11],
       }}
     >
-      {/*       <Suspense fallback={<Loading />}>
+      <Suspense fallback={<Loading />}>
         <Environment
           preset='sunset'
           background
@@ -31,10 +31,7 @@ function Experience() {
         <Postprocessing />
         <StaticLights />
         <Scene />
-
-      </Suspense> */}
-
-      <Loading />
+      </Suspense>
     </Canvas>
   );
 }
