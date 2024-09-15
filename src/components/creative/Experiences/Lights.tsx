@@ -3,15 +3,38 @@ import { useFrame, useThree } from '@react-three/fiber';
 import { SpotLight, useDepthBuffer } from '@react-three/drei';
 import { Vector3 } from 'three';
 
-function Lights() {
-  const depthBuffer = useDepthBuffer();
+type LightsProps = {
+  position: [number, number, number];
+  color?: string;
+  anglePower?: number;
+  intensity?: number;
+  attenuation?: number;
+  angle?: number;
+  distance?: number;
+  penumbra?: number;
+};
 
+function Lights({
+  position,
+  color = 'white',
+  anglePower = 4,
+  intensity = 5,
+  attenuation = 20,
+  angle = 0.5,
+  distance = 20,
+  penumbra = 1,
+}: LightsProps) {
   return (
     <>
       <MovingSpot
-        depthBuffer={depthBuffer}
-        color='pink'
-        position={[-5, 15, 0]}
+        color={color}
+        position={position}
+        anglePower={anglePower}
+        intensity={intensity}
+        attenuation={attenuation}
+        angle={angle}
+        distance={distance}
+        penumbra={penumbra}
       />
     </>
   );
@@ -32,18 +55,6 @@ export function MovingSpot({ vec = new Vector3(), ...props }) {
     );
     light.current?.target.updateMatrixWorld();
   });
-  return (
-    <SpotLight
-      castShadow
-      ref={light}
-      penumbra={1}
-      distance={20}
-      angle={0.5}
-      attenuation={20}
-      anglePower={4}
-      intensity={5}
-      {...props}
-    />
-  );
+  return <SpotLight castShadow ref={light} {...props} />;
 }
 export default Lights;
