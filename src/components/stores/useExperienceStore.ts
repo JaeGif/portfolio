@@ -23,6 +23,7 @@ const useExperienceStore = create<ExperienceState>((set) => {
     select: (project: SelectedProjectsType) => {
       return set((state) => ({ selected: project }));
     },
+
     stage: 0,
     incStage: () => {
       return set((state) => ({ stage: state.stage + 1 }));

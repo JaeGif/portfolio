@@ -30,7 +30,8 @@ function Experience() {
             backgroundBlurriness={0.9}
             environmentIntensity={0.25}
           />
-          <OrbitControls makeDefault maxPolarAngle={Math.PI / 2 - 0.1} />
+          {/*           <OrbitControls makeDefault maxPolarAngle={Math.PI / 2 - 0.1} />
+           */}{' '}
           <Postprocessing />
           <StaticLights />
           <Scene />

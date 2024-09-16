@@ -1,18 +1,19 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Float } from '@react-three/drei';
 import { Stand } from './Stand';
-import { useFrame } from '@react-three/fiber';
+import { useFrame, useThree } from '@react-three/fiber';
 import Boat from './Boat';
 import useExperienceStore from '@/components/stores/useExperienceStore';
 import TextTemplate from './texts/TextTemplate';
 import HtmlTemplate from './texts/HtmlTemplate';
-
+import * as THREE from 'three';
 function BoatStand() {
   const [hovered, setHovered] = useState(false);
   const selected = useExperienceStore((state) => state.selected);
   const select = useExperienceStore((state) => state.select);
   const [active, setActive] = useState<boolean>(false);
   const boatRef = useRef<any>(null);
+  const three = useThree();
 
   useEffect(() => {
     if (selected === 'boat') setActive(true);
@@ -24,11 +25,19 @@ function BoatStand() {
       boatRef.current!.rotation.y += delta * 0.2;
     }
   });
+
+  const handleLookAt = () => {
+    three.camera.position.set(0.7, 0.5, 2);
+    three.camera.rotation.set(0, 5, 0);
+  };
   return (
     <group
       onPointerEnter={() => setHovered(true)}
       onPointerLeave={() => setHovered(false)}
-      onClick={() => select('boat')}
+      onClick={() => {
+        handleLookAt();
+        select('boat');
+      }}
       rotation={[0, 1.2, 0]}
       position={[-10, 0, 7]}
     >
