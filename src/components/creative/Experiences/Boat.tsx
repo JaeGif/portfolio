@@ -33,7 +33,6 @@ function Boat() {
 
   baseGeometry.count = 249440;
   baseGeometry.instance = nodes.geometry;
-  baseGeometry.count = baseGeometry.instance!.attributes.position.count;
 
   // GP-GPU
   const gpgpu: GpgpuType = {};
@@ -126,6 +125,10 @@ function Boat() {
   particles.geometry.setAttribute(
     'aParticlesUv',
     new THREE.BufferAttribute(particlesUvArray, 2)
+  );
+  particles.geometry.setAttribute(
+    'position',
+    baseGeometry.instance?.attributes.position!
   );
   particles.geometry.setAttribute(
     'aColor',
