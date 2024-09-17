@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from 'react';
+import React, { useState } from 'react';
 import { OrbitControls } from '@react-three/drei';
 import { Environment, useProgress } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
@@ -30,8 +30,7 @@ function Experience() {
             backgroundBlurriness={0.9}
             environmentIntensity={0.25}
           />
-          {/*           <OrbitControls makeDefault maxPolarAngle={Math.PI / 2 - 0.1} />
-           */}{' '}
+          <OrbitControls makeDefault maxPolarAngle={Math.PI / 2 - 0.1} />
           <Postprocessing />
           <StaticLights />
           <Scene />

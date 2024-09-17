@@ -8,34 +8,60 @@ import TextTemplate from './texts/TextTemplate';
 import HtmlTemplate from './texts/HtmlTemplate';
 import * as THREE from 'three';
 function BoatStand() {
+  // states
   const [hovered, setHovered] = useState(false);
+  const [looking, setLooking] = useState(false);
+  const [active, setActive] = useState<boolean>(false);
+  // stores
   const selected = useExperienceStore((state) => state.selected);
   const select = useExperienceStore((state) => state.select);
-  const [active, setActive] = useState<boolean>(false);
+  //refs
   const boatRef = useRef<any>(null);
-  const three = useThree();
+  // constants
+  const vec3 = new THREE.Vector3();
 
+  // effects
   useEffect(() => {
     if (selected === 'boat') setActive(true);
     else if (selected) setActive(false);
   }, [selected]);
 
+  useEffect(() => {
+    const listener = () => {
+      if (looking) setLooking(false);
+    };
+    window.addEventListener('dblclick', listener);
+    window.addEventListener('drag', listener);
+
+    return () => {
+      window.removeEventListener('dblclick', listener);
+      window.removeEventListener('drag', listener);
+    };
+  }, []);
+
+  useEffect(() => {
+    console.log(looking);
+  }, [looking]);
+
+  // frameCalls
   useFrame((state, delta) => {
-    if (active) {
-      boatRef.current!.rotation.y += delta * 0.2;
-    }
+    if (active) boatRef.current!.rotation.y += delta * 0.2;
+    if (looking) handleLookAt(state.camera, 0.1);
   });
 
-  const handleLookAt = () => {
-    three.camera.position.set(0.7, 0.5, 2);
-    three.camera.rotation.set(0, 5, 0);
+  // misc funcs
+  const handleLookAt = (camera: THREE.Camera, transition: number) => {
+    camera.lookAt(boatRef.current.position);
+    camera.position.lerp(vec3.set(3, 1, 3), transition);
+    camera.updateMatrix();
   };
+
   return (
     <group
       onPointerEnter={() => setHovered(true)}
       onPointerLeave={() => setHovered(false)}
       onClick={() => {
-        handleLookAt();
+        setLooking(true);
         select('boat');
       }}
       rotation={[0, 1.2, 0]}
