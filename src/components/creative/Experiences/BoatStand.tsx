@@ -18,36 +18,20 @@ function BoatStand() {
   //refs
   const boatRef = useRef<any>(null);
   // constants
-  const vec3 = new THREE.Vector3();
 
   // effects
   useEffect(() => {
     if (selected === 'boat') setActive(true);
     else if (selected) setActive(false);
   }, [selected]);
-
-  useEffect(() => {
-    const listener = () => {
-      if (looking) setLooking(false);
-    };
-    window.addEventListener('dblclick', listener);
-    window.addEventListener('drag', listener);
-
-    return () => {
-      window.removeEventListener('dblclick', listener);
-      window.removeEventListener('drag', listener);
-    };
-  }, []);
-
-  useEffect(() => {
-    console.log(looking);
-  }, [looking]);
-
   // frameCalls
   useFrame((state, delta) => {
     if (active) boatRef.current!.rotation.y += delta * 0.2;
-    if (looking) handleLookAt(state.camera, 0.1);
+    /*       if (looking) handleLookAt(state.camera, 0.1);
+     */
   });
+  /* 
+
 
   // misc funcs
   const handleLookAt = (camera: THREE.Camera, transition: number) => {
@@ -55,7 +39,7 @@ function BoatStand() {
     camera.position.lerp(vec3.set(3, 1, 3), transition);
     camera.updateMatrix();
   };
-
+ */
   return (
     <group
       onPointerEnter={() => setHovered(true)}

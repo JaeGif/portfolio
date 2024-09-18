@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { OrbitControls } from '@react-three/drei';
 import { Environment, useProgress } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
@@ -10,6 +10,7 @@ import Loading from './Loading';
 function Experience() {
   const [start, setStart] = useState(false);
   const { progress } = useProgress();
+  const cameraControls = useRef(null);
 
   return (
     <Canvas
@@ -30,10 +31,14 @@ function Experience() {
             backgroundBlurriness={0.9}
             environmentIntensity={0.25}
           />
-          <OrbitControls makeDefault maxPolarAngle={Math.PI / 2 - 0.1} />
+          <OrbitControls
+            ref={cameraControls}
+            makeDefault
+            maxPolarAngle={Math.PI / 2 - 0.1}
+          />
           <Postprocessing />
           <StaticLights />
-          <Scene />
+          <Scene cameraControls={cameraControls.current} />
         </>
       ) : (
         <Loading progress={progress} start={setStart} />
