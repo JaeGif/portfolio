@@ -7,7 +7,7 @@ import Island from '../projects/island/Island';
 import { useFrame, useThree } from '@react-three/fiber';
 import useExperienceStore from '@/components/stores/useExperienceStore';
 import * as THREE from 'three';
-
+/* 
 interface TargetLocationsDict {
   [index: string]: { x: number; y: number; z: number };
 }
@@ -18,10 +18,10 @@ const TARGET_LOCATIONS = {
   boat: { x: 2, y: 2, z: 2 },
   marble: { x: 3, y: 3, z: 3 },
 } as TargetLocationsDict;
-
+ */
 function Scene({ cameraControls }: any) {
   const selected = useExperienceStore((state) => state.selected);
-  const [target, setTarget] = useState<{
+  /*  const [target, setTarget] = useState<{
     x: number;
     y: number;
     z: number;
@@ -51,11 +51,7 @@ function Scene({ cameraControls }: any) {
       cameraControls.update();
     }
   });
-
-  useEffect(() => {
-    console.log(target);
-  }, [target]);
-
+ */
   return (
     <>
       <group scale={0.075}>
