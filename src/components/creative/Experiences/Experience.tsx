@@ -15,7 +15,7 @@ function Experience() {
 
   return (
     <>
-      <ControlOverlay />
+      {start && <ControlOverlay />}
       <Canvas
         shadows
         dpr={[1, 2]}

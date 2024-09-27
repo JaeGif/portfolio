@@ -3,7 +3,7 @@ import React from 'react';
 function ControlOverlay() {
   return (
     <div className='absolute top-5 left-5 z-10 flex flex-col justify-center items-center w-40 gap-2'>
-      <h1 className='text-blue-500 text-lg'>Controls</h1>
+      <h1 className='text-lg'>Controls</h1>
 
       <span className='text-sm flex justify-around items-center w-full'>
         <div className='flex flex-col justify-center items-center gap-2'>
