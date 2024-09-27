@@ -38,7 +38,14 @@ function Island(props: any) {
   return (
     <>
       <group
-        onClick={() => select('island')}
+        onClick={(e) => {
+          console.log(
+            e.intersections[0].object.parent?.uuid,
+            islandRef.current.uuid
+          );
+          if (e.intersections[0].object.parent?.uuid === islandRef.current.uuid)
+            select('island');
+        }}
         ref={islandRef}
         {...props}
         dispose={null}
@@ -65,7 +72,7 @@ function Island(props: any) {
           source='https://github.com/JaeGif/Portal-R3F'
         >
           {
-            'The island was\n particularly challenging.\n So many small\n details to meticulously\n craft. I hope\n you enjoy!'
+            'The island was\n particularly challenging.\n So many small\n details to \n meticulously craft.\n I hope you\n enjoy the fun!'
           }
         </ProjectDescription>
       )}
