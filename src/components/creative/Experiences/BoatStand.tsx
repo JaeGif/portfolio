@@ -1,16 +1,16 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Float } from '@react-three/drei';
 import { Stand } from './Stand';
-import { useFrame, useThree } from '@react-three/fiber';
+import { useFrame } from '@react-three/fiber';
 import Boat from './Boat';
 import useExperienceStore from '@/components/stores/useExperienceStore';
 import TextTemplate from './texts/TextTemplate';
 import HtmlTemplate from './texts/HtmlTemplate';
-import * as THREE from 'three';
+import LinksTemplate from './texts/LinksTemplate';
+
 function BoatStand() {
   // states
   const [hovered, setHovered] = useState(false);
-  const [looking, setLooking] = useState(false);
   const [active, setActive] = useState<boolean>(false);
   // stores
   const selected = useExperienceStore((state) => state.selected);
@@ -45,7 +45,6 @@ function BoatStand() {
       onPointerEnter={() => setHovered(true)}
       onPointerLeave={() => setHovered(false)}
       onClick={() => {
-        setLooking(true);
         select('boat');
       }}
       rotation={[0, 1.2, 0]}
@@ -54,22 +53,52 @@ function BoatStand() {
       <Stand hovered={hovered} />
       {active && (
         <>
-          <TextTemplate>GP-GPU Computations</TextTemplate>
+          <TextTemplate scale={1} position={[-15, 10, 0]}>
+            GP-GPU Computations
+          </TextTemplate>
+          <TextTemplate
+            position={[-15, 8, 0]}
+            scale={0.75}
+            maxWidth={12}
+            align='left'
+          >
+            Flow Field
+          </TextTemplate>
           <TextTemplate
             scale={0.75}
             maxWidth={12}
             align='left'
-            position={[-10, 5, 0]}
+            position={[-15, 6, 0]}
           >
-            Flow field animation showing the power of general pupose GPU
-            programming brought to life with Three.js, FBO's, and custom GLSL
-            shaders.
+            Built with Three.js
           </TextTemplate>
-          <HtmlTemplate
+          <TextTemplate
+            scale={0.75}
+            maxWidth={12}
+            align='left'
+            position={[-15, 5, 0]}
+          >
+            GLSL, and Frame
+          </TextTemplate>
+          <TextTemplate
+            scale={0.75}
+            maxWidth={12}
+            align='left'
+            position={[-15, 4, 0]}
+          >
+            Buffer Objects
+          </TextTemplate>
+          <LinksTemplate
+            scale={1}
             position={[5, 7.5, 0]}
             live='https://gpgpu-flow-field.vercel.app/#debug'
             source='https://github.com/JaeGif/GPGPU-Flow-Field/tree/main/41-gpgpu-flow-field-particles-shaders'
           />
+          {/* <HtmlTemplate
+            position={[5, 7.5, 0]}
+            live='https://gpgpu-flow-field.vercel.app/#debug'
+            source='https://github.com/JaeGif/GPGPU-Flow-Field/tree/main/41-gpgpu-flow-field-particles-shaders'
+          /> */}
         </>
       )}
       <Float>

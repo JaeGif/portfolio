@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text } from '@react-three/drei';
+import { Text3D } from '@react-three/drei';
 
 type TextTemplateProps = {
   align?: 'left' | 'right' | 'center';
@@ -18,17 +18,18 @@ function TextTemplate({
   children,
 }: TextTemplateProps) {
   return (
-    <Text
-      font='/fonts/montserrat-alt.ttf'
+    <Text3D
+      castShadow
+      font='/assets/fonts/pixeloidtf.json'
       scale={scale}
-      maxWidth={maxWidth}
+      //   maxWidth={maxWidth}
       lineHeight={lineHeight}
-      textAlign={align}
+      //   textAlign={align}
       position={position}
     >
       {children}
       <meshBasicMaterial color={'black'} toneMapped={false} />
-    </Text>
+    </Text3D>
   );
 }
 
