@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { OrbitControls } from '@react-three/drei';
 import { Environment, useProgress } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
@@ -10,12 +10,22 @@ import ControlOverlay from './ControlOverlay';
 
 function Experience() {
   const [start, setStart] = useState(false);
+  const [overlayVisible, setOverlayVisible] = useState(false);
+
   const { progress } = useProgress();
   const cameraControls = useRef(null);
 
+  useEffect(() => {
+    if (!overlayVisible && start) {
+      window.setTimeout(() => {
+        setOverlayVisible(true), 1000;
+      });
+    }
+  }, [start]);
+
   return (
     <>
-      {start && <ControlOverlay />}
+      {start && overlayVisible && <ControlOverlay />}
       <Canvas
         shadows
         dpr={[1, 2]}

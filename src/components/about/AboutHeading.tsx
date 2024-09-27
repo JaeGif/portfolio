@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+
 function AboutHeading() {
   const [hasLoaded, setHasLoaded] = useState<boolean>(false);
   useEffect(() => {
