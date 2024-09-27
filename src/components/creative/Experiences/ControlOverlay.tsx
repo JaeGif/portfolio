@@ -2,19 +2,21 @@ import React from 'react';
 
 function ControlOverlay() {
   return (
-    <div className='absolute top-5 left-5 z-10'>
-      <span className='flex justify-between items-center w-24'>
-        <div
-          style={{ font: '/fonts/montserrat-alt.ttf' }}
-          className='flex flex-col justify-center items-center'
-        >
-          <img className='h-8' src='/assets/creative/leftmouse.svg' />
-          <p>Orbit</p>
-        </div>
+    <div className='absolute top-5 left-5 z-10 flex flex-col justify-center items-center w-40 gap-2'>
+      <h1 className='text-blue-500 text-lg'>Controls</h1>
 
-        <div className='flex flex-col justify-center items-center'>
+      <span className='text-sm flex justify-around items-center w-full'>
+        <div className='flex flex-col justify-center items-center gap-2'>
+          <img className='h-8' src='/assets/creative/leftmouse.svg' />
+          <p style={{ font: '/fonts/montserrat-alt.ttf' }}>Orbit</p>
+        </div>
+        <div className='flex flex-col justify-center items-center gap-2'>
+          <img className='h-8' src='/assets/creative/zoom.svg' />
+          <p style={{ font: '/fonts/montserrat-alt.ttf' }}>Zoom</p>
+        </div>
+        <div className='flex flex-col justify-center items-center gap-2'>
           <img className='h-8' src='/assets/creative/dblmouse.svg' />
-          <p>Pan</p>
+          <p style={{ font: '/fonts/montserrat-alt.ttf' }}>Pan</p>
         </div>
       </span>
     </div>
