@@ -15,14 +15,34 @@ import Fireflies from './nature/Fireflies';
 import Waterfall from './nature/Waterfall';
 import SunDial from './items/SunDial';
 
+import ProjectDescription from '../../Experiences/ProjectDescription';
+
+import { useState, useRef, useEffect } from 'react';
+import useExperienceStore from '@/components/stores/useExperienceStore';
+
 function Island(props: any) {
   const { nodes, materials } = useGLTF(
     '/assets/creative/models/portalData.glb'
   ) as GLTFResult;
 
+  const selected = useExperienceStore((state) => state.selected);
+  const select = useExperienceStore((state) => state.select);
+  const [active, setActive] = useState<boolean>(false);
+  const islandRef = useRef<any>(null);
+
+  useEffect(() => {
+    if (selected === 'island') setActive(true);
+    else if (selected) setActive(false);
+  }, [selected]);
+
   return (
     <>
-      <group {...props} dispose={null}>
+      <group
+        onClick={() => select('island')}
+        ref={islandRef}
+        {...props}
+        dispose={null}
+      >
         <Staff nodes={nodes} materials={materials} />
         <Stark nodes={nodes} materials={materials} />
         <Path nodes={nodes} materials={materials} />
@@ -37,6 +57,18 @@ function Island(props: any) {
         <Waterfall nodes={nodes} materials={materials} />
         <Fireflies />
       </group>
+      {active && (
+        <ProjectDescription
+          title='Portal Island'
+          headline='Details'
+          live='https://portal-r3f-pied.vercel.app/'
+          source='https://github.com/JaeGif/Portal-R3F'
+        >
+          {
+            'The island was\n particularly challenging.\n So many small\n details to meticulously\n craft. I hope\n you enjoy!'
+          }
+        </ProjectDescription>
+      )}
     </>
   );
 }

@@ -4,6 +4,7 @@ import { Stand } from './Stand';
 import { useFrame } from '@react-three/fiber';
 import ProceduralTerrain from '../projects/procedural/ProceduralTerrain';
 import useExperienceStore from '@/components/stores/useExperienceStore';
+import ProjectDescription from './ProjectDescription';
 
 function ProceduralTerrainStand() {
   const [hovered, setHovered] = useState(false);
@@ -28,7 +29,7 @@ function ProceduralTerrainStand() {
       onPointerEnter={() => setHovered(true)}
       onPointerLeave={() => setHovered(false)}
       onClick={() => select('terrain')}
-      rotation={[0, 2, 0]}
+      rotation={[0, -1, 0]}
       position={[10, 0, 22]}
     >
       <Stand hovered={hovered} />
@@ -37,6 +38,18 @@ function ProceduralTerrainStand() {
           <ProceduralTerrain />
         </group>
       </Float>
+      {active && (
+        <ProjectDescription
+          title='Procedural Terrain'
+          headline='Taking Flight'
+          live='https://procedural-terrain-mu.vercel.app/#debug'
+          source='https://github.com/JaeGif/Procedural-Terrain/tree/main/44-procedural-terrain-shader'
+        >
+          {
+            'A challenging project,\n I learned alot\n about Blender, GLSL,\n and structuring.'
+          }
+        </ProjectDescription>
+      )}
     </group>
   );
 }

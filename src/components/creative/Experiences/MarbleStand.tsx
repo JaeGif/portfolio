@@ -4,24 +4,18 @@ import { Float } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import Marble from './Marble';
 import useExperienceStore from '@/components/stores/useExperienceStore';
+import ProjectDescription from './ProjectDescription';
 
 function MarbleStand() {
   const [hovered, setHovered] = useState(false);
   const selected = useExperienceStore((state) => state.selected);
   const select = useExperienceStore((state) => state.select);
   const [active, setActive] = useState<boolean>(false);
-  const marbleRef = useRef<any>(null);
 
   useEffect(() => {
     if (selected === 'marble') setActive(true);
     else if (selected) setActive(false);
   }, [selected]);
-
-  useFrame((state, delta) => {
-    if (active) {
-      marbleRef.current!.rotation.y += delta * 0.2;
-    }
-  });
 
   return (
     <group
@@ -33,10 +27,22 @@ function MarbleStand() {
     >
       <Stand hovered={hovered} />
       <Float>
-        <group ref={marbleRef} position={[0, 5.5, 3.5]} scale={0.6}>
+        <group position={[0, 5.5, 4]} scale={0.6}>
           <Marble />
         </group>
       </Float>
+      {active && (
+        <ProjectDescription
+          title='Marble Run'
+          headline='Racing Platformer'
+          live='https://procedural-terrain-mu.vercel.app/#debug'
+          source='https://github.com/JaeGif/Procedural-Terrain/tree/main/44-procedural-terrain-shader'
+        >
+          {
+            'My first game!\n A simple marble\n racing game with\n a bright future.'
+          }
+        </ProjectDescription>
+      )}
     </group>
   );
 }

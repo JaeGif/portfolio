@@ -11,10 +11,8 @@ type TextTemplateProps = {
   source?: string;
 };
 function TextTemplate({
-  align = 'center',
   scale = 2,
   lineHeight = 1,
-  maxWidth = 10,
   position = [0, 12, 0],
   live = '',
   source = '',
@@ -34,24 +32,20 @@ function TextTemplate({
         onClick={() => window.open(live, '_blank')}
         font='/assets/fonts/pixeloidtf.json'
         scale={scale}
-        //   maxWidth={maxWidth}
         lineHeight={lineHeight}
-        //   textAlign={align}
         position={position}
       >
-        {live !== '' && 'Live'}
+        {live !== '' && 'Live ->'}
         <meshStandardMaterial toneMapped={false} />
       </Text3D>
       <Text3D
         onClick={() => window.open(source, '_blank')}
         font='/assets/fonts/pixeloidtf.json'
         scale={scale}
-        //   maxWidth={maxWidth}
         lineHeight={lineHeight}
-        //   textAlign={align}
-        position={[position[0], position[1] - 2, position[2]]}
+        position={[position[0], position[1] - 3, position[2]]}
       >
-        {source !== '' && 'Code'}
+        {source !== '' && 'Code </>'}
         <meshStandardMaterial toneMapped={false} />
       </Text3D>
     </group>

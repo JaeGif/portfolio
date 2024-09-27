@@ -5,8 +5,8 @@ import { useFrame } from '@react-three/fiber';
 import Boat from './Boat';
 import useExperienceStore from '@/components/stores/useExperienceStore';
 import TextTemplate from './texts/TextTemplate';
-import HtmlTemplate from './texts/HtmlTemplate';
 import LinksTemplate from './texts/LinksTemplate';
+import ProjectDescription from './ProjectDescription';
 
 function BoatStand() {
   // states
@@ -52,54 +52,14 @@ function BoatStand() {
     >
       <Stand hovered={hovered} />
       {active && (
-        <>
-          <TextTemplate scale={1} position={[-15, 10, 0]}>
-            GP-GPU Computations
-          </TextTemplate>
-          <TextTemplate
-            position={[-15, 8, 0]}
-            scale={0.75}
-            maxWidth={12}
-            align='left'
-          >
-            Flow Field
-          </TextTemplate>
-          <TextTemplate
-            scale={0.75}
-            maxWidth={12}
-            align='left'
-            position={[-15, 6, 0]}
-          >
-            Built with Three.js
-          </TextTemplate>
-          <TextTemplate
-            scale={0.75}
-            maxWidth={12}
-            align='left'
-            position={[-15, 5, 0]}
-          >
-            GLSL, and Frame
-          </TextTemplate>
-          <TextTemplate
-            scale={0.75}
-            maxWidth={12}
-            align='left'
-            position={[-15, 4, 0]}
-          >
-            Buffer Objects
-          </TextTemplate>
-          <LinksTemplate
-            scale={1}
-            position={[5, 7.5, 0]}
-            live='https://gpgpu-flow-field.vercel.app/#debug'
-            source='https://github.com/JaeGif/GPGPU-Flow-Field/tree/main/41-gpgpu-flow-field-particles-shaders'
-          />
-          {/* <HtmlTemplate
-            position={[5, 7.5, 0]}
-            live='https://gpgpu-flow-field.vercel.app/#debug'
-            source='https://github.com/JaeGif/GPGPU-Flow-Field/tree/main/41-gpgpu-flow-field-particles-shaders'
-          /> */}
-        </>
+        <ProjectDescription
+          title='GP-GPU Computations'
+          headline='Flow Field'
+          live='https://gpgpu-flow-field.vercel.app/#debug'
+          source='https://github.com/JaeGif/GPGPU-Flow-Field/tree/main/41-gpgpu-flow-field-particles-shaders'
+        >
+          {'Built with Three.js\n GLSL, and Frame\n Buffer Objects.'}
+        </ProjectDescription>
       )}
       <Float>
         <group
