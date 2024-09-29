@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Stand } from './Stand';
 import { Float } from '@react-three/drei';
-import { useFrame } from '@react-three/fiber';
+
 import Marble from './Marble';
 import useExperienceStore from '@/components/stores/useExperienceStore';
 import ProjectDescription from './ProjectDescription';
@@ -21,7 +21,10 @@ function MarbleStand() {
     <group
       onPointerEnter={() => setHovered(true)}
       onPointerLeave={() => setHovered(false)}
-      onClick={() => select('marble')}
+      onClick={(e) => {
+        e.stopPropagation();
+        select('marble');
+      }}
       rotation={[0, 0.1, 0]}
       position={[12, 0, -7]}
     >

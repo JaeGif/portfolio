@@ -44,7 +44,8 @@ function BoatStand() {
     <group
       onPointerEnter={() => setHovered(true)}
       onPointerLeave={() => setHovered(false)}
-      onClick={() => {
+      onClick={(e) => {
+        e.stopPropagation();
         select('boat');
       }}
       rotation={[0, 1.2, 0]}

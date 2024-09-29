@@ -54,7 +54,7 @@ function Scene({ cameraControls }: any) {
  */
   return (
     <>
-      <group scale={0.075}>
+      <group name='scene' scale={0.075}>
         <TrophyStand />
         <ProceduralTerrainStand />
         <BoatStand />

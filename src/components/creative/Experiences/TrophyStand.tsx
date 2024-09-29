@@ -18,7 +18,13 @@ function TrophyStand() {
 
   return (
     <group position={[-8, 0, 35]} rotation={[0, 0.2, 0]}>
-      <group onClick={() => select('trophy')} ref={trophyRef}>
+      <group
+        onClick={(e) => {
+          e.stopPropagation();
+          select('trophy');
+        }}
+        ref={trophyRef}
+      >
         <Trophy />
         {active && (
           <ProjectDescription

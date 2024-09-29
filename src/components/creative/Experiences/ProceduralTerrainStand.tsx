@@ -28,7 +28,10 @@ function ProceduralTerrainStand() {
     <group
       onPointerEnter={() => setHovered(true)}
       onPointerLeave={() => setHovered(false)}
-      onClick={() => select('terrain')}
+      onClick={(e) => {
+        e.stopPropagation();
+        select('terrain');
+      }}
       rotation={[0, -1, 0]}
       position={[10, 0, 22]}
     >

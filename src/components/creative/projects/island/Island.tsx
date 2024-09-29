@@ -27,29 +27,12 @@ function Island(props: any) {
 
   const selected = useExperienceStore((state) => state.selected);
   const select = useExperienceStore((state) => state.select);
-  const [active, setActive] = useState<boolean>(false);
+  const [active, setActive] = useState<boolean>(true);
   const islandRef = useRef<any>(null);
-
-  useEffect(() => {
-    if (selected === 'island') setActive(true);
-    else if (selected) setActive(false);
-  }, [selected]);
 
   return (
     <>
-      <group
-        onClick={(e) => {
-          console.log(
-            e.intersections[0].object.parent?.uuid,
-            islandRef.current.uuid
-          );
-          if (e.intersections[0].object.parent?.uuid === islandRef.current.uuid)
-            select('island');
-        }}
-        ref={islandRef}
-        {...props}
-        dispose={null}
-      >
+      <group name='island' ref={islandRef} {...props} dispose={null}>
         <Staff nodes={nodes} materials={materials} />
         <Stark nodes={nodes} materials={materials} />
         <Path nodes={nodes} materials={materials} />
@@ -67,7 +50,7 @@ function Island(props: any) {
       {active && (
         <ProjectDescription
           title='Portal Island'
-          headline='Details'
+          headline='"Je ne sais quoi"'
           live='https://portal-r3f-pied.vercel.app/'
           source='https://github.com/JaeGif/Portal-R3F'
         >

@@ -14,9 +14,7 @@ type GLTFResult = GLTF & {
 const marbleMaterial = new THREE.MeshStandardMaterial();
 
 export function Stand({ hovered = false }: { hovered: boolean }) {
-  const { nodes, materials } = useGLTF(
-    '/assets/creative/models/stand.glb'
-  ) as GLTFResult;
+  const { nodes } = useGLTF('/assets/creative/models/stand.glb') as GLTFResult;
 
   const { map, arm } = useTexture({
     map: '/assets/creative/textures/quartzite/Poliigon_StoneQuartzite_8060_BaseColor.jpg',
@@ -30,7 +28,7 @@ export function Stand({ hovered = false }: { hovered: boolean }) {
       arm;
 
   return (
-    <group scale={2.5} dispose={null}>
+    <group name='stand' scale={2.5} dispose={null}>
       <mesh
         castShadow
         receiveShadow
