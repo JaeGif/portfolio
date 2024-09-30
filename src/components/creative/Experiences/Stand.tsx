@@ -13,7 +13,7 @@ type GLTFResult = GLTF & {
 
 const marbleMaterial = new THREE.MeshStandardMaterial();
 
-export function Stand({ hovered = false }: { hovered: boolean }) {
+export function Stand({ hovered = false }: { hovered?: boolean }) {
   const { nodes } = useGLTF('/assets/creative/models/stand.glb') as GLTFResult;
 
   const { map, arm } = useTexture({
