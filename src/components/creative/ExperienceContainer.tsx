@@ -149,7 +149,7 @@ function ExperienceContainer() {
           <em className='text-pink-500 not-italic'>Hint: </em>try clicking,
           dragging, and zooming to interact with the scenes
         </p>
-        <div className='w-screen md:w-full h-[75vh] flex flex-col sm:flex-row relative sm:w-5/6 shadow-md border-2 md:dark:border-blue-300 border-gray-950 bg-white dark:bg-gray-800 rounded-md mt-5 items-center'>
+        <div className='w-screen md:w-full h-[75vh] flex flex-col md:flex-row relative shadow-md border-2 md:dark:border-blue-300 border-gray-950 bg-white dark:bg-gray-800 rounded-md mt-5 items-center'>
           <div className='hidden sm:flex absolute top-3 left-3 h-full w-full bg-gray-950 dark:bg-blue-300 rounded-xl -z-10'></div>
           {displayExperience()}
         </div>

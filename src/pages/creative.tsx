@@ -93,7 +93,7 @@ function creative() {
           </div>
         )}
       </section>
-      <section className='w-full flex mt-14 sm:mt-8 gap-5 mb-10'>
+      <section className='w-full flex mt-20 sm:mt-8 gap-5 mb-10'>
         <Creativity />
       </section>
     </>
