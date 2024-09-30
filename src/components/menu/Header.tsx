@@ -72,7 +72,11 @@ function Header({ toggleMenu }: HeaderProps) {
           className='overflow-hidden flex flex-col items-center min-w-fit'
         >
           <Link
-            className={urlParam === '/creative' ? 'text-blue-500' : ''}
+            className={
+              urlParam === '/creative'
+                ? 'text-blue-500 font-pixeloid'
+                : 'font-pixeloid'
+            }
             href={'/creative'}
           >
             Creative

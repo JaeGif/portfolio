@@ -88,7 +88,7 @@ function Rocks({ nodes, materials }: GLTFNodesMaterials) {
         receiveShadow
         geometry={nodes.rock3002.geometry}
         material={materials.rocks}
-        position={[-2.87124, 0.10794, -0.71336]}
+        position={[-2.87124, 0, -0.71336]}
         rotation={[0, 0.63739, 0]}
       />
       <mesh
@@ -106,7 +106,7 @@ function Rocks({ nodes, materials }: GLTFNodesMaterials) {
         receiveShadow
         geometry={nodes.rock3006.geometry}
         material={materials.rocks}
-        position={[-2.12817, 0.07144, -0.0581]}
+        position={[-2.12817, 0, -0.0581]}
         rotation={[-3.13739, 0.26961, 3.1258]}
       />
       <mesh

@@ -105,7 +105,6 @@ function ImageCarousel() {
           alt='photography showcase'
           style={{ objectPosition: `${percentageMoved + 50}% center` }}
         />
-
         <motion.img
           whileHover={{ scale: 1.3, y: -30, zIndex: 10 }}
           whileTap={{ scale: 1.3, y: -30, zIndex: 10 }}
@@ -118,7 +117,6 @@ function ImageCarousel() {
           alt='photography showcase'
           style={{ objectPosition: `${percentageMoved + 50}% center` }}
         />
-
         <motion.video
           autoPlay={true}
           loop
