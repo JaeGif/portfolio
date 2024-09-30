@@ -1,15 +1,23 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import TransitionEffect from '@/components/menu/TransitionEffect';
 import Experience from '@/components/creative/Experiences/Experience';
 import Creativity from '@/components/creative/Creativity';
 import ExperienceContainer from '@/components/creative/ExperienceContainer';
 import { motion } from 'framer-motion';
-import ControlOverlay from '@/components/creative/Experiences/ControlOverlay';
+import useMediaQuery from '@/hooks/useMediaQuery';
 
 function creative() {
   const [isExperience, setIsExperience] = useState(false);
   const [selected, setSelected] = useState(false);
+  const isSm = useMediaQuery('(max-width: 640px)');
+
+  useEffect(() => {
+    if (isSm) {
+      setSelected(true);
+      setIsExperience(false);
+    }
+  }, [isSm]);
 
   const line = {
     initial: { x: '-110%' },
@@ -30,7 +38,7 @@ function creative() {
             <h1 className='text-5xl w-full text-center'>
               Choose your adventure!
             </h1>
-            <div className='w-full flex justify-around items-center text-3xl'>
+            <div className='w-full flex md:flex-row flex-col gap-5 md:gap-0 justify-around items-center text-3xl'>
               <div>
                 <motion.button
                   initial='initial'
@@ -80,15 +88,13 @@ function creative() {
             </div>
           </div>
         ) : (
-          <>
-            <div className='h-full relative'>
-              {isExperience ? <Experience /> : <ExperienceContainer />}
-            </div>
-            <section className='w-full flex mt-5 gap-5 mb-10'>
-              <Creativity />
-            </section>
-          </>
+          <div className='h-full relative'>
+            {isExperience ? <Experience /> : <ExperienceContainer />}
+          </div>
         )}
+      </section>
+      <section className='w-full flex mt-5 gap-5 mb-10'>
+        <Creativity />
       </section>
     </>
   );

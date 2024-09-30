@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import useMediaQuery from '@/hooks/useMediaQuery';
 
 function ControlOverlay() {
   return (
@@ -7,7 +8,9 @@ function ControlOverlay() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.75 }}
-      className='absolute bottom-5 right-5 z-10 flex flex-col justify-center items-center w-64 gap-2 font-pixeloid'
+      className={
+        'invisible md:visible absolute bottom-0 md:bottom-5 md:right-5 z-10 flex flex-col justify-center items-center w-64 gap-2 font-pixeloid'
+      }
     >
       <h1 className='text-xl'>Controls</h1>
       <span className='text-lg flex justify-around items-center w-full'>
