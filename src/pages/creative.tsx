@@ -10,6 +10,7 @@ function creative() {
         <link rel='icon' href='/assets/images/bluetitle.ico'></link>
         <meta name='description' content='creative content I make' />
       </Head>
+      <TransitionEffect />
       <section className='h-screen p-2 flex flex-col mt-8 gap-10'>
         <div className='h-full relative'>
           <Experience />
