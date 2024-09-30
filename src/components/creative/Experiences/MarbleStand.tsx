@@ -38,8 +38,8 @@ function MarbleStand() {
         <ProjectDescription
           title='Marble Run'
           headline='Racing Platformer'
-          live='https://procedural-terrain-mu.vercel.app/#debug'
-          source='https://github.com/JaeGif/Procedural-Terrain/tree/main/44-procedural-terrain-shader'
+          live='https://marble-run-blond.vercel.app/'
+          source='https://github.com/JaeGif/Marble-Game'
         >
           {
             'My first game!\n A simple marble\n racing game with\n a bright future.'
