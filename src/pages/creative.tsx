@@ -38,7 +38,7 @@ function creative() {
             <h1 className='text-5xl w-full text-center'>
               Choose your adventure!
             </h1>
-            <div className='w-full flex md:flex-row flex-col gap-5 md:gap-0 justify-around items-center text-3xl'>
+            <div className='w-full flex md:flex-row flex-col gap-5 md:gap-0 justify-around items-start md:items-center text-3xl'>
               <div>
                 <motion.button
                   initial='initial'
@@ -93,7 +93,7 @@ function creative() {
           </div>
         )}
       </section>
-      <section className='w-full flex mt-5 gap-5 mb-10'>
+      <section className='w-full flex mt-14 sm:mt-8 gap-5 mb-10'>
         <Creativity />
       </section>
     </>
