@@ -5,6 +5,7 @@ import Experience from '@/components/creative/Experiences/Experience';
 import Creativity from '@/components/creative/Creativity';
 import ExperienceContainer from '@/components/creative/ExperienceContainer';
 import { motion } from 'framer-motion';
+import ControlOverlay from '@/components/creative/Experiences/ControlOverlay';
 
 function creative() {
   const [isExperience, setIsExperience] = useState(false);

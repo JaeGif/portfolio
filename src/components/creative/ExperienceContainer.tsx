@@ -1,10 +1,9 @@
 import React, { Suspense, useState } from 'react';
-import { Canvas } from '@react-three/fiber';
 import PortalExperience from '@/components/creative/Experiences/PortalExperience';
 import uniqid from 'uniqid';
 import { useTheme } from 'next-themes';
 import useMediaQuery from '@/hooks/useMediaQuery';
-
+import ControlOverlay from './Experiences/ControlOverlay';
 function ExperienceContainer() {
   const [currentExperience, setCurrentExperience] = useState('Portal');
   const { systemTheme, theme } = useTheme();
@@ -96,6 +95,7 @@ function ExperienceContainer() {
   ];
   return (
     <>
+      <ControlOverlay />
       <div className='w-full flex justify-center flex-col items-center gap-5'>
         {isMobile ? (
           <h1 className='text-5xl'>Creativity</h1>
