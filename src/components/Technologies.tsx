@@ -199,27 +199,15 @@ function Technologies() {
                 aria-label='express'
                 title='Express'
               />
+              <Image
+                height={52}
+                width={52}
+                src='/assets/favicons/go-original-wordmark.svg'
+                alt='technologies I use'
+                aria-label='Go Programming Language'
+                title='Go'
+              />
 
-              <Image
-                height={54}
-                width={54}
-                src={
-                  currentTheme === 'dark'
-                    ? '/assets/favicons/flask-dark.svg'
-                    : '/assets/favicons/flask-original.svg'
-                }
-                alt='technologies I use'
-                aria-label='flask'
-                title='Flask'
-              />
-              <Image
-                height={54}
-                width={54}
-                src='/assets/favicons/mongodb-original-wordmark.svg'
-                alt='technologies I use'
-                aria-label='mongodb'
-                title='MongoDB'
-              />
               <Image
                 height={54}
                 width={54}
@@ -231,6 +219,14 @@ function Technologies() {
                 alt='technologies I use'
                 aria-label='postgresql'
                 title='PostgreSQL'
+              />
+              <Image
+                height={54}
+                width={54}
+                src='/assets/favicons/mongodb-original-wordmark.svg'
+                alt='technologies I use'
+                aria-label='mongodb'
+                title='MongoDB'
               />
               <Image
                 height={54}

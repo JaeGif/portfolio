@@ -1,27 +1,27 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from 'react';
 import Link from 'next/link';
-import InstagramLinks from './InstagramLinks';
-import InstagramStack from './InstagramStack';
+import MarbleLinks from './MarbleLinks';
+import MarbleStack from './MarbleStack';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import useMediaQuery from '@/hooks/useMediaQuery';
 
-function InstagramDetails() {
+function MarbleDetails() {
   const isSm = useMediaQuery('(min-width: 640px)');
   const isMd = useMediaQuery('(min-width: 768px)');
   const isLg = useMediaQuery('(min-width: 1024px)');
 
   return (
     <span className='flex w-full p-2 sm:p-5 gap-5'>
-      <h1 className='text-7xl hidden sm:flex w-20'>5.</h1>
+      <h1 className='text-7xl hidden sm:flex w-20'>1.</h1>
       <div className='flex flex-col sm:flex-row relative sm:w-5/6 shadow-md border-2 dark:border-white border-gray-950 bg-white dark:bg-gray-800 rounded-md mt-5 p-4 items-center'>
         <div className='hidden sm:flex absolute top-3 left-3 h-full w-full bg-gray-950 dark:bg-white rounded-xl -z-10'></div>
         <div className='flex flex-col'>
           <div>
-            <h1 className='text-3xl'>Totally Not Instagram</h1>
+            <h1 className='text-3xl'>Marble Run</h1>
             <h2 className='text-xl dark:text-blue-300 text-pink-500'>
-              Instagram Clone
+              3D Platforming Game
             </h2>
           </div>
           <div className='flex'>
@@ -29,27 +29,35 @@ function InstagramDetails() {
               <div className=''>
                 <h2 className='font-semibold text-2xl'>About</h2>
                 <p>
-                  Totally Not Instagram is a full stack instagram clone. The
-                  final product has most of the key features of Instagram,
-                  including photo filters, following and notification systems,
-                  and CRUD operations for posts and users. This was my first
-                  true full stack application, utilizing my own REST API built
-                  with <em className='text-blue-500 not-italic'>Express.js</em>.
+                  Marble Run is a full-stack 3D platforming game built with{' '}
+                  <em className='text-blue-500 not-italic'>Three.js</em> and{' '}
+                  <em className='text-blue-500 not-italic'>
+                    React Three Fiber
+                  </em>
+                  . The game is progressively difficult with a variety of
+                  obstacles made with{' '}
+                  <em className='text-blue-500 not-italic'>Blender</em> and
+                  stylized with custom shaders using{' '}
+                  <em className='text-blue-500 not-italic'>GLSL</em>.
                 </p>
                 <br />
                 <p>
-                  This was the first project that forced me well outside of my
-                  comfortable tech stack, I learned{' '}
-                  <em className='text-blue-500  not-italic'>React Query</em>,{' '}
-                  <em className='text-blue-500  not-italic'>Vite</em>, and{' '}
-                  <em className='text-blue-500  not-italic'>Mongoose</em> to
-                  finish the project. Authorization is handled by{' '}
-                  <em className='text-blue-500  not-italic'>Passport.js</em>{' '}
-                  using JWT&apos;s.
+                  The game features 2 difficulty modes, 30 complete and
+                  interesting levels, an ever expanding list of unique
+                  obstacles, a highscore functionality and smooth seamless
+                  gameplay.
+                </p>
+                <br />
+                <p>
+                  Marble run is currently in a development state, as I work on
+                  the ability to make and share custom stages, 20 new levels,
+                  and multiplayer online support via websockets using Go's{' '}
+                  <em className='text-blue-500 not-italic'>Gorilla</em>{' '}
+                  framework.
                 </p>
               </div>
-              <InstagramLinks />
-              <InstagramStack />
+              <MarbleLinks />
+              <MarbleStack />
             </div>
           </div>
         </div>
@@ -70,7 +78,7 @@ function InstagramDetails() {
           >
             <img
               className='h-full max-w-fit'
-              src='/assets/images/instagram/mobile.png'
+              src='/assets/images/gradient/mobile.png'
               alt='project image'
               aria-label='project mobile view'
             />
@@ -81,4 +89,4 @@ function InstagramDetails() {
   );
 }
 
-export default InstagramDetails;
+export default MarbleDetails;
