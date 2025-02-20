@@ -7,6 +7,7 @@ import BattleshipDetails from './battleship/BattleshipDetails';
 import GradientDetails from './gradient/GradientDetails';
 import FreelanceDetails from './freelance/FreelanceDetails';
 import PortfolioDetails from './portfolio/PortfolioDetails';
+import MarbleDetails from './marble/MarbleDetails';
 
 function Projects() {
   return (
@@ -15,6 +16,7 @@ function Projects() {
         <h1 className='text-4xl font-semibold'>Projects</h1>
       </span>
       <div className='flex flex-col items-center gap-20'>
+        <MarbleDetails />
         <GradientDetails />
         <PortfolioDetails />
         <SymphonyDetails />
