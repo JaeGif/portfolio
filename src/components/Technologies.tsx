@@ -199,7 +199,7 @@ function Technologies() {
                 aria-label='express'
                 title='Express'
               />
-              <Image
+              {/*               <Image
                 height={52}
                 width={52}
                 src='/assets/favicons/go-original-wordmark.svg'
@@ -207,7 +207,7 @@ function Technologies() {
                 aria-label='Go Programming Language'
                 title='Go'
               />
-
+ */}
               <Image
                 height={54}
                 width={54}
