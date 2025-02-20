@@ -49,7 +49,7 @@ function ProceduralTerrainStand() {
           source='https://github.com/JaeGif/Procedural-Terrain/tree/main/44-procedural-terrain-shader'
         >
           {
-            'A challenging project,\n I learned alot\n about Blender, GLSL,\n and structuring.'
+            'A challenging project,\n I learned a lot\n about Blender, GLSL,\n and structuring.'
           }
         </ProjectDescription>
       )}
