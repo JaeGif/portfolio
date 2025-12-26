@@ -19,7 +19,7 @@ function Intro() {
     <div className='w-full h-[calc(100vh-7rem)] flex flex-col justify-start mt-10 items-center gap-5'>
       <div className='flex flex-col text-5xl mt-10 sm:mt-0 sm:text-[6vw] text-center w-full'>
         <p className='m-11'>Jacob Gifford</p>
-        <p>Full Stack Developer</p>
+        <p>Software Engineer</p>
       </div>
       <nav className='flex gap-5 justify-center'>
         <Link href='/assets/jacobGiffordResume.pdf' target='_blank'>

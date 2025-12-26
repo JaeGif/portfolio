@@ -45,6 +45,14 @@ function Technologies() {
               <Image
                 height={54}
                 width={54}
+                src='/assets/favicons/electron-original.svg'
+                alt='technologies I use'
+                aria-label='electron'
+                title='Electron'
+              />
+              <Image
+                height={54}
+                width={54}
                 src={
                   currentTheme === 'dark'
                     ? '/assets/favicons/nextjs-line.svg'
@@ -171,6 +179,22 @@ function Technologies() {
           <div className='flex flex-col w-full sm:w-[calc(33%-4rem)] dark:bg-gray-800'>
             <h1 className='text-2xl'>Back-End</h1>
             <div className='flex flex-1 flex-wrap p-4 rounded-md border-2 dark:border-white border-gray-950 justify-center gap-4 shadow-md'>
+              <Image
+                height={54}
+                width={54}
+                src='/assets/favicons/java-original-wordmark.svg'
+                alt='technologies I use'
+                aria-label='java'
+                title='Java'
+              />
+              <Image
+                height={54}
+                width={54}
+                src='/assets/favicons/spring-original-wordmark.svg'
+                alt='technologies I use'
+                aria-label='springboot'
+                title='Spring Boot'
+              />
               <Image
                 height={54}
                 width={54}
